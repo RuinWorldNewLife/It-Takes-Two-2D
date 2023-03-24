@@ -202,7 +202,28 @@ public class Player : MonoBehaviour, IPunObservable
         RB.velocity = workspace;
         CurrentVelocity = workspace;
     }
-
+    /// <summary>
+    /// 设置触碰到跳跃钥匙的方法。
+    /// </summary>
+    public void SetTouchingJumpKey()
+    {
+        playerData.amountOfJump++;//增加最大跳跃次数
+        JumpState.lastAmountOfJump++;//添加一次当前的临时跳跃次数
+    }
+    /// <summary>
+    /// 设置触碰到闪避钥匙方法
+    /// </summary>
+    public void SetTouchingDashKey()
+    {
+        playerData.ifHaveDashKey = true;
+    }
+    /// <summary>
+    /// 设置触碰到爬墙钥匙方法
+    /// </summary>
+    public void SetTouchingWallKey()
+    {
+        playerData.ifHaveWallKey = true;
+    }
     /// <summary>
     /// 设置重力缩放
     /// </summary>

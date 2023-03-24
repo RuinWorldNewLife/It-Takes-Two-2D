@@ -18,7 +18,7 @@ MonoBehaviour:
   circleRadius: 0.1
   idle2WinkTime: 5
   moveSpeed: 5
-  amountOfJump: 1
+  amountOfJump: 2
   jumpSpeed: 20
   jumpHoldOnSpeed: 15
   jumpMinTime: 0.06

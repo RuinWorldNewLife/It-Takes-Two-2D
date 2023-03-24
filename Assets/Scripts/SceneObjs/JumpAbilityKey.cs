@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class JumpAbilityKey : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Collider2D keyCollider;
+    public LayerMask playerLayer;
+    private Player player;
+    private void Start()
     {
-        
+        keyCollider = GetComponent<Collider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (keyCollider.IsTouchingLayers(playerLayer))
+        {
+            player = collision.gameObject.GetComponent<Player>();
+            player.SetTouchingJumpKey();
+            Destroy(gameObject, 0.2f);
+
+        }
     }
 }
