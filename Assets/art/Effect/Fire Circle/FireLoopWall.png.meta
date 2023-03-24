@@ -1,0 +1,892 @@
+fileFormatVersion: 2
+guid: f740d192d712aa8408ad8ce3e000ceed
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FireLoopWall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1770.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3f0f5af7f133b4ebbbc850dd92ec6c
+      internalID: -1132119351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de52f990f706c24eb25eca1a99aef95
+      internalID: -1244315951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa445205cb7494e4cabe0f00fd6c4c43
+      internalID: 1423677693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_3
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4c84351b90eee45a4b4fbc220fb988
+      internalID: -576503308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_4
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0afd1948841a140b37aa6472805566
+      internalID: 1964498788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_5
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2b6ab05ab9b3b48820b416f7b12d49
+      internalID: 388753746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_6
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae32de4d5ff4e54fa95e4826d30e9b7
+      internalID: -179667132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_7
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e223be8154396b4dab70dbd8f05d3a3
+      internalID: 1697786107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8d0af33f635a64da1253401639dcda
+      internalID: 962480955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c659f52dc5cf34fa532060381f92a5
+      internalID: 1531672840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_10
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27eca781e0e123e4cb653bae107c67fd
+      internalID: 1062980521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_11
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db1e4ff5d011f14c883fca8f767539a
+      internalID: 1858682279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_12
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d55a1c9e9f56bf4d8660029c3aa5ee5
+      internalID: -2071909309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_13
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b7f816d25e7355408d73a41858f3b36
+      internalID: 867183426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_14
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe2879f1448a864f8a2b658c713eec2
+      internalID: 408337008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f730eda82efa64f956a344a916154c
+      internalID: 179770493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f12cd85fc618546ac9035a40ff21ae
+      internalID: 1236320756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_17
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0febbece6da361f42898c66a313e61f7
+      internalID: 1778388527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_18
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb9dc0099e1ebe4ca4236d94fa63d97
+      internalID: -607910611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_19
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f5c28deede740439cb4c1f52544c18
+      internalID: -2078369648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_20
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0240022e72e2a845a082f23ceb99bfe
+      internalID: -392907195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_21
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab77bea9d5f23b44c944cb4a2f6beb3e
+      internalID: 217557505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9a563c25c9e6c44b8597e53541eae1
+      internalID: -24452896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_23
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8352326db5bdc854583a4f8692943a3a
+      internalID: -1443772909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_24
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2dd103d505de6c439abf06a7d365a9b
+      internalID: 1270803625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_25
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf573e05eebed14d97d47f4fac42247
+      internalID: 448549181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_26
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831bcd92c843c48439a6b64c394985b8
+      internalID: 741682424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_27
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81560e3fe72cfd439f67f15af77fa5e
+      internalID: 2133455277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd04b8a2471496409b9da6ea44720d9
+      internalID: -1591925109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_29
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c467e5905765f274394f965a78d98718
+      internalID: 1718967113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_30
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ff499743194c14989a710f3bc00520
+      internalID: -819205076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_31
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c7939cd9e07a94baf159f4e4abc8cd
+      internalID: 362176612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_32
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993d6138bb93927419140514c27085b2
+      internalID: -213641049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_33
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2723047db7fff4bb7a4c4d651e6a1b
+      internalID: 1626992794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopWall_34
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0974995df1c13b74888f9c53ad6deafd
+      internalID: -581929003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FireLoopWall_2: 1423677693
+      FireLoopWall_32: -213641049
+      FireLoopWall_13: 867183426
+      FireLoopWall_25: 448549181
+      FireLoopWall_34: -581929003
+      FireLoopWall_26: 741682424
+      FireLoopWall_8: 962480955
+      FireLoopWall_27: 2133455277
+      FireLoopWall_10: 1062980521
+      FireLoopWall_9: 1531672840
+      FireLoopWall_0: -1132119351
+      FireLoopWall_3: -576503308
+      FireLoopWall_23: -1443772909
+      FireLoopWall_7: 1697786107
+      FireLoopWall_15: 179770493
+      FireLoopWall_21: 217557505
+      FireLoopWall_30: -819205076
+      FireLoopWall_19: -2078369648
+      FireLoopWall_18: -607910611
+      FireLoopWall_4: 1964498788
+      FireLoopWall_24: 1270803625
+      FireLoopWall_6: -179667132
+      FireLoopWall_11: 1858682279
+      FireLoopWall_33: 1626992794
+      FireLoopWall_20: -392907195
+      FireLoopWall_31: 362176612
+      FireLoopWall_14: 408337008
+      FireLoopWall_17: 1778388527
+      FireLoopWall_12: -2071909309
+      FireLoopWall_5: 388753746
+      FireLoopWall_1: -1244315951
+      FireLoopWall_29: 1718967113
+      FireLoopWall_16: 1236320756
+      FireLoopWall_28: -1591925109
+      FireLoopWall_22: -24452896
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

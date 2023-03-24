@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Wall
+  - Wind
+  - WindToFly
+  - PlayerDark
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Wall
+  - Wind
+  - Player
+  - WindToFly
+  - PlayerDark
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BackGroundTree
+    uniqueID: 1814818759
+    locked: 0
+  - name: Gizmos
+    uniqueID: 3706859275
+    locked: 0
+  - name: Wall
+    uniqueID: 2206886031
+    locked: 0
+  - name: GizmosForward
+    uniqueID: 2089218053
+    locked: 0
+  - name: Wind
+    uniqueID: 1404982891
+    locked: 0
+  - name: Player
+    uniqueID: 559282045
+    locked: 0

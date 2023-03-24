@@ -1,0 +1,892 @@
+fileFormatVersion: 2
+guid: 5cc83ceeb121c33429b50a7d3c6c75f5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FireLoop_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1770.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b03bcf93d7af7479b5347bd55530fe
+      internalID: -545447479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561097e3f1cd2b645a60d53e92176638
+      internalID: -440987506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b32e6f7ffee9641b1ee4a61ff05017
+      internalID: 1972731691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_3
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b995d225b2cef14a988b416cea570be
+      internalID: -1185239776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_4
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39483f440f7ed0b46be500a2f86a0967
+      internalID: -2102617210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_5
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343ea316feb54884482d489bf8be174a
+      internalID: 770308979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_6
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19be08650ef41640996c853c6bc33f3
+      internalID: 790669779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_7
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621012225b0298d49833ff27b147d201
+      internalID: 1151423365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c1c08e2a739464aa49d8d3e9003e30
+      internalID: -1095328460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892b1e0327de6f24da8f1eb14942b156
+      internalID: -1501641929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_10
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60977fc2ea683249b3f4317290c6f94
+      internalID: -1373590282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_11
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08cd8fa470838bb41b004eb500f99ac1
+      internalID: -1402437918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_12
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dd4955fc9ff0a4aab9a4b53b40b9f0
+      internalID: 399774092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_13
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c176a580efc03541be5ad1ba0a990a6
+      internalID: 993645606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_14
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bc064e99cd70f43b5d11c2186688d0
+      internalID: -2065754901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31072c9296040ed47a328058c2360a6f
+      internalID: 1414788097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed73c37262b4974ea2b4745da5fc70d
+      internalID: 1611901422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_17
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977e98063fbe1644dae94e7b528e304f
+      internalID: -703057678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_18
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cdc01a6f43db014fafe14d690e03a3e
+      internalID: -890872904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_19
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f802b99f2a59f7b4989531ef513dcc84
+      internalID: -2494591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_20
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae137eb6a8820f42b02a085d4239497
+      internalID: -1888928724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_21
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8075df4ab6d3184a844e7b96e442e75
+      internalID: 1218606527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a5fbf3ecc2aa241aded1724fa3c627
+      internalID: 1031367719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_23
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ef9e5e41006104ca4dd1a28358e237
+      internalID: -1002672069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_24
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98dd9f0f9af3694c9649a4e94a0922a
+      internalID: -1427024200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_25
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d052f29ad4209274a97091a6a1a6f7e3
+      internalID: 1819566892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_26
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046eae9a8c4d21b41a735c7a8798f420
+      internalID: 300289101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_27
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145b293d0515741469a1a2a88f091916
+      internalID: 1412881243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47c5f954713fc140b35e2d576c9144f
+      internalID: 1432403352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_29
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 614e70c4a31e79e469c7e668210ad5aa
+      internalID: -1495823288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_30
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed0066e8efdb9f41ac1777872a703fc
+      internalID: -233001017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_31
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529aebda243acbd448fc1e8a13a30254
+      internalID: 1926554710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_32
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea2123c17cad214894de7106650cf0d
+      internalID: 2020687840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_33
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4caaca70e3e9d4441b01f1132b2d5df5
+      internalID: 2038097509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoop_34
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c315589221debf4d8c64b3841c997b7
+      internalID: 768867927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FireLoop_22: 1031367719
+      FireLoop_10: -1373590282
+      FireLoop_25: 1819566892
+      FireLoop_27: 1412881243
+      FireLoop_2: 1972731691
+      FireLoop_28: 1432403352
+      FireLoop_9: -1501641929
+      FireLoop_15: 1414788097
+      FireLoop_18: -890872904
+      FireLoop_14: -2065754901
+      FireLoop_19: -2494591
+      FireLoop_23: -1002672069
+      FireLoop_4: -2102617210
+      FireLoop_5: 770308979
+      FireLoop_34: 768867927
+      FireLoop_31: 1926554710
+      FireLoop_17: -703057678
+      FireLoop_0: -545447479
+      FireLoop_1: -440987506
+      FireLoop_33: 2038097509
+      FireLoop_30: -233001017
+      FireLoop_21: 1218606527
+      FireLoop_24: -1427024200
+      FireLoop_12: 399774092
+      FireLoop_13: 993645606
+      FireLoop_6: 790669779
+      FireLoop_20: -1888928724
+      FireLoop_11: -1402437918
+      FireLoop_26: 300289101
+      FireLoop_3: -1185239776
+      FireLoop_16: 1611901422
+      FireLoop_7: 1151423365
+      FireLoop_8: -1095328460
+      FireLoop_32: 2020687840
+      FireLoop_29: -1495823288
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

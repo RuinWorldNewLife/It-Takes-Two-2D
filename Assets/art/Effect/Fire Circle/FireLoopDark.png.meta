@@ -1,0 +1,892 @@
+fileFormatVersion: 2
+guid: 4b446335b0ae44d44894eb3fb4f609dd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FireLoopDark_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1770.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31253795954ce024bb05c998cfd084dd
+      internalID: -1778608011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46e0e00bc261c840b35cdf964809a8b
+      internalID: 1761482622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b98f5d683f0b14e94f78ee42ceecd3
+      internalID: 1155927888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_3
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba2d444673d55e459a4c7a393fe81fe
+      internalID: 1459947715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_4
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8dc909dc040784e98a4af33520816f
+      internalID: -1968414962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_5
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea09cc1a8049428448cc20fcf3e68bec
+      internalID: -667215899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_6
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274cfacfbf8d1b24cb1f9815806f3ae5
+      internalID: -2049547067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_7
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1416.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded80417f7f71924481d372922905293
+      internalID: 820695440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc08a4a82ff764c4a85f91cb2b469541
+      internalID: 827546565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed85a6c8cf8cdd409d55eb48b66259e
+      internalID: 1849261113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_10
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d694938f9c601d14294bdcbdfdc63d8e
+      internalID: 1732705525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_11
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5267addb3abad848a30022d567b72c4
+      internalID: -1144315780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_12
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c316db0b2a2a80545829af7059cfecaf
+      internalID: 1581180706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_13
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e35e7c87567c904e896cd437595aaa3
+      internalID: 1768057046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_14
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1062.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0741c598c3fc5c74f954df3563d25fa8
+      internalID: -571617263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab078022664ca4447b337063a9c8dea2
+      internalID: 1234725133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed238ec5a2bee4e439f52e03f8f73b94
+      internalID: -135223764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_17
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643041153a31c35499a8fac72549a018
+      internalID: -2075268286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_18
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68dc596a5b689945800fc4d0a58b52b
+      internalID: 1700418048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_19
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2ca841bb0e09444ab329072b15cb36
+      internalID: -1732026677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_20
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335f37a93a726b6439cb9f0d7c0e6fa9
+      internalID: 2029342988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_21
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 708.8334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20e81ecfab10d3438d336ec70062193
+      internalID: -980942109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62caa0fab742205438c68d3a30b0a729
+      internalID: 1168584809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_23
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30a01390778ba44ba7f01e4e70dc183
+      internalID: -2013717726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_24
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e360667f31d6f46b76dfb585f17397
+      internalID: -1192529447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_25
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e02debe00e8fb44bd5b18d023e6d50
+      internalID: -428714953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_26
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9f62fb701bc464182b030086fc6a0b
+      internalID: -75849192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_27
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 354.83334
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c60738223f20204b8f4b130a93fc4eb
+      internalID: -375787839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41694e7bd3db89a409ece16054612880
+      internalID: 544083892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_29
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618acbec892933c4d99e5a806c16d2dd
+      internalID: -2074798223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_30
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a52a6342a2880e44a3589e505ea0fea
+      internalID: -1901449784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_31
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6435bb432e956bb43b32ea6cf439a354
+      internalID: -1880137652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_32
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e5963152fbedd45957142f2345c433
+      internalID: -1644099328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_33
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634fb213200aa4647bb134305f204bf2
+      internalID: -609833334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireLoopDark_34
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 0.8333435
+        width: 270
+        height: 354.16666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7921276ed137bbd43834ff2c8e77a6e7
+      internalID: 236056689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FireLoopDark_20: 2029342988
+      FireLoopDark_7: 820695440
+      FireLoopDark_12: 1581180706
+      FireLoopDark_18: 1700418048
+      FireLoopDark_28: 544083892
+      FireLoopDark_15: 1234725133
+      FireLoopDark_22: 1168584809
+      FireLoopDark_5: -667215899
+      FireLoopDark_27: -375787839
+      FireLoopDark_9: 1849261113
+      FireLoopDark_10: 1732705525
+      FireLoopDark_11: -1144315780
+      FireLoopDark_21: -980942109
+      FireLoopDark_1: 1761482622
+      FireLoopDark_4: -1968414962
+      FireLoopDark_17: -2075268286
+      FireLoopDark_32: -1644099328
+      FireLoopDark_0: -1778608011
+      FireLoopDark_33: -609833334
+      FireLoopDark_19: -1732026677
+      FireLoopDark_6: -2049547067
+      FireLoopDark_23: -2013717726
+      FireLoopDark_13: 1768057046
+      FireLoopDark_26: -75849192
+      FireLoopDark_25: -428714953
+      FireLoopDark_30: -1901449784
+      FireLoopDark_31: -1880137652
+      FireLoopDark_3: 1459947715
+      FireLoopDark_14: -571617263
+      FireLoopDark_2: 1155927888
+      FireLoopDark_34: 236056689
+      FireLoopDark_24: -1192529447
+      FireLoopDark_8: 827546565
+      FireLoopDark_29: -2074798223
+      FireLoopDark_16: -135223764
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
