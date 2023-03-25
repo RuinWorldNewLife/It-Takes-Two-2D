@@ -7,7 +7,7 @@ public class PlayerDashState : PlayerAbilityState
 {
     private int canDash;
     private float yPostion;
-    public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData,PlayerSelfData selfData, string animBoolName) : base(player, stateMachine, playerData,selfData, animBoolName)
     {
         canDash = 1;
     }
@@ -81,7 +81,7 @@ public class PlayerDashState : PlayerAbilityState
     }
     public bool CheckIfCanDash()
     {
-        if (canDash > 0 && playerData.ifHaveDashKey)
+        if (canDash > 0 && selfData.ifHaveDashKey)
         {
             return true;
         }

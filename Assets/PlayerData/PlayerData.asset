@@ -18,24 +18,24 @@ MonoBehaviour:
   circleRadius: 0.1
   idle2WinkTime: 5
   moveSpeed: 5
-  amountOfJump: 2
-  jumpSpeed: 20
-  jumpHoldOnSpeed: 15
-  jumpMinTime: 0.06
-  stopyJumpVerlocity: 0.5
+  amountOfJump: 1
+  jumpSpeed: 15
+  jumpHoldOnSpeed: 10
+  jumpMinTime: 0.03
+  stopyJumpVerlocity: 0.3
   airMoveSpeed: 5
   jump2StopVelocity: 5
   wallCheckDistance: 0.2
   variableJumpHeightMultiplier: 0.5
   WallSlideWaittingTime: 3
   wallSlideVelocity: 1.5
-  wallJumpVelocity: 15
+  wallJumpVelocity: 10
   wallJumpAngle: {x: 1, y: 2.5}
   wallJumpTime: 0.1
   wallHandleCD: 0.1
-  ifHaveWallKey: 1
+  ifHaveWallKey: 0
   dashTime: 0.2
-  ifHaveDashKey: 1
+  ifHaveDashKey: 0
   WindLayer:
     serializedVersion: 2
     m_Bits: 128

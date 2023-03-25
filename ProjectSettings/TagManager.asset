@@ -8,6 +8,7 @@ TagManager:
   - Wind
   - WindToFly
   - PlayerDark
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Player
   - WindToFly
   - PlayerDark
-  - 
+  - Key
   - 
   - 
   - 
@@ -59,6 +60,9 @@ TagManager:
     locked: 0
   - name: Wind
     uniqueID: 1404982891
+    locked: 0
+  - name: Key
+    uniqueID: 3987474689
     locked: 0
   - name: Player
     uniqueID: 559282045

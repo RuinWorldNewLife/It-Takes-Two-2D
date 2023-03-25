@@ -7,12 +7,23 @@ public class PlayerState
     protected Player player;
     protected PlayerStateMachine stateMachine;
     protected PlayerData playerData;
+    protected PlayerSelfData selfData;
 
     protected float startTime;
     protected bool isExitingState;
     protected bool isAnimationFinished;
 
     private string animBoolName;
+
+    public PlayerState(Player player, PlayerStateMachine stateMachine, PlayerData playerData,PlayerSelfData selfData, string animBoolName)
+    {
+        this.player = player;
+        this.stateMachine = stateMachine;
+        this.playerData = playerData;
+        this.selfData = selfData;
+        this.animBoolName = animBoolName;
+        
+    }
 
     public PlayerState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName)
     {

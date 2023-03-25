@@ -17,6 +17,7 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     
     public bool DashInput { get; private set; }
     public bool JumpInput { get; private set; }
+    public bool HandleInput { get; private set; }
     [SerializeField]
     private float inputHoldTime = 0.2f;
     private float jumpInputStartTime;
@@ -27,6 +28,7 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     {
         DashInput = false;
         JumpInput = false;
+        HandleInput = false;
         JumpInputStop = true;
         playerInput = GetComponent<PlayerInput>();
         cam = Camera.main;
@@ -82,6 +84,20 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
         {
             DashInput = true;
             dashInputStartTime = Time.time;
+        }
+    }
+
+    public void OnHandleInput(InputAction.CallbackContext context)
+    {
+        if (!photonView.IsMine)//如果正在操作的不是本身，则返回
+            return;
+        if(context.started)
+        {
+            HandleInput = true;
+        }
+        if (context.canceled)
+        {
+            HandleInput = false;
         }
     }
 

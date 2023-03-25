@@ -11,11 +11,12 @@ public class PlayerData : ScriptableObject
     [Header("步行")]
     public float moveSpeed;
     [Header("跳跃")]
-    public int amountOfJump;
+    
     public float jumpSpeed;
     public float jumpHoldOnSpeed;
     public float jumpMinTime;
     public float stopyJumpVerlocity;
+    
     [Header("空中")]
     public float airMoveSpeed;
     public float jump2StopVelocity;
@@ -28,10 +29,10 @@ public class PlayerData : ScriptableObject
     public Vector2 wallJumpAngle = new Vector2(1, 2);
     public float wallJumpTime;
     public float wallHandleCD;
-    public bool ifHaveWallKey;//是否有爬墙技能
+    
     [Header("闪避")]
     public float dashTime;
-    public bool ifHaveDashKey;//是否有闪避技能。
+    
     [Header("外界因素")]
     public LayerMask WindLayer;
     public LayerMask windToFlyLayer;

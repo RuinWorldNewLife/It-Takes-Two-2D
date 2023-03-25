@@ -6,10 +6,9 @@ public class PlayerJumpState : PlayerAbilityState
 {
     public int lastAmountOfJump;
 
-    public PlayerJumpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerJumpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, PlayerSelfData selfData, string animBoolName) : base(player, stateMachine, playerData, selfData, animBoolName)
     {
-
-        lastAmountOfJump = playerData.amountOfJump;
+        lastAmountOfJump = selfData.amountOfJump;
     }
 
     public override void DoChecks()

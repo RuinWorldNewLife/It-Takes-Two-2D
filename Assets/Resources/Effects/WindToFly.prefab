@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2098931259456731700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.4147, y: 5.475, z: 0}
-  m_LocalScale: {x: 2.1272116, y: 3.4031143, z: 0.7764221}
+  m_LocalScale: {x: 1.3753624, y: 2.273461, z: 0.50200075}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -130,7 +130,7 @@ MonoBehaviour:
   flySpeed: 3
   affectObjLayers:
     serializedVersion: 2
-    m_Bits: 1280
+    m_Bits: 1024
 --- !u!95 &983442116
 Animator:
   serializedVersion: 4

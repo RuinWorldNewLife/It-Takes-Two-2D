@@ -18,10 +18,6 @@ public class WindToFly : MonoBehaviour
     [SerializeField]
     private LayerMask affectObjLayers;
 
-    
-    //[SerializeField]
-    //private LayerMask affectObjLayersForDark;
-
 
     private Player player;
 
@@ -38,6 +34,7 @@ public class WindToFly : MonoBehaviour
         if (windCollider.IsTouchingLayers(affectObjLayers))
         {
             player = collision.gameObject.GetComponent<Player>();
+            player.isFly = true;//½øÈë·ÉµÄ×´Ì¬
             player.windToFlyDirection = facingDirection;
             if (facingDirection.x > 0)
             {
@@ -54,18 +51,7 @@ public class WindToFly : MonoBehaviour
                 }
             }
         }
-        //if (windCollider.IsTouchingLayers(affectObjLayersForDark))
-        //{
-        //    darkPlayer.windToFlyDirection = facingDirection;
-        //    if (facingDirection.x > 0)
-        //    {
-        //        darkPlayer.Anim.SetBool("Fly", true);
-        //    }
-        //    if (facingDirection.y > 0)
-        //    {
-        //        darkPlayer.Anim.SetBool("In Air", true);
-        //    }
-        //}
+        
 
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -73,6 +59,7 @@ public class WindToFly : MonoBehaviour
         if (windCollider.IsTouchingLayers(affectObjLayers))
         {
             player = collision.gameObject.GetComponent<Player>();
+            player.isFly = true;
             yVerlocity = player.CurrentVelocity.normalized.y;
 
             if (facingDirection.x != 0)
@@ -124,46 +111,7 @@ public class WindToFly : MonoBehaviour
                 }
             }
         }
-        //if (windCollider.IsTouchingLayers(affectObjLayersForDark))
-        //{
-        //    yVerlocity = darkPlayer.CurrentVelocity.normalized.y;
-        //    if (facingDirection.x != 0)
-        //    {
-        //        if (darkPlayer.FacingDirection != darkPlayer.windToFlyDirection.x)
-        //        {
-        //            darkPlayer.Flip();
-        //        }
-        //        if (!darkPlayer.isInJumpOrDashState)
-        //        {
-        //            darkPlayer.Anim.SetBool("In Air", false);
-        //            darkPlayer.Anim.SetBool("Fly", true);
-        //            darkPlayer.SetVelocityX(facingDirection.x * flySpeed);
-        //            darkPlayer.SetVelocityY((gameObject.transform.position.y - darkPlayer.transform.position.y) * toMidSpeed);
-        //        }
-        //        else if (darkPlayer.StateMachine.CurrentState != darkPlayer.DashState)
-        //        {
-        //            darkPlayer.Anim.SetBool("Fly", false);
-        //            darkPlayer.Anim.SetBool("In Air", true);
-        //        }
-        //    }
-        //    else if (facingDirection.y != 0)
-        //    {
-        //        darkPlayer.CheckIfShouldFlip(darkPlayer.InputHandler.NormInputX);
-
-        //        if (!darkPlayer.isInJumpOrDashState)
-        //        {
-        //            darkPlayer.Anim.SetBool("In Air", true);
-        //            darkPlayer.SetVelocityY(facingDirection.y * flySpeed);
-        //            darkPlayer.SetVelocityX((gameObject.transform.position.x - darkPlayer.transform.position.x) * toMidSpeed);
-        //            darkPlayer.Anim.SetFloat("yVerlocity", yVerlocity);
-        //        }
-        //        else if (darkPlayer.StateMachine.CurrentState == darkPlayer.DashState)
-        //        {
-        //            darkPlayer.Anim.SetBool("Fly", true);
-        //            darkPlayer.Anim.SetBool("In Air", false);
-        //        }
-        //    }
-        //}
+        
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

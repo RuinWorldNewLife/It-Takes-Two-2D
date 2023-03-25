@@ -19,10 +19,10 @@ public class PlayerExternalAffect : MonoBehaviour
         {
             player.isRotate = true;
         }
-        if (playerCollider.IsTouchingLayers(playerData.windToFlyLayer))
-        {
-            player.isFly = true;
-        }
+        //if (playerCollider.IsTouchingLayers(playerData.windToFlyLayer))//当玩家触碰到风时，进入飞的状态
+        //{
+        //    player.isFly = true;
+        //}
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -30,10 +30,10 @@ public class PlayerExternalAffect : MonoBehaviour
         {
             player.isRotate = true;
         }
-        if (playerCollider.IsTouchingLayers(playerData.windToFlyLayer))
-        {
-            player.isFly = true;
-        }
+        //if (playerCollider.IsTouchingLayers(playerData.windToFlyLayer))
+        //{
+        //    player.isFly = true;
+        //}
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

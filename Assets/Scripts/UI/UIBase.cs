@@ -128,7 +128,7 @@ public class UIBase : MonoBehaviourPunCallbacks, IPointerClickHandler
     }
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log(name + " Game Object Clicked!");
+        //Debug.Log(name + " Game Object Clicked!");
         MusicMgr.Instance.PlaySounds("click");
     }
 }

@@ -6,12 +6,13 @@ using Photon.Realtime;
 using Photon.Pun;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
-public class MainGameManager : Singleton<MainGameManager>
+public class MainSceneRoot : Singleton<MainSceneRoot>
 {
     GameObject player;
     bool isInited;//判断是否进入
     PhotonView windPhotonView;
-    
+    public Vector3 RedInitPos;
+    public Vector3 DarkInitPos;
 
     //Camera mainCamera;
     private void Awake()
@@ -24,14 +25,14 @@ public class MainGameManager : Singleton<MainGameManager>
         //设置成功加载玩家属性
         SetPlayerLoaded();
 
-        //定时生成风的方法
-        MonoHelper.Instance.InvokeReapeat(() =>
-        {
-            if (PhotonNetwork.IsMasterClient)
-            {
-                PhotonNetwork.Instantiate("wink", new Vector3(-4.63f, 11.82f, 0f), Quaternion.identity);
-            }
-        }, 6, () => { return false; });
+        ////定时生成风的方法
+        //MonoHelper.Instance.InvokeReapeat(() =>
+        //{
+        //    if (PhotonNetwork.IsMasterClient)
+        //    {
+        //        PhotonNetwork.Instantiate("wink", new Vector3(-4.63f, 11.82f, 0f), Quaternion.identity);
+        //    }
+        //}, 6, () => { return false; });
     }
     
     /// <summary>
@@ -117,12 +118,12 @@ public class MainGameManager : Singleton<MainGameManager>
         if (PhotonNetwork.IsMasterClient)
         {
             //生成网络对象
-            player = PhotonNetwork.Instantiate("PlayerRed", new Vector3(-4.22f, 0.79f, 0), Quaternion.identity);
+            player = PhotonNetwork.Instantiate("PlayerRed", RedInitPos, Quaternion.identity);
         }
         else
         {
             //生成网络对象
-            player = PhotonNetwork.Instantiate("PlayerDark", new Vector3(-1.66f, 0.82f, 0), Quaternion.identity);
+            player = PhotonNetwork.Instantiate("PlayerDark", DarkInitPos, Quaternion.identity);
         }
         //将玩家的名字中的克隆取出
         player.name = player.name.Replace("(Clone)", "");
