@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 4160
+  ifHaveWallKey: 0
+  ifHaveDashKey: 0
+  ifHaveJumpKey: 0
+  amountOfJump: 1

@@ -1,0 +1,848 @@
+fileFormatVersion: 2
+guid: cc46ae4c805784246b80e03999f8bb91
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RedBeamVertical_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3025
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e4c016f7b7ec541a6cb64bb894755c
+      internalID: -1125072621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_1
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 3025
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed06c31365ede704fa0cf13999040a3b
+      internalID: -278048150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_2
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 3025
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b30e750bb5ce474aa407f5694ec5e60
+      internalID: 1818261045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2750
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6c4ea197fc8af49a0b8ae66f32a834
+      internalID: 1697183552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_4
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 2750
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e3c037f4308f94db2f439755bcefd8
+      internalID: -1113090962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_5
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 2750
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b95e160c8a5974e8ece7afd6c86a6e
+      internalID: -2044732044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2475
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2e8fc016b62c34c9656b66430c10e4
+      internalID: -1851688545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_7
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 2475
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6be842561db594498b9b3aa7f01b0f
+      internalID: -1736673360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_8
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 2475
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd620443075e5b47a6639685ac8c1dc
+      internalID: 800818762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2200
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7052e713350af8c4284090cec93cfa82
+      internalID: 1052067582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_10
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 2200
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365170babf245324981067c7b6fa31e9
+      internalID: 1546619370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_11
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 2200
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92fbc6e657f895947be33d22a426b920
+      internalID: 139406625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1925
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e61ea68bb8e544f817c55d4f68d0bb
+      internalID: -1226015309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_13
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1925
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c121e339f01f4b54db051fd86c941f99
+      internalID: -1511097548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_14
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1925
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd9c0020b0cc954992c2b917f507eb6
+      internalID: 94145242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1650
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ec1e60cb5db5c4b8f207a9bb26eb6f
+      internalID: 2121950481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_16
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1650
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b223ae75d7b191439eeab926ba7cf61
+      internalID: 1559251446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_17
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1650
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71d09bd4ae69ea4c93f8f65abfd1ee8
+      internalID: -767167183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1375
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176f849df23c9dc4a8b2fd6f35c85cc3
+      internalID: -10327373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_19
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1375
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9465ee60e0ac43429f36fea600d4a0c
+      internalID: 488304775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_20
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1375
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66dc4b9c60004b74dbcd9281865d43ff
+      internalID: -787559207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1100
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60270e5f950cacd41aa51c4c86239938
+      internalID: -1817772566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_22
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1100
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9c4647c6ae36c4a873d1a8448ba443
+      internalID: 1496955539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_23
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1100
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f27d981f2c12234cb71247d7830943d
+      internalID: -1950453159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 825
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc2f2070edfd384a9c7cda19175809f
+      internalID: -2104713669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_25
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 825
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa86e0eef588b146a3c7b73580c6ead
+      internalID: 1970483938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_26
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 825
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2b19f8de0e9bc4286dadd32ec2498e
+      internalID: -1615732970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_27
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 550
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dff6fe7b8ff181408648fb69f15bb41
+      internalID: 1531466393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_28
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 550
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9830bda46ce903843862d66b592e9125
+      internalID: -1321202287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_29
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 275
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea13cd2fbc9c064a9c172be2225667b
+      internalID: -2105089444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_30
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 275
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bfb657958443e419b7cf2d84424aff
+      internalID: -1874290426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_31
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 0
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6a2a12a3e4b9147984f3b1d11eaafa
+      internalID: 118524694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedBeamVertical_32
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 0
+        width: 472
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab5da4721e3cbb478bd7192586bfb96
+      internalID: 1341038339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RedBeamVertical_32: 1341038339
+      RedBeamVertical_31: 118524694
+      RedBeamVertical_1: -278048150
+      RedBeamVertical_11: 139406625
+      RedBeamVertical_3: 1697183552
+      RedBeamVertical_16: 1559251446
+      RedBeamVertical_18: -10327373
+      RedBeamVertical_25: 1970483938
+      RedBeamVertical_21: -1817772566
+      RedBeamVertical_17: -767167183
+      RedBeamVertical_23: -1950453159
+      RedBeamVertical_12: -1226015309
+      RedBeamVertical_27: 1531466393
+      RedBeamVertical_2: 1818261045
+      RedBeamVertical_5: -2044732044
+      RedBeamVertical_15: 2121950481
+      RedBeamVertical_22: 1496955539
+      RedBeamVertical_4: -1113090962
+      RedBeamVertical_7: -1736673360
+      RedBeamVertical_19: 488304775
+      RedBeamVertical_14: 94145242
+      RedBeamVertical_24: -2104713669
+      RedBeamVertical_0: -1125072621
+      RedBeamVertical_20: -787559207
+      RedBeamVertical_30: -1874290426
+      RedBeamVertical_29: -2105089444
+      RedBeamVertical_8: 800818762
+      RedBeamVertical_6: -1851688545
+      RedBeamVertical_13: -1511097548
+      RedBeamVertical_10: 1546619370
+      RedBeamVertical_26: -1615732970
+      RedBeamVertical_9: 1052067582
+      RedBeamVertical_28: -1321202287
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

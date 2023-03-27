@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class Wind : MonoBehaviour
 {
-    [SerializeField]
-    Vector2 WindDirection;
+    
+    public Vector2 windDirection;
     [SerializeField]
     private float WindVelocity;
     private Collider2D windCollider;
@@ -43,7 +43,7 @@ public class Wind : MonoBehaviour
     }
     private void Update()
     {
-        transform.Translate(new Vector3(WindDirection.x, WindDirection.y, 0) * WindVelocity * Time.deltaTime);
+        transform.Translate(new Vector3(windDirection.x, windDirection.y, 0) * WindVelocity * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

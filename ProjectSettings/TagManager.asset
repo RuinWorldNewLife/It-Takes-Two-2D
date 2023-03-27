@@ -9,6 +9,7 @@ TagManager:
   - WindToFly
   - PlayerDark
   - Key
+  - MobilePlat
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - WindToFly
   - PlayerDark
   - Key
-  - 
+  - MobilePlat
   - 
   - 
   - 
@@ -46,23 +47,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: BackGroundTree
-    uniqueID: 1814818759
-    locked: 0
-  - name: Gizmos
+  - name: GizmosBack
     uniqueID: 3706859275
+    locked: 0
+  - name: InteractiveObjBack
+    uniqueID: 1404982891
     locked: 0
   - name: Wall
     uniqueID: 2206886031
     locked: 0
+  - name: InteractiveObjForward
+    uniqueID: 3370017103
+    locked: 0
   - name: GizmosForward
     uniqueID: 2089218053
-    locked: 0
-  - name: Wind
-    uniqueID: 1404982891
-    locked: 0
-  - name: Key
-    uniqueID: 3987474689
     locked: 0
   - name: Player
     uniqueID: 559282045
