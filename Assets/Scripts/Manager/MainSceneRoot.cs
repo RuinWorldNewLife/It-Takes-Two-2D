@@ -11,10 +11,20 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
     GameObject player;
     bool isInited;//判断是否进入
     PhotonView windPhotonView;
-    public Vector3 RedInitPos;
-    public Vector3 DarkInitPos;
 
-    //Camera mainCamera;
+    [Header("使用第几个玩家生成位置")]
+    public int index;
+
+    Vector3 RedInitPos;
+    Vector3 DarkInitPos;
+
+    //玩家生成位置的存储结构体
+    public struct CharacterStartPos
+    {
+        public Vector3 RedInitPos;
+        public Vector3 DarkInitPos;
+    }
+
     private void Awake()
     {
         isInited = false;
@@ -22,19 +32,52 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
     }
     private void Start()
     {
+        //第一个生成位置
+        CharacterStartPos Pos1 = new CharacterStartPos();
+        Pos1.RedInitPos = new Vector3(-3.71f, 0.34f, 0f);
+        Pos1.DarkInitPos = new Vector3(-2.46f, 0.33f, 0f);
+
+        //第二个生成位置
+        CharacterStartPos Pos2 = new CharacterStartPos();
+        Pos2.RedInitPos = new Vector3(26.8f, 4.11f, 0f);
+        Pos2.DarkInitPos = new Vector3(28.3f, 4.11f, 0f);
+
+        //第三个生成位置
+        CharacterStartPos Pos3 = new CharacterStartPos();
+        Pos3.RedInitPos = new Vector3(67.88f, 5.07f, 0f);
+        Pos3.DarkInitPos = new Vector3(69.26f, 5.07f, 0f);
+
+        switch (index)
+        {
+            case 1:
+                RedInitPos = Pos1.RedInitPos;
+                DarkInitPos = Pos1.DarkInitPos;
+                break;
+            case 2:
+                RedInitPos = Pos2.RedInitPos;
+                DarkInitPos = Pos2.DarkInitPos;
+                break;
+            case 3:
+                RedInitPos = Pos3.RedInitPos;
+                DarkInitPos = Pos3.DarkInitPos;
+                break;
+            default:
+                break;
+        }
+
         //设置成功加载玩家属性
         SetPlayerLoaded();
 
-        ////定时生成风的方法
-        //MonoHelper.Instance.InvokeReapeat(() =>
-        //{
-        //    if (PhotonNetwork.IsMasterClient)
-        //    {
-        //        PhotonNetwork.Instantiate("wink", new Vector3(-4.63f, 11.82f, 0f), Quaternion.identity);
-        //    }
-        //}, 6, () => { return false; });
+        //定时生成风的方法
+        MonoHelper.Instance.InvokeReapeat(() =>
+        {
+            if (PhotonNetwork.IsMasterClient)
+            {
+                PhotonNetwork.Instantiate("winkHorizontal", new Vector3(67.28f, 1.97f, 0f), Quaternion.identity);
+            }
+        }, 6, () => { return false; });
     }
-    
+
     /// <summary>
     /// 设置当前玩家已经加载场景成功。
     /// </summary>
@@ -106,9 +149,9 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
         catch (System.Exception)
         {
         }
-        
+
     }
-    
+
     //将角色加载进入场景
     private void InitHero()
     {
@@ -128,6 +171,6 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
         //将玩家的名字中的克隆取出
         player.name = player.name.Replace("(Clone)", "");
 
-        
+
     }
 }

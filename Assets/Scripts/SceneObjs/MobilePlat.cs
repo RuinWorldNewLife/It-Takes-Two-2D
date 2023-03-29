@@ -42,7 +42,7 @@ public class MobilePlat : MonoBehaviour
         startTF = transform.GetChild(0);
         endTF = transform.GetChild(1);
         //初始化判断移动平台上升或者下降。
-        if(startTF.position.y < endTF.position.y)
+        if (startTF.position.y < endTF.position.y)
         {
             trueUpFalseDown = true;
         }
@@ -51,7 +51,7 @@ public class MobilePlat : MonoBehaviour
             trueUpFalseDown = false;
         }
         StaticData.buttonOneNum = 0;
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -95,7 +95,7 @@ public class MobilePlat : MonoBehaviour
             else//当按钮已经按到底，执行平台移动方法
             {
                 //判断平台应该上升还是下降，true为上升，flase为下降。
-                if(trueUpFalseDown)
+                if (trueUpFalseDown)
                 {
                     if (platTransform.position.y >= endTF.position.y) return;//如果平台高度达到最高，则返回
                                                                              //平台向上升
@@ -107,7 +107,7 @@ public class MobilePlat : MonoBehaviour
                                                                              //平台向下降
                     platTransform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
                 }
-                
+
             }
         }
     }

@@ -59,9 +59,9 @@ TagManager:
   - name: InteractiveObjForward
     uniqueID: 3370017103
     locked: 0
-  - name: GizmosForward
-    uniqueID: 2089218053
-    locked: 0
   - name: Player
     uniqueID: 559282045
+    locked: 0
+  - name: GizmosForward
+    uniqueID: 2089218053
     locked: 0

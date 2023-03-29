@@ -16,6 +16,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4160
   ifHaveWallKey: 0
-  ifHaveDashKey: 0
+  ifHaveDashKey: 1
   ifHaveJumpKey: 0
   amountOfJump: 1

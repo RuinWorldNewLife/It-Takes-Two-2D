@@ -34,6 +34,7 @@ public class PlayerFlyState : PlayerInExternalState
         base.LogicUpdate();
         if (!isExitingState)
         {
+            //在飞行的过程中，可以转换状态
             if (player.InputHandler.JumpInput && player.JumpState.CanJump())
             {
                 player.isInJumpOrDashState = true;
@@ -44,30 +45,32 @@ public class PlayerFlyState : PlayerInExternalState
                 player.isInJumpOrDashState = true;
                 stateMachine.ChangeState(player.DashState);
             }
+            //如果玩家飞出了光柱范围
             if (!player.isFly)
             {
                 if (player.IsMinePlayer)
                 {
-                    player.Anim.SetBool("In Air", true);
+                    player.Anim.SetBool("In Air", true);//将动画设置为在空中。
                 }
-                if (player.windToFlyDirection.y > 0f)
+                if (player.windToFlyDirection.y > 0f)//如果飞行方向是向上飞
                 {
-                    player.CheckIfShouldFlip(xInput);
+                    player.CheckIfShouldFlip(xInput);//可以翻转方向。
                     if (player.IsMinePlayer)
                     {
                         player.Anim.SetFloat("yVerlocity", player.CurrentVelocity.y);
                     }
-                    player.SetVelocityX(playerData.airMoveSpeed * xInput);
+                    player.SetVelocityX(playerData.airMoveSpeed * xInput);//可以左右移动
                 }
-                else
+                else//如果不是向上飞，则是向左右飞。
                 {
                     if (player.IsMinePlayer)
                     {
                         player.Anim.SetBool("Fly", false);
                         player.Anim.SetFloat("yVerlocity", player.CurrentVelocity.y);
                     }
-                    player.RB.gravityScale = playerData.gravityValue;
+                    player.RB.gravityScale = playerData.gravityValue;//还原重力
                 }
+                //经过一段时间后，玩家切换到空中状态
                 if (Time.time > (player.exitWindToFlyTime + player.exitWindToFlyStartTime))
                 {
                     stateMachine.ChangeState(player.InAirState);

@@ -31,7 +31,7 @@ public class WindToFly : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (windCollider.IsTouchingLayers(affectObjLayers))
+        if ((1 << collision.gameObject.layer) == affectObjLayers.value)
         {
             player = collision.gameObject.GetComponent<Player>();
             player.isFly = true;//½øÈë·ÉµÄ×´Ì¬
@@ -56,7 +56,7 @@ public class WindToFly : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (windCollider.IsTouchingLayers(affectObjLayers))
+        if ((1 << collision.gameObject.layer) == affectObjLayers.value)
         {
             player = collision.gameObject.GetComponent<Player>();
             player.isFly = true;

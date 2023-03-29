@@ -18,4 +18,4 @@ MonoBehaviour:
   ifHaveWallKey: 0
   ifHaveDashKey: 0
   ifHaveJumpKey: 0
-  amountOfJump: 0
+  amountOfJump: 1
