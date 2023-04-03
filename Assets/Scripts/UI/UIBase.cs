@@ -16,14 +16,7 @@ public class UIBase : MonoBehaviourPunCallbacks, IPointerClickHandler
     protected CanvasGroup canvasGroup;
     protected GraphicRaycaster graphicRaycaster;
     protected Coroutine coroutine;
-    //protected Button Btn;
-    //public int id; 
-    //private Button btnLevel;
-    //public Button BtnLevel
-    //{
-    //get { return btnLevel ?? GetComponent<Button>();}
-    //}
-    //public event Action<int> onLevelButtonOnClick;
+    
     private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -46,6 +39,8 @@ public class UIBase : MonoBehaviourPunCallbacks, IPointerClickHandler
     /// </summary>
     public virtual void DoOnStart()
     {
+        if (graphicRaycaster != null)
+            graphicRaycaster.enabled = true; //检测开始
         //Debug.Log("进来");
         if (canvasGroup != null)
             canvasGroup.interactable = true; //交互开始
@@ -61,9 +56,6 @@ public class UIBase : MonoBehaviourPunCallbacks, IPointerClickHandler
     /// </summary>
     public virtual void DoOnPause()
     {
-        //事件交互关闭
-        //canvasGroup.interactable = false; //不去交互
-        //canvasGroup.blocksRaycasts = false; //不去检测射线
         if (graphicRaycaster != null)
             graphicRaycaster.enabled = false; //检测关闭
     }
@@ -86,10 +78,14 @@ public class UIBase : MonoBehaviourPunCallbacks, IPointerClickHandler
     {
         if (canvasGroup != null)
             canvasGroup.interactable = false; //不去交互
+        if (coroutine != null)
+            StopCoroutine(coroutine);
 
         coroutine = StartCoroutine(UpdateAlphaHide()); //透明
         if (canvasGroup != null)
             canvasGroup.blocksRaycasts = false; //不去检测射线
+        if (graphicRaycaster != null)
+            graphicRaycaster.enabled = false; //检测关闭
     }
 
     //显示
@@ -106,8 +102,13 @@ public class UIBase : MonoBehaviourPunCallbacks, IPointerClickHandler
             canvasGroup.interactable = true; //交互开始
             canvasGroup.blocksRaycasts = true; //检测射线
             if (graphicRaycaster != null)
+            {
+
                 graphicRaycaster.enabled = true; //检测开始
+            }
+            
         }
+        coroutine = null;
     }
 
     //隐藏
@@ -125,6 +126,7 @@ public class UIBase : MonoBehaviourPunCallbacks, IPointerClickHandler
                 canvasGroup.alpha -= Time.deltaTime;
             } while (canvasGroup.alpha > 0);
         }
+        coroutine = null;
     }
     public virtual void OnPointerClick(PointerEventData eventData)
     {

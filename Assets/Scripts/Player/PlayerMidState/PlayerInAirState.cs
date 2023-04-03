@@ -138,12 +138,15 @@ public class PlayerInAirState : PlayerState
     }
     private void CheckCoyoteTime()
     {
+       
         if (IsCoyote && Time.time > startTime + playerData.coyoteTime)
         {
-            player.JumpState.lastAmountOfJump--;
+            player.JumpState.lastAmountOfJump--; //当土狼时间开启，且进入空中状态的时间加上土狼时间小于当前时间，
+            //Debug.Log("土狼时间执行，当前剩余跳跃次数为：" + player.JumpState.lastAmountOfJump);
             IsCoyote = false;
         }
     }
+    //开启土狼时间
     public void StartCoyoteTime()
     {
         IsCoyote = true;

@@ -9,6 +9,10 @@ public class PlayerInExternalState : PlayerState
     {
     }
 
+    public PlayerInExternalState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, PlayerSelfData selfData, string animBoolName) : base(player, stateMachine, playerData, selfData, animBoolName)
+    {
+    }
+
     public override void AnimationFinishTrigger()
     {
         base.AnimationFinishTrigger();

@@ -51,7 +51,11 @@ public class MobilePlat : MonoBehaviour
             trueUpFalseDown = false;
         }
         StaticData.buttonOneNum = 0;
-
+        StaticData.buttonTwoNum = 0;
+        StaticData.buttonThreeNum = 0;
+        StaticData.buttonFourNum = 0;
+        StaticData.buttonFiveNum = 0;
+        StaticData.buttonSixNum = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -71,6 +75,18 @@ public class MobilePlat : MonoBehaviour
                     break;
                 case 3:
                     StaticData.buttonThreeNum++;//每次有玩家站在平台上，让按钮一上的玩家数量自增。
+                    //if (StaticData.buttonThreeNum > 0) return;//如果按钮上的玩家数量大于0，则返回。
+                    break;
+                case 4:
+                    StaticData.buttonFourNum++;//每次有玩家站在平台上，让按钮一上的玩家数量自增。
+                    //if (StaticData.buttonThreeNum > 0) return;//如果按钮上的玩家数量大于0，则返回。
+                    break;
+                case 5:
+                    StaticData.buttonFiveNum++;//每次有玩家站在平台上，让按钮一上的玩家数量自增。
+                    //if (StaticData.buttonThreeNum > 0) return;//如果按钮上的玩家数量大于0，则返回。
+                    break;
+                case 6:
+                    StaticData.buttonSixNum++;//每次有玩家站在平台上，让按钮一上的玩家数量自增。
                     //if (StaticData.buttonThreeNum > 0) return;//如果按钮上的玩家数量大于0，则返回。
                     break;
                 default:
@@ -127,6 +143,18 @@ public class MobilePlat : MonoBehaviour
             case 3:
                 StaticData.buttonThreeNum--;
                 if (StaticData.buttonThreeNum > 0) return;//如果按钮上的玩家数量大于0，则返回。
+                break;
+            case 4:
+                StaticData.buttonFourNum--;
+                if (StaticData.buttonFourNum > 0) return;//如果按钮上的玩家数量大于0，则返回。
+                break;
+            case 5:
+                StaticData.buttonFiveNum--;
+                if (StaticData.buttonFiveNum > 0) return;//如果按钮上的玩家数量大于0，则返回。
+                break;
+            case 6:
+                StaticData.buttonSixNum--;
+                if (StaticData.buttonSixNum > 0) return;//如果按钮上的玩家数量大于0，则返回。
                 break;
             default:
                 break;

@@ -37,6 +37,9 @@ public class ButtonWindToFly : MonoBehaviour
         StaticData.buttonOneNum = 0;
         StaticData.buttonTwoNum = 0;
         StaticData.buttonThreeNum = 0;
+        StaticData.buttonFourNum = 0;
+        StaticData.buttonFiveNum = 0;
+        StaticData.buttonSixNum = 0;
 
         windToFlyTF = transform.GetChild(1);//拿到第三个光柱子物体
         photonView.RPC("SetWindToFlyActive", RpcTarget.Others, false);

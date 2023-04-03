@@ -14,7 +14,7 @@ public class UIStart : UIBase
     private void Start()
     {
         PhotonNetwork.ConnectUsingSettings();//连接到网络
-        PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.AutomaticallySyncScene = true;//同步主机场景层级。
     }
     public override void OnConnectedToMaster()
     {

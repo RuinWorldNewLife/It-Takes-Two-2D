@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class PlayerFlyState : PlayerInExternalState
 {
-    public PlayerFlyState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerFlyState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, PlayerSelfData selfData, string animBoolName) : base(player, stateMachine, playerData, selfData, animBoolName)
     {
     }
 
@@ -20,6 +20,14 @@ public class PlayerFlyState : PlayerInExternalState
         player.SetGravityScaleFun(0, RpcTarget.Others);//将重力缩放设置为0
         player.RB.gravityScale = 0f;
         player.Anim.SetBool("idle", false);
+        if(selfData.ifHaveDashKey)//如果角色有闪避能力，恢复闪避次数；
+        {
+            player.DashState.CanDash();
+        }
+        if (selfData.ifHaveJumpKey)//如果角色有跳跃能力，将它剩余的跳跃次数置为1；
+        {
+            player.JumpState.lastAmountOfJump = 1;
+        }
     }
 
     public override void Exit()

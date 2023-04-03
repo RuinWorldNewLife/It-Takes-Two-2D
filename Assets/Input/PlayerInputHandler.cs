@@ -18,6 +18,8 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     public bool DashInput { get; private set; }
     public bool JumpInput { get; private set; }
     public bool HandleInput { get; private set; }
+    //设置能否控制角色的变量
+    public bool CanControl { get; private set; }
     [SerializeField]
     private float inputHoldTime = 0.2f;
     private float jumpInputStartTime;
@@ -26,6 +28,7 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     private float dashInputStartTime;
     private void Start()
     {
+        CanControl = true;//初始化角色可以控制
         DashInput = false;
         JumpInput = false;
         HandleInput = false;
@@ -43,6 +46,13 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     {
         if (!photonView.IsMine)//如果正在操作的不是本身，则返回
             return;
+        if (!CanControl) //如果不能控制，则返回
+        {
+            NormInputX = 0;
+            NormInputY = 0;
+            return;
+        }
+            
         Movement = context.ReadValue<Vector2>();
         if (Mathf.Abs(Movement.x) > 0.5f)
         {
@@ -65,6 +75,8 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     {
         if (!photonView.IsMine)//如果正在操作的不是本身，则返回
             return;
+        if (!CanControl)//如果不能控制，则返回
+            return;
         if (context.started)
         {
             JumpInput = true;
@@ -80,6 +92,8 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     {
         if (!photonView.IsMine)//如果正在操作的不是本身，则返回
             return;
+        if (!CanControl)//如果不能控制，则返回
+            return;
         if (context.started)
         {
             DashInput = true;
@@ -91,7 +105,9 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     {
         if (!photonView.IsMine)//如果正在操作的不是本身，则返回
             return;
-        if(context.started)
+        if (!CanControl)//如果不能控制，则返回
+            return;
+        if (context.started)
         {
             HandleInput = true;
         }
@@ -117,5 +133,11 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
             DashInput = false;
         }
     }
-    
+    /// <summary>
+    /// 角色停止控制方法，true为可控制，false为不可控制
+    /// </summary>
+    public void ControlHandler(bool controlHandle)
+    {
+        CanControl = controlHandle;
+    }
 }

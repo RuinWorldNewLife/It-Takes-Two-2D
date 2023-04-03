@@ -6,6 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.EventSystems;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour, IPunObservable
 {
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour, IPunObservable
     private Vector2 workspace;
     private Vector3 posPlayerClone;
     private Transform handleTF;//handle子物体
+
     public bool IsMinePlayer { get;private set; }
     private bool updateInvokeAvoid;//避免多次执行协程
 
@@ -91,9 +93,9 @@ public class Player : MonoBehaviour, IPunObservable
         wallHandleState = new WallHandleState(this, StateMachine, playerData, "wallHandle");
         wallSlideState = new WallSlide(this, StateMachine, playerData, "wallSlide");
         wallJumpState = new WallJumpState(this, StateMachine, playerData,playerSelfData, "In Air");
-        RotateState = new PlayerRotateState(this, StateMachine, playerData, "Rotate");
+        RotateState = new PlayerRotateState(this, StateMachine, playerData, playerSelfData, "Rotate");
         DashState = new PlayerDashState(this, StateMachine, playerData, playerSelfData, "Fly");
-        FlyState = new PlayerFlyState(this, StateMachine, playerData, "idle");
+        FlyState = new PlayerFlyState(this, StateMachine, playerData, playerSelfData, "idle");
         JumpPlatState = new PlayerJumpPlatState(this, StateMachine, playerData, "In Air");
     }
 
@@ -116,17 +118,19 @@ public class Player : MonoBehaviour, IPunObservable
         isRotate = false;
         isInJumpOrDashState = false;
         updateInvokeAvoid = true;
-        playerSelfData.ifHaveDashKey = false;//初始化是否拥有闪避钥匙。
-        playerSelfData.ifHaveWallKey = false;//初始化是否拥有爬墙技能。
-        playerSelfData.ifHaveJumpKey = false;//初始化是否拥有连跳技能。
-        preHandleInput = false;//初始化上一帧handle输入。
-        playerSelfData.amountOfJump = 1;//初始化能够跳跃一次。
+        //playerSelfData.ifHaveDashKey = false;//初始化是否拥有闪避钥匙。
+        //playerSelfData.ifHaveWallKey = false;//初始化是否拥有爬墙技能。
+        //playerSelfData.ifHaveJumpKey = false;//初始化是否拥有连跳技能。
+        //preHandleInput = false;//初始化上一帧handle输入。
+        //playerSelfData.amountOfJump = 1;//初始化能够跳跃一次。
         IsMinePlayer = photonView.IsMine;//判断当前角色是否为本身。
         RB.gravityScale = playerData.gravityValue;
         exitWindToFlyTime = playerData.exitWindToFlyTime;
         //将PhotonNetWork的通讯速率改为每帧60秒
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 60;
+
+        //Debug.Log("黑色的身份是否正确：" + (playerSelfData.selfIdentity == LayerMask.GetMask("PlayerDark")));
     }
     
 
@@ -160,6 +164,7 @@ public class Player : MonoBehaviour, IPunObservable
     #endregion
 
     #region 联网RPC方法
+    
     /// <summary>
     /// 相机跟随方法
     /// </summary>
@@ -366,6 +371,60 @@ public class Player : MonoBehaviour, IPunObservable
         {
             posPlayerClone = (Vector3)stream.ReceiveNext();
         }
+    }
+    /// <summary>
+    /// 重新在保存点开始
+    /// </summary>
+    public void Restart()
+    {
+        photonView.RPC("RPCRestart", RpcTarget.All);
+    }
+    [PunRPC]
+    public void RPCUIPop()
+    {
+        UIManager.Instance.PopUI();
+    }
+    [PunRPC]
+    public void RPCRestart()
+    {
+        //////根据不同角色，分配不同位置，并且设置可以控制角色。
+        //if (playerSelfData.selfIdentity == LayerMask.GetMask("PlayerDark"))
+        //{
+        //    transform.position = MainSceneRoot.Instance.DarkInitPos;
+        //    InputHandler.ControlHandler(true);
+        //}
+        //else
+        //{
+        //    transform.position = MainSceneRoot.Instance.RedInitPos;
+        //    InputHandler.ControlHandler(true);
+        //}
+        //重新加载本场景
+        SceneMgr.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Dead()
+    {
+        photonView.RPC("RPCDead", RpcTarget.All);
+    }
+    /// <summary>
+    /// 角色死亡方法。
+    /// </summary>
+    [PunRPC]
+    public void RPCDead()
+    {
+        RB.velocity = Vector3.zero;//将速度设置为0
+        InputHandler.ControlHandler(false);//设置角色不可控制
+        //Debug.Log("执行！！！！！");
+        UIManager.Instance.PushUI("UIEndGame");
+    }
+
+    public void playerDataClear()
+    {
+        playerSelfData.ifHaveDashKey = false;//初始化是否拥有闪避钥匙。
+        playerSelfData.ifHaveWallKey = false;//初始化是否拥有爬墙技能。
+        playerSelfData.ifHaveJumpKey = false;//初始化是否拥有连跳技能。
+        preHandleInput = false;//初始化上一帧handle输入。
+        playerSelfData.amountOfJump = 1;//初始化能够跳跃一次。
     }
     #endregion
 }

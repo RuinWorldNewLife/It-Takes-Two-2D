@@ -15,10 +15,17 @@ public class PlayerExternalAffect : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(playerCollider.IsTouchingLayers(playerData.WindLayer))
+        try
         {
-            player.isRotate = true;
+            if (playerCollider.IsTouchingLayers(playerData.WindLayer))
+            {
+                player.isRotate = true;
+            }
         }
+        catch (System.Exception)
+        {
+        }
+        
         //if (playerCollider.IsTouchingLayers(playerData.windToFlyLayer))//当玩家触碰到风时，进入飞的状态
         //{
         //    player.isFly = true;

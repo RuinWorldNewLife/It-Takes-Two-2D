@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
 
 /// <summary>
 /// 脚本功能: 控制场景跳转
@@ -28,6 +29,9 @@ public class SceneMgr : Singleton<SceneMgr>
     /// <exception cref="NotImplementedException"></exception>
     private void OnSceneUnLoad(Scene arg0)
 	{
+		DOTween.KillAll();//在场景卸载之前，杀死所有动画。
+        
+        
 		// Debug.Log("场景中所有对象已经被销毁，即将卸载场景......");
 		//Debug.Log("<color=#00ff00>代码来到这里说明场景中所有的对象都被卸载，这里你需要做的是保存一些数据，最后想做的事放到这里来</color>");
 	}
@@ -49,7 +53,6 @@ public class SceneMgr : Singleton<SceneMgr>
 				break;
 			case "SampleScene":
 				// 初始化UIManager栈区和字典
-				UIManager.Instance.PushUI("UIGameStart");
 				MusicMgr.Instance.PlayBgm("sairai");
 				// Debug.Log("场景跳转初始化");
 				break;
@@ -77,5 +80,25 @@ public class SceneMgr : Singleton<SceneMgr>
     public void LoadScene(int buildIndex)
     {
         PhotonNetwork.LoadLevel(buildIndex);
+    }
+	/// <summary>
+	/// 当离开房间，加载第一个场景。
+	/// </summary>
+    public override void OnLeftRoom()
+    {
+        if (MainSceneRoot.Instance != null)//如果场景中有这个单例存在，那么执行他清除数据的方法。
+        {
+            MainSceneRoot.Instance.PlayerDataClear();
+        }
+        LoadScene(0);
+    }
+    public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
+    {
+        PhotonNetwork.AutomaticallySyncScene = false;//取消同步主机场景层级。
+        if (PhotonNetwork.InRoom)
+        {
+            Debug.Log("离开房间");
+            PhotonNetwork.LeaveRoom();
+        }
     }
 }
