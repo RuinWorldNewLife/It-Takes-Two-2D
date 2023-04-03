@@ -72,7 +72,7 @@ public class ButtonToWind : MonoBehaviour
                 {
                     GameObject wind = PhotonNetwork.Instantiate(windToBorn, windBornTF.position, Quaternion.identity);
                 }
-            }, 6, () => { return false; });
+            }, 4, () => { return false; });
         }
     }
 

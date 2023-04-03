@@ -23,6 +23,10 @@ public class JumpAbilityKey : MonoBehaviour
                 return;
             }//检查是否拥有钥匙，如果拥有，则返回
             player.SetTouchingJumpKey();
+            if (player.CheckIfIsMine())//检查是否是自己
+            {
+                UIManager.Instance.PushUI("UIDoubleJumpAbility");
+            }
             Destroy(gameObject, 0.2f);
         }
     }

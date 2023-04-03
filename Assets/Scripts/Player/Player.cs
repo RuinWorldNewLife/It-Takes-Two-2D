@@ -221,6 +221,11 @@ public class Player : MonoBehaviour, IPunObservable
     #endregion
 
     #region ¼ì²é·½·¨
+    public bool CheckIfIsMine()
+    {
+        return photonView.IsMine;
+    }
+
     public bool CheckIfIsGrounded()
     {
         return Physics2D.OverlapCircle(

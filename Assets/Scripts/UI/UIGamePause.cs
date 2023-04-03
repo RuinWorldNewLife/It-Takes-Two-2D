@@ -50,7 +50,7 @@ public class UIGamePause : UIBase
     {
         if (PhotonNetwork.InRoom)
         {
-            Debug.Log("离开房间");
+            //Debug.Log("离开房间");
             PhotonNetwork.LeaveRoom();
         }
     }

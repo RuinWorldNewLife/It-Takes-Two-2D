@@ -31,4 +31,11 @@ public class UIStart : UIBase
     {
         UIManager.Instance.PushUI(uiName);
     }
+    /// <summary>
+    /// 退出游戏
+    /// </summary>
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

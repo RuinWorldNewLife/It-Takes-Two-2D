@@ -63,8 +63,8 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
 
         //第二个生成位置
         CharacterStartPos Pos2 = new CharacterStartPos();
-        Pos2.RedInitPos = new Vector3(28f, 5f, 0f);
-        Pos2.DarkInitPos = new Vector3(26.81f, 5f, 0f);
+        Pos2.RedInitPos = new Vector3(41f, 0.27f, 0f); 
+        Pos2.DarkInitPos = new Vector3(41f, 5f, 0f);
 
         //第三个生成位置
         CharacterStartPos Pos3 = new CharacterStartPos();
