@@ -20,6 +20,13 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
     [SerializeField]
     private SceneData sceneData;//场景数据
 
+    private struct KeyPos
+    {
+        public Vector3 dashKeyPos;
+        public Vector3 jumpKeyPos;
+        public Vector3 wallClimbPos;
+    }
+    KeyPos keyPos;
     //玩家生成位置的存储结构体
     public struct CharacterStartPos
     {
@@ -31,12 +38,18 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
     {
         isInited = false;
         windPhotonView = GetComponent<PhotonView>();
+        //存储各种钥匙的生成位置。
+        keyPos = new KeyPos();
+        keyPos.dashKeyPos = new Vector3(9.54f, 1.62f, 0);
+        keyPos.jumpKeyPos = new Vector3(69.17f, 5.08f, 0);
+        keyPos.wallClimbPos = new Vector3(111.31f, 4.31f, 0);
     }
 
     
     private void Start()
     {
         SetBornPos();//初始化
+        SetKeyBorn();//初始化钥匙
         //设置成功加载玩家属性
         SetPlayerLoaded();
 
@@ -48,7 +61,28 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
                 PhotonNetwork.Instantiate("winkHorizontal", new Vector3(67.28f, 1.97f, 0f), Quaternion.identity);
             }
         }, 6, () => { return false; });
-        
+    }
+    /// <summary>
+    /// 初始化能力钥匙获取
+    /// </summary>
+    public void SetKeyBorn()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            //如果玩家没有拿到对应的钥匙，那么在重生场景的时候就生成对应钥匙。
+            if (!sceneData.haveDashKey)
+            {
+                PhotonNetwork.Instantiate("DashAbilityKey", keyPos.dashKeyPos, Quaternion.identity);
+            }
+            if (!sceneData.haveJumpKey)
+            {
+                PhotonNetwork.Instantiate("JumpAbilityKey", keyPos.jumpKeyPos, Quaternion.identity);
+            }
+            if (!sceneData.haveWallClimbKey)
+            {
+                PhotonNetwork.Instantiate("WallAbilityKey", keyPos.wallClimbPos, Quaternion.identity);
+            }
+        }
     }
 
     /// <summary>
@@ -167,7 +201,6 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
     //将角色加载进入场景
     private void InitHero()
     {
-
         //如果角色进入场景，则将判断设置为true
         isInited = true;
         if (PhotonNetwork.IsMasterClient)
@@ -203,6 +236,15 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
         catch (System.Exception)
         {
         }
-        
+    }
+    /// <summary>
+    /// 场景数据清除
+    /// </summary>
+    public void SceneDataClean()
+    {
+        sceneData.bornPosIndex = 1;
+        sceneData.haveDashKey = false;
+        sceneData.haveJumpKey = false;
+        sceneData.haveWallClimbKey = false;
     }
 }

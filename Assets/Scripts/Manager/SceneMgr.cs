@@ -89,6 +89,7 @@ public class SceneMgr : Singleton<SceneMgr>
         if (MainSceneRoot.Instance != null)//如果场景中有这个单例存在，那么执行他清除数据的方法。
         {
             MainSceneRoot.Instance.PlayerDataClear();
+            MainSceneRoot.Instance.SceneDataClean();
         }
         LoadScene(0);
     }

@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class DashAbilityKey : MonoBehaviour
 {
     Collider2D keyCollider;
     public LayerMask playerLayer;
     private Player player;
+    [SerializeField]
+    private SceneData sceneData;
     private void Start()
     {
         keyCollider = GetComponent<Collider2D>();
@@ -23,12 +27,17 @@ public class DashAbilityKey : MonoBehaviour
                 return;
             }//检查是否拥有钥匙，如果拥有，则返回
             player.SetTouchingDashKey();
+            sceneData.haveDashKey = true;
             if (player.CheckIfIsMine())//检查是否是自己
             {
                 UIManager.Instance.PushUI("UIDashAbility");
             }
-            Destroy(gameObject, 0.2f);
-
+            Invoke("DestoryDashKey", 0.2f);
         }
+    }
+    public void DestoryDashKey()
+    {
+        if (PhotonNetwork.IsMasterClient)
+            PhotonNetwork.Destroy(gameObject);
     }
 }
