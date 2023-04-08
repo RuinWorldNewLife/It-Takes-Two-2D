@@ -14,15 +14,17 @@ public class Light : MonoBehaviour
     private Collider2D lightCollider;
     private GameObject LightOff;
     private GameObject LightOn;//拿到两个灯子物体
+    private GameObject _2DLight;//拿到点光源
 
     private void Start()
     {
         lightCollider = GetComponent<Collider2D>();
         LightOff = transform.GetChild(0).gameObject;
         LightOn = transform.GetChild(1).gameObject;//拿到两个灯子物体
-
+        _2DLight = transform.GetChild(2).gameObject;//拿到点光源
         LightOff.SetActive(!isOn);
         LightOn.SetActive(isOn);//根据初始值，设定路灯是开启或者关闭
+        _2DLight.SetActive(isOn);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,6 +36,7 @@ public class Light : MonoBehaviour
             isOn = true;
             LightOff.SetActive(!isOn);
             LightOn.SetActive(isOn);//设定路灯是开启或者关闭
+            _2DLight.SetActive(isOn);
         }
     }
 }

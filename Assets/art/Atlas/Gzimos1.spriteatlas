@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Gzimos1
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 2b42718506edddb44ab323378e2275e7, type: 3}
+    - {fileID: 2800000, guid: e526d4576ec7ae440aff2e17e9cd000f, type: 3}
+    - {fileID: 2800000, guid: ebc2c1945cae4b34aabaac9ea4593466, type: 3}
+    - {fileID: 2800000, guid: d169bfc3c19a83742b33ae92c1f40252, type: 3}
+    - {fileID: 2800000, guid: 75ad4964c85b3044db23d0c3b0a64b74, type: 3}
+    - {fileID: 2800000, guid: 8950fbaeafabdc04097fdd22e142e7a8, type: 3}
+    - {fileID: 2800000, guid: 47dee761ca6d83e4eb93b58132e7add4, type: 3}
+    - {fileID: 2800000, guid: ca743dea8e616f549b2a3482b8345d5d, type: 3}
+    - {fileID: 2800000, guid: 8e50adea9a140ac4d8400f8d6be6605a, type: 3}
+    - {fileID: 2800000, guid: e98a0cfdda04cba4990c0ba445f0c8e9, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 47dee761ca6d83e4eb93b58132e7add4, type: 3}
+  - {fileID: 21300000, guid: d169bfc3c19a83742b33ae92c1f40252, type: 3}
+  - {fileID: 21300000, guid: 75ad4964c85b3044db23d0c3b0a64b74, type: 3}
+  - {fileID: 21300000, guid: ebc2c1945cae4b34aabaac9ea4593466, type: 3}
+  - {fileID: 21300000, guid: 2b42718506edddb44ab323378e2275e7, type: 3}
+  - {fileID: 21300000, guid: e526d4576ec7ae440aff2e17e9cd000f, type: 3}
+  - {fileID: 21300000, guid: ca743dea8e616f549b2a3482b8345d5d, type: 3}
+  - {fileID: 21300000, guid: 8e50adea9a140ac4d8400f8d6be6605a, type: 3}
+  - {fileID: 21300000, guid: e98a0cfdda04cba4990c0ba445f0c8e9, type: 3}
+  - {fileID: 21300000, guid: 8950fbaeafabdc04097fdd22e142e7a8, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Fore_Bush03 #40301
+  - Fore_Bush02 #42515
+  - Fore_Bush02 #42916
+  - Fore_Bush01
+  - Fore_Bush01 #41391
+  - Fore_Bush01 #43218
+  - Fore_Bush03 #43371
+  - Fore_Bush03
+  - Fore_Bush04
+  - Fore_Bush02
+  m_RenderDataMap: {}
+  m_Tag: Gzimos1
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Beam
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 4ff0cced55b25124095915c5fabbe6dc, type: 3}
+    - {fileID: 2800000, guid: 5b8e68e1391cdca4fb3385069885a864, type: 3}
+    - {fileID: 2800000, guid: 30d8f92d6b9c6f74e80fd3ee2d194959, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 1686157589, guid: 5b8e68e1391cdca4fb3385069885a864, type: 3}
+  - {fileID: 1261339741, guid: 5b8e68e1391cdca4fb3385069885a864, type: 3}
+  - {fileID: 15504665, guid: 5b8e68e1391cdca4fb3385069885a864, type: 3}
+  - {fileID: -729391187, guid: 5b8e68e1391cdca4fb3385069885a864, type: 3}
+  - {fileID: -946395994, guid: 5b8e68e1391cdca4fb3385069885a864, type: 3}
+  - {fileID: 1808413732, guid: 5b8e68e1391cdca4fb3385069885a864, type: 3}
+  - {fileID: -1127878637, guid: 5b8e68e1391cdca4fb3385069885a864, type: 3}
+  - {fileID: 2014154303, guid: 5b8e68e1391cdca4fb3385069885a864, type: 3}
+  - {fileID: -702136015, guid: 5b8e68e1391cdca4fb3385069885a864, type: 3}
+  - {fileID: -78477464, guid: 30d8f92d6b9c6f74e80fd3ee2d194959, type: 3}
+  - {fileID: -298082598, guid: 30d8f92d6b9c6f74e80fd3ee2d194959, type: 3}
+  - {fileID: -816903540, guid: 30d8f92d6b9c6f74e80fd3ee2d194959, type: 3}
+  - {fileID: -793536740, guid: 30d8f92d6b9c6f74e80fd3ee2d194959, type: 3}
+  - {fileID: -64237268, guid: 30d8f92d6b9c6f74e80fd3ee2d194959, type: 3}
+  - {fileID: -952343112, guid: 30d8f92d6b9c6f74e80fd3ee2d194959, type: 3}
+  - {fileID: -977334040, guid: 30d8f92d6b9c6f74e80fd3ee2d194959, type: 3}
+  - {fileID: -209274168, guid: 30d8f92d6b9c6f74e80fd3ee2d194959, type: 3}
+  - {fileID: -1797639044, guid: 30d8f92d6b9c6f74e80fd3ee2d194959, type: 3}
+  - {fileID: 1144776356, guid: 4ff0cced55b25124095915c5fabbe6dc, type: 3}
+  - {fileID: 1725931087, guid: 4ff0cced55b25124095915c5fabbe6dc, type: 3}
+  - {fileID: -1283049065, guid: 4ff0cced55b25124095915c5fabbe6dc, type: 3}
+  - {fileID: 2002958449, guid: 4ff0cced55b25124095915c5fabbe6dc, type: 3}
+  - {fileID: 779857155, guid: 4ff0cced55b25124095915c5fabbe6dc, type: 3}
+  - {fileID: -1706520128, guid: 4ff0cced55b25124095915c5fabbe6dc, type: 3}
+  - {fileID: -1669630751, guid: 4ff0cced55b25124095915c5fabbe6dc, type: 3}
+  - {fileID: -1815673228, guid: 4ff0cced55b25124095915c5fabbe6dc, type: 3}
+  - {fileID: -1100794429, guid: 4ff0cced55b25124095915c5fabbe6dc, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - DarkBeamVertical_8
+  - DarkBeamVertical_5
+  - DarkBeamVertical_4
+  - DarkBeamVertical_7
+  - DarkBeamVertical_6
+  - DarkBeamVertical_1
+  - DarkBeamVertical_0
+  - DarkBeamVertical_3
+  - DarkBeamVertical_2
+  - DarkBeamF_1
+  - DarkBeamF_0
+  - DarkBeamF_3
+  - DarkBeamF_2
+  - DarkBeamF_5
+  - DarkBeamF_4
+  - DarkBeamF_7
+  - DarkBeamF_6
+  - DarkBeamF_8
+  - DarkBeam_8
+  - DarkBeam_7
+  - DarkBeam_6
+  - DarkBeam_5
+  - DarkBeam_4
+  - DarkBeam_3
+  - DarkBeam_2
+  - DarkBeam_1
+  - DarkBeam_0
+  m_RenderDataMap: {}
+  m_Tag: Beam
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

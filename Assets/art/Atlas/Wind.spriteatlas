@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Wind
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 828750531, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: 1208584504, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: 377987718, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: 1507908285, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: -1204896278, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: 42014417, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: -98077947, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: -478036863, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: 1572815460, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: 774017567, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: 1516467364, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: 1465645188, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: -1749546238, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: 2101677822, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: 1543785351, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  - {fileID: -1176807143, guid: 47823e288858f1046a229d7792ba4a80, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - wink_14
+  - wink_15
+  - wink_12
+  - wink_13
+  - wink_10
+  - wink_11
+  - wink_9
+  - wink_8
+  - wink_3
+  - wink_2
+  - wink_1
+  - wink_0
+  - wink_7
+  - wink_6
+  - wink_5
+  - wink_4
+  m_RenderDataMap: {}
+  m_Tag: Wind
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

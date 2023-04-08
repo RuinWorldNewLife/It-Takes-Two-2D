@@ -100,42 +100,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -143,9 +107,9 @@ TextureImporter:
       name: DarkJumpUP_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 96
+        x: 0
+        y: 0
+        width: 96.2
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -154,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 149f6fbb9c14299448c76973b5fb35ec
-      internalID: -680688213
+      spriteID: b09224ca77a310b4198c4a3eb3b9e322
+      internalID: -228593330
       vertices: []
       indices: 
       edges: []
@@ -164,9 +128,9 @@ TextureImporter:
       name: DarkJumpUP_1
       rect:
         serializedVersion: 2
-        x: 97
-        y: 1
-        width: 96
+        x: 96
+        y: 0
+        width: 96.2
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -175,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaac78b92c099af49845fa3267615da2
-      internalID: -1743315549
+      spriteID: 0c157b5b653cd7d49a2b63ff2e657258
+      internalID: 1423663785
       vertices: []
       indices: 
       edges: []
@@ -185,9 +149,9 @@ TextureImporter:
       name: DarkJumpUP_2
       rect:
         serializedVersion: 2
-        x: 193
-        y: 1
-        width: 96
+        x: 192
+        y: 0
+        width: 96.2
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -196,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a328920257801b46ba3446ca400e845
-      internalID: -1137528264
+      spriteID: 4cfe9746630187240b4d19e0b8085ba9
+      internalID: -2073243927
       vertices: []
       indices: 
       edges: []
@@ -206,9 +170,9 @@ TextureImporter:
       name: DarkJumpUP_3
       rect:
         serializedVersion: 2
-        x: 289
-        y: 1
-        width: 96
+        x: 288
+        y: 0
+        width: 96.2
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -217,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d34511aeb6cffe4a9123d17c525cc62
-      internalID: 256923904
+      spriteID: 2e65d2dd8c2aa1740856b2db8bab1431
+      internalID: -1569000518
       vertices: []
       indices: 
       edges: []
@@ -227,9 +191,9 @@ TextureImporter:
       name: DarkJumpUP_4
       rect:
         serializedVersion: 2
-        x: 385
-        y: 1
-        width: 96
+        x: 384
+        y: 0
+        width: 96.2
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -238,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3afc5cc1f3be56d438eb61c4ea616fc3
-      internalID: 779423089
+      spriteID: 45b15665de6ba944e8e52b21f4cd1ddb
+      internalID: -174125296
       vertices: []
       indices: 
       edges: []
@@ -255,11 +219,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DarkJumpUP_4: 779423089
-      DarkJumpUP_1: -1743315549
-      DarkJumpUP_2: -1137528264
-      DarkJumpUP_3: 256923904
-      DarkJumpUP_0: -680688213
+      DarkJumpUP_4: -174125296
+      DarkJumpUP_1: 1423663785
+      DarkJumpUP_2: -2073243927
+      DarkJumpUP_3: -1569000518
+      DarkJumpUP_0: -228593330
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

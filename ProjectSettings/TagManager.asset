@@ -47,6 +47,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sky
+    uniqueID: 103748315
+    locked: 0
+  - name: Cloub
+    uniqueID: 2248259285
+    locked: 0
+  - name: Mountain
+    uniqueID: 3369888781
+    locked: 0
+  - name: Tree15
+    uniqueID: 3797878713
+    locked: 0
+  - name: Tree
+    uniqueID: 1303598255
+    locked: 0
   - name: GizmosBack
     uniqueID: 3706859275
     locked: 0

@@ -100,42 +100,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -143,9 +107,9 @@ TextureImporter:
       name: RedSlide_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 96
+        x: 0
+        y: 0
+        width: 96.2
         height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -154,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b59d8dc844f72f24d9d70b1f31959c1e
-      internalID: 2053923209
+      spriteID: e62f2c7d75da6b345aa06e77b0837911
+      internalID: 1701601731
       vertices: []
       indices: 
       edges: []
@@ -164,9 +128,9 @@ TextureImporter:
       name: RedSlide_1
       rect:
         serializedVersion: 2
-        x: 97
-        y: 1
-        width: 96
+        x: 96
+        y: 0
+        width: 96.2
         height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -175,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7693a38425cf5194cbefafa494fd54fc
-      internalID: 1389560604
+      spriteID: 36de8bdda6570ac46b47e4d634c3e887
+      internalID: -2034005008
       vertices: []
       indices: 
       edges: []
@@ -185,9 +149,9 @@ TextureImporter:
       name: RedSlide_2
       rect:
         serializedVersion: 2
-        x: 193
-        y: 1
-        width: 96
+        x: 192
+        y: 0
+        width: 96.2
         height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -196,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 912be12ded28aed4b84e64983ffdb1dd
-      internalID: 352072375
+      spriteID: f68341accc25fb74e9d3562c2d8a0863
+      internalID: 31313739
       vertices: []
       indices: 
       edges: []
@@ -206,9 +170,9 @@ TextureImporter:
       name: RedSlide_3
       rect:
         serializedVersion: 2
-        x: 289
-        y: 1
-        width: 96
+        x: 288
+        y: 0
+        width: 96.2
         height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -217,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 874a539bc063ecb4e8af740a3db38cae
-      internalID: 1629209809
+      spriteID: b066cc3df384cfc4fa63ea44fb8e05cd
+      internalID: -155613076
       vertices: []
       indices: 
       edges: []
@@ -227,9 +191,9 @@ TextureImporter:
       name: RedSlide_4
       rect:
         serializedVersion: 2
-        x: 385
-        y: 1
-        width: 96
+        x: 384
+        y: 0
+        width: 96.2
         height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -238,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79327e813f6414a4e80e01c46cedfb13
-      internalID: 1285997880
+      spriteID: 1c61f279fee868f44bb35dcb1e5fdcd5
+      internalID: 438358231
       vertices: []
       indices: 
       edges: []
@@ -255,11 +219,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RedSlide_3: 1629209809
-      RedSlide_2: 352072375
-      RedSlide_4: 1285997880
-      RedSlide_0: 2053923209
-      RedSlide_1: 1389560604
+      RedSlide_3: -155613076
+      RedSlide_2: 31313739
+      RedSlide_4: 438358231
+      RedSlide_0: 1701601731
+      RedSlide_1: -2034005008
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

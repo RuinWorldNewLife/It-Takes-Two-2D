@@ -33,15 +33,23 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
+    - {fileID: 2800000, guid: 83149a0b94347d34b83e8d180ccce022, type: 3}
+    - {fileID: 2800000, guid: 4a28beccda2b3e7409d349cad9b94ff8, type: 3}
+    - {fileID: 2800000, guid: b12f8cc5159759d4384210841221bd49, type: 3}
+    - {fileID: 2800000, guid: 4a0de075f704d0d43b939f75530aabc6, type: 3}
+    - {fileID: 2800000, guid: 32d7470971f88da448c8dc8dae30bd70, type: 3}
+    - {fileID: 2800000, guid: 58db115f12693ad42bf980e5cbbe753b, type: 3}
+    - {fileID: 2800000, guid: 4890a3c61a594bf4c913dcad9c279b18, type: 3}
+    - {fileID: 2800000, guid: 8d5bcdf5d7a58574d8feb9f5fc403ab4, type: 3}
+    - {fileID: 2800000, guid: a5bb1fb9cce668e4b91c5659a7b3f715, type: 3}
+    - {fileID: 2800000, guid: 608b708569b691f43a7ab89278cab9c9, type: 3}
+    - {fileID: 2800000, guid: 7fefdf5087436df48974e5f3cfb035c8, type: 3}
     - {fileID: 2800000, guid: d59d1853653fccb4496fd734102acb4a, type: 3}
     - {fileID: 2800000, guid: b2cc48d5f9054f943b65f189028c5439, type: 3}
     - {fileID: 2800000, guid: 13c5a6f642493f34cbd414f28294a991, type: 3}
     - {fileID: 2800000, guid: 6dfe8e9b44707f741a635e419e10104e, type: 3}
     - {fileID: 2800000, guid: 1426f97d8ca963942994f361b74a9a86, type: 3}
     - {fileID: 2800000, guid: f2bb07ae32491f44e9636bfff9bd7a90, type: 3}
-    - {fileID: 2800000, guid: 6247c4f6dbb60a64a875423701bfa31d, type: 3}
-    - {fileID: 2800000, guid: 1d9a557eacc700c4b80c0c6fd07dc0ca, type: 3}
-    - {fileID: 2800000, guid: c1efd54ba8ab1da4f9615bf5ffd23762, type: 3}
     - {fileID: 2800000, guid: 5ffa7a4e62a15bf45ae373d4efcd536e, type: 3}
     - {fileID: 2800000, guid: cbe274ddb15681b44aa343b07a885130, type: 3}
     - {fileID: 2800000, guid: 5df911416a82af04ea559ac213aec01b, type: 3}
@@ -71,11 +79,15 @@ SpriteAtlas:
     - {fileID: 2800000, guid: dce7185f18df5234aafff1f1a7ed7d5a, type: 3}
     - {fileID: 2800000, guid: 798f7c780cc6eba4c9a8a934fbcfbcfa, type: 3}
     - {fileID: 2800000, guid: fabce1ce8ab185f45b52bd74ef88ec91, type: 3}
+    - {fileID: 2800000, guid: 1d9a557eacc700c4b80c0c6fd07dc0ca, type: 3}
+    - {fileID: 2800000, guid: 6247c4f6dbb60a64a875423701bfa31d, type: 3}
+    - {fileID: 2800000, guid: c1efd54ba8ab1da4f9615bf5ffd23762, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 7fefdf5087436df48974e5f3cfb035c8, type: 3}
   - {fileID: 21300000, guid: 5df911416a82af04ea559ac213aec01b, type: 3}
   - {fileID: 21300000, guid: ed1eabd101ab8b44f88c6ae38e49e2dd, type: 3}
   - {fileID: 21300000, guid: 2d3ae2e11855585449bf05c906cedd3c, type: 3}
@@ -86,8 +98,13 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3d692cb4ecb024e4f907ec813b6e1b8b, type: 3}
   - {fileID: 21300000, guid: 42d11ef417d091e4c88e9e91f840dedc, type: 3}
   - {fileID: 21300000, guid: 6af638255b0b9b949b8997c82058586d, type: 3}
+  - {fileID: 21300000, guid: 4a0de075f704d0d43b939f75530aabc6, type: 3}
+  - {fileID: 21300000, guid: 608b708569b691f43a7ab89278cab9c9, type: 3}
+  - {fileID: 21300000, guid: b12f8cc5159759d4384210841221bd49, type: 3}
   - {fileID: 21300000, guid: b2cc48d5f9054f943b65f189028c5439, type: 3}
+  - {fileID: 21300000, guid: 8d5bcdf5d7a58574d8feb9f5fc403ab4, type: 3}
   - {fileID: 21300000, guid: e2923576ccb3f4344a10a497212715eb, type: 3}
+  - {fileID: 21300000, guid: 4890a3c61a594bf4c913dcad9c279b18, type: 3}
   - {fileID: 21300000, guid: 6247c4f6dbb60a64a875423701bfa31d, type: 3}
   - {fileID: 21300000, guid: 13c5a6f642493f34cbd414f28294a991, type: 3}
   - {fileID: 21300000, guid: c768bdf6421e02a43abfdf31cdf277c8, type: 3}
@@ -97,14 +114,18 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3a578738c949d4347b5504c198233787, type: 3}
   - {fileID: 21300000, guid: e277fc3899398314d8c075b8e5f13c69, type: 3}
   - {fileID: 21300000, guid: 798f7c780cc6eba4c9a8a934fbcfbcfa, type: 3}
+  - {fileID: 21300000, guid: 32d7470971f88da448c8dc8dae30bd70, type: 3}
   - {fileID: 21300000, guid: a0704619193eb0041a83c717e8a597e4, type: 3}
+  - {fileID: 21300000, guid: a5bb1fb9cce668e4b91c5659a7b3f715, type: 3}
   - {fileID: 21300000, guid: 319eaec9cb799ac488e83991da6712da, type: 3}
+  - {fileID: 21300000, guid: 83149a0b94347d34b83e8d180ccce022, type: 3}
   - {fileID: 21300000, guid: 6bb6443b78667e44395dba739abef676, type: 3}
   - {fileID: 21300000, guid: 7800783bd3510324ab1a358bd012e32f, type: 3}
   - {fileID: 21300000, guid: c1efd54ba8ab1da4f9615bf5ffd23762, type: 3}
   - {fileID: 21300000, guid: 6dfe8e9b44707f741a635e419e10104e, type: 3}
   - {fileID: 21300000, guid: f992952ce4e3c2e4e9ce24fc940a076f, type: 3}
   - {fileID: 21300000, guid: bc57cb2c353b0d44998f9b2f98168683, type: 3}
+  - {fileID: 21300000, guid: 4a28beccda2b3e7409d349cad9b94ff8, type: 3}
   - {fileID: 21300000, guid: 1426f97d8ca963942994f361b74a9a86, type: 3}
   - {fileID: 21300000, guid: cbe274ddb15681b44aa343b07a885130, type: 3}
   - {fileID: 21300000, guid: c33b2e1ecf01e2d4dab3b7c9e97866ce, type: 3}
@@ -113,8 +134,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f2bb07ae32491f44e9636bfff9bd7a90, type: 3}
   - {fileID: 21300000, guid: f8c29fbef5c60934590a31dbbaf06cae, type: 3}
   - {fileID: 21300000, guid: fabce1ce8ab185f45b52bd74ef88ec91, type: 3}
+  - {fileID: 21300000, guid: 58db115f12693ad42bf980e5cbbe753b, type: 3}
   - {fileID: 21300000, guid: dce7185f18df5234aafff1f1a7ed7d5a, type: 3}
   m_PackedSpriteNamesToIndex:
+  - 01_Parts02 #39360
   - lamp02 #40528
   - Rock04 #40151
   - lamp02_2
@@ -125,8 +148,13 @@ SpriteAtlas:
   - Rock08
   - RockCraneRock
   - Statue02
+  - 01 #40704
+  - 01 #43575
+  - 01 #39191
   - 01_Parts02 (1)
+  - 01 #42895
   - Rock07
+  - 01 #42050
   - vinewall1
   - 01_Parts03 #39004
   - Rock04 #40096
@@ -136,14 +164,18 @@ SpriteAtlas:
   - Rock01
   - Rock04
   - Statue03 #41313
+  - 01 #41565
   - Orchid01 #42324
+  - 01 #43567
   - Orchid01 #41743
+  - 01 #39080
   - Rock03 #43593
   - Orchid02 #42310
   - vinewall2
   - 3-4_Crystal01
   - Orchid01
   - Rock05 #43183
+  - 01 #39093
   - 3-4_Crystal02
   - EntSkull_ThornyVine_Sign_11
   - Orchid02
@@ -152,6 +184,7 @@ SpriteAtlas:
   - 3-4_Wall04
   - Rock03
   - Statue03
+  - 01 #41567
   - Statue02_base
   m_RenderDataMap: {}
   m_Tag: Gizmos2

@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FireBall3
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 1964498788, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 388753746, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -179667132, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 1697786107, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -1132119351, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -1244315951, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 1423677693, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -576503308, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 962480955, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 1531672840, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -24452896, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -1443772909, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -392907195, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 217557505, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 741682424, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -581929003, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 2133455277, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 1270803625, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 448549181, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 362176612, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -819205076, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 1626992794, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -1591925109, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -213641049, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 1718967113, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -2078369648, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -607910611, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 1778388527, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 1236320756, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 179770493, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 408337008, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 867183426, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: -2071909309, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 1858682279, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  - {fileID: 1062980521, guid: f740d192d712aa8408ad8ce3e000ceed, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - FireLoopWall_4
+  - FireLoopWall_5
+  - FireLoopWall_6
+  - FireLoopWall_7
+  - FireLoopWall_0
+  - FireLoopWall_1
+  - FireLoopWall_2
+  - FireLoopWall_3
+  - FireLoopWall_8
+  - FireLoopWall_9
+  - FireLoopWall_22
+  - FireLoopWall_23
+  - FireLoopWall_20
+  - FireLoopWall_21
+  - FireLoopWall_26
+  - FireLoopWall_34
+  - FireLoopWall_27
+  - FireLoopWall_24
+  - FireLoopWall_25
+  - FireLoopWall_31
+  - FireLoopWall_30
+  - FireLoopWall_33
+  - FireLoopWall_28
+  - FireLoopWall_32
+  - FireLoopWall_29
+  - FireLoopWall_19
+  - FireLoopWall_18
+  - FireLoopWall_17
+  - FireLoopWall_16
+  - FireLoopWall_15
+  - FireLoopWall_14
+  - FireLoopWall_13
+  - FireLoopWall_12
+  - FireLoopWall_11
+  - FireLoopWall_10
+  m_RenderDataMap: {}
+  m_Tag: FireBall3
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

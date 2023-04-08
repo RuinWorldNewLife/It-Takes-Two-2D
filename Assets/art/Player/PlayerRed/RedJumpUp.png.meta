@@ -100,42 +100,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -143,9 +107,9 @@ TextureImporter:
       name: RedJumpUp_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 96
+        x: 0
+        y: 0
+        width: 96.2
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -154,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efb2c5573fada1b4091c34c7a16d1177
-      internalID: 1982199447
+      spriteID: 0435ddeaed6f6bd4094b8a655a44d73c
+      internalID: -229069509
       vertices: []
       indices: 
       edges: []
@@ -164,9 +128,9 @@ TextureImporter:
       name: RedJumpUp_1
       rect:
         serializedVersion: 2
-        x: 97
-        y: 1
-        width: 96
+        x: 96
+        y: 0
+        width: 96.2
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -175,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ac84f8cb400d2d48b92e64527ddfa2a
-      internalID: 1403865505
+      spriteID: c1bcd1f5e0b1d22489cd8edea7977e3f
+      internalID: 595555968
       vertices: []
       indices: 
       edges: []
@@ -185,9 +149,9 @@ TextureImporter:
       name: RedJumpUp_2
       rect:
         serializedVersion: 2
-        x: 193
-        y: 1
-        width: 96
+        x: 192
+        y: 0
+        width: 96.2
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -196,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b07115a4e3ee7d64b974e4921664b824
-      internalID: -1175884209
+      spriteID: 908bfba783e2f5841b389eed5322f8bf
+      internalID: 1983637837
       vertices: []
       indices: 
       edges: []
@@ -206,9 +170,9 @@ TextureImporter:
       name: RedJumpUp_3
       rect:
         serializedVersion: 2
-        x: 289
-        y: 1
-        width: 96
+        x: 288
+        y: 0
+        width: 96.2
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -217,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 606d7bb07c6c3ee44878f2a43d9ef2dc
-      internalID: -780359058
+      spriteID: 8ef301b651ea8f04183ac0797c4105e3
+      internalID: 1877987103
       vertices: []
       indices: 
       edges: []
@@ -227,9 +191,9 @@ TextureImporter:
       name: RedJumpUp_4
       rect:
         serializedVersion: 2
-        x: 385
-        y: 1
-        width: 96
+        x: 384
+        y: 0
+        width: 96.2
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -238,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cd262b01013a234abcef281a7787b0a
-      internalID: 1276258101
+      spriteID: 6403a9f5dc76b4742bb68e175a4f04b1
+      internalID: 544561268
       vertices: []
       indices: 
       edges: []
@@ -255,11 +219,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RedJumpUp_3: -780359058
-      RedJumpUp_0: 1982199447
-      RedJumpUp_4: 1276258101
-      RedJumpUp_2: -1175884209
-      RedJumpUp_1: 1403865505
+      RedJumpUp_3: 1877987103
+      RedJumpUp_0: -229069509
+      RedJumpUp_4: 544561268
+      RedJumpUp_2: 1983637837
+      RedJumpUp_1: 595555968
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

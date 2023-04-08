@@ -23,6 +23,7 @@ public class Player : MonoBehaviour, IPunObservable
     private Vector2 workspace;
     private Vector3 posPlayerClone;
     private Transform handleTF;//handle子物体
+    private CinemachineVirtualCamera cinemachine;//虚拟摄像机
 
     public bool IsMinePlayer { get;private set; }
     private bool updateInvokeAvoid;//避免多次执行协程
@@ -106,11 +107,11 @@ public class Player : MonoBehaviour, IPunObservable
         RB = GetComponent<Rigidbody2D>();
         ExternalAffect = GetComponent<PlayerExternalAffect>();
         photonView = GetComponent<PhotonView>();
-        CinemachineVirtualCamera cinemachine = GameObject.Find("Camera").transform.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
+        cinemachine = GameObject.Find("Camera").transform.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
         handleTF = transform.GetChild(2);//拿到第三个子物体HandlePos
         photonView.RPC("SetHandleEffectActive", RpcTarget.Others,false);
         SetHandleEffectActiveNotRPC(false);//将第三个子物体的Handle初始化为false。
-        cinemachine.Follow = transform;
+        cinemachine.Follow = transform;//摄像机跟随玩家
         photonView.RPC("CameraFollow", RpcTarget.Others);///相机跟随
         StateMachine.Initialize(IdleState);
         FacingDirection = 1;//记录任务朝向
@@ -356,6 +357,8 @@ public class Player : MonoBehaviour, IPunObservable
     /// </summary>
     public void Flip()
     {
+
+        
         FacingDirection *= -1;
         transform.Rotate(new Vector3(0, 180, 0));
     }
