@@ -59,6 +59,10 @@ public class PlayerGroundState : PlayerState
         {
             stateMachine.ChangeState(player.JumpPlatState);
         }
+        else if(StaticData.buttonSevenNum >= 2)
+        {
+            stateMachine.ChangeState(player.TurnInState);
+        }
     }
 
     public override void PhysicsUpdate()

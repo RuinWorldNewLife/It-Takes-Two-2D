@@ -45,3 +45,4 @@ MonoBehaviour:
   exitWindToFlyTime: 0.15
   coyoteTime: 0.05
   isTesting: 1
+  fadeTime: 3

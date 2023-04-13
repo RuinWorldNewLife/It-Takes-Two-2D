@@ -43,4 +43,6 @@ public class PlayerData : ScriptableObject
     [Header("其他")]
     public float coyoteTime;
     public bool isTesting;
+    public float fadeTime;//消失速度
+    
 }

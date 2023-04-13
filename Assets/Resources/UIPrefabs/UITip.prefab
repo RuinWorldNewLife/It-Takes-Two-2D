@@ -330,7 +330,7 @@ MonoBehaviour:
   m_text: "\u8BE5\u9879\u64CD\u4F5C\u53EA\u5141\u8BB8\u623F\u4E3B\u64CD\u4F5C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9df82154363fbae46b54cd73cffa5add, type: 2}
-  m_sharedMaterial: {fileID: -7401566332797335804, guid: 9df82154363fbae46b54cd73cffa5add, type: 2}
+  m_sharedMaterial: {fileID: -2618215898085113028, guid: 9df82154363fbae46b54cd73cffa5add, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

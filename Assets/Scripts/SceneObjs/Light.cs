@@ -1,42 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class Light : MonoBehaviour
 {
-    public bool isOn = false;//ÉèÖÃ³õÊ¼ÊÇ·ñÎª¿ªÆô
-    [Header("³¡¾°Êı¾İ")]
+    public bool isOn = false;//è®¾ç½®åˆå§‹æ˜¯å¦ä¸ºå¼€å¯
+    [Header("åœºæ™¯æ•°æ®")]
     [SerializeField]
-    private SceneData sceneData;//³¡¾°Êı¾İ
-    public int indexOfBornPos;//ÉèÖÃ³öÉúË÷ÒıÖµ£¬Õâ¸öÖµÓÃÀ´Éè¶¨
+    private SceneData sceneData;//åœºæ™¯æ•°æ®
+    public int indexOfBornPos;//è®¾ç½®å‡ºç”Ÿç´¢å¼•å€¼ï¼Œè¿™ä¸ªå€¼ç”¨æ¥è®¾å®š
     public LayerMask playerLayer;
 
     private Collider2D lightCollider;
     private GameObject LightOff;
-    private GameObject LightOn;//ÄÃµ½Á½¸öµÆ×ÓÎïÌå
-    private GameObject _2DLight;//ÄÃµ½µã¹âÔ´
+    private GameObject LightOn;//æ‹¿åˆ°ä¸¤ä¸ªç¯å­ç‰©ä½“
+    private GameObject _2DLight;//æ‹¿åˆ°ç‚¹å…‰æº
+    private GameObject LightParticle;//æ‹¿åˆ°ç²’å­ç‰¹æ•ˆ
+    private GameObject LightYun;//æ‹¿åˆ°ç²’å­ç‰¹æ•ˆ
 
     private void Start()
     {
         lightCollider = GetComponent<Collider2D>();
         LightOff = transform.GetChild(0).gameObject;
-        LightOn = transform.GetChild(1).gameObject;//ÄÃµ½Á½¸öµÆ×ÓÎïÌå
-        _2DLight = transform.GetChild(2).gameObject;//ÄÃµ½µã¹âÔ´
+        LightOn = transform.GetChild(1).gameObject;//æ‹¿åˆ°ä¸¤ä¸ªç¯å­ç‰©ä½“
+        _2DLight = transform.GetChild(2).gameObject;//æ‹¿åˆ°ç‚¹å…‰æº
+        LightParticle = transform.GetChild(3).gameObject;
+        LightYun = transform.GetChild(4).gameObject;
         LightOff.SetActive(!isOn);
-        LightOn.SetActive(isOn);//¸ù¾İ³õÊ¼Öµ£¬Éè¶¨Â·µÆÊÇ¿ªÆô»òÕß¹Ø±Õ
+        LightOn.SetActive(isOn);//æ ¹æ®åˆå§‹å€¼ï¼Œè®¾å®šè·¯ç¯æ˜¯å¼€å¯æˆ–è€…å…³é—­
         _2DLight.SetActive(isOn);
+        LightParticle.SetActive(isOn);
+        LightYun.SetActive(isOn);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(lightCollider.IsTouchingLayers(playerLayer))
         {
-            sceneData.bornPosIndex = indexOfBornPos;//µ÷Õû³öÉúË÷ÒıÖµ¡£
-            MainSceneRoot.Instance.SetBornPos();//ÖØĞÂÉèÖÃ³öÉúÎ»ÖÃ
+            sceneData.bornPosIndex = indexOfBornPos;//è°ƒæ•´å‡ºç”Ÿç´¢å¼•å€¼ã€‚
+            MainSceneRoot.Instance.SetBornPos();//é‡æ–°è®¾ç½®å‡ºç”Ÿä½ç½®
             isOn = true;
             LightOff.SetActive(!isOn);
-            LightOn.SetActive(isOn);//Éè¶¨Â·µÆÊÇ¿ªÆô»òÕß¹Ø±Õ
+            LightOn.SetActive(isOn);//è®¾å®šè·¯ç¯æ˜¯å¼€å¯æˆ–è€…å…³é—­
             _2DLight.SetActive(isOn);
+            LightParticle.SetActive(isOn);
+            LightYun.SetActive(isOn);
         }
     }
 }

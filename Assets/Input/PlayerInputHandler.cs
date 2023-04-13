@@ -28,7 +28,7 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     private float dashInputStartTime;
     private void Start()
     {
-        CanControl = true;//初始化角色可以控制
+        CanControl = false;//初始化角色不可以控制
         DashInput = false;
         JumpInput = false;
         HandleInput = false;

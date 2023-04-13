@@ -34,7 +34,7 @@ public class WindToFly : MonoBehaviour
         if ((1 << collision.gameObject.layer) == affectObjLayers.value)
         {
             player = collision.gameObject.GetComponent<Player>();
-            player.isFly = true;//½øÈë·ÉµÄ×´Ì¬
+            player.isFly = true;//è¿›å…¥é£žçš„çŠ¶æ€
             player.windToFlyDirection = facingDirection;
             if (facingDirection.x > 0)
             {
@@ -113,23 +113,11 @@ public class WindToFly : MonoBehaviour
         }
         
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if ((1 << collision.gameObject.layer) == affectObjLayers.value)
-        {
-            player.isInJumpOrDashState = false;
-            if (player.StateMachine.CurrentState != player.DashState)
-            {
-                player.Anim.SetBool("Fly", false);
-            }
-        }
-        //if ((1 << collision.gameObject.layer) == affectObjLayersForDark.value)
-        //{
-        //    darkPlayer.isInJumpOrDashState = false;
-        //    if (darkPlayer.StateMachine.CurrentState != darkPlayer.DashState)
-        //    {
-        //        darkPlayer.Anim.SetBool("Fly", false);
-        //    }
-        //}
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if ((1 << collision.gameObject.layer) == affectObjLayers.value)
+    //    {
+            
+    //    }
+    //}
 }

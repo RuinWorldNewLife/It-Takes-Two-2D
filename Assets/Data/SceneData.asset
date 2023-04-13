@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: SceneData
   m_EditorClassIdentifier: 
   bornPosIndex: 1
+  haveDashKey: 0
+  haveJumpKey: 0
+  haveWallClimbKey: 0

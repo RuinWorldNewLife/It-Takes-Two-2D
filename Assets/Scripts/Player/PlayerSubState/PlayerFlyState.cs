@@ -17,14 +17,14 @@ public class PlayerFlyState : PlayerInExternalState
     public override void Enter()
     {
         base.Enter();
-        player.SetGravityScaleFun(0, RpcTarget.Others);//½«ÖØÁ¦Ëõ·ÅÉèÖÃÎª0
+        player.SetGravityScaleFun(0, RpcTarget.Others);//å°†é‡åŠ›ç¼©æ”¾è®¾ç½®ä¸º0
         player.RB.gravityScale = 0f;
         player.Anim.SetBool("idle", false);
-        if(selfData.ifHaveDashKey)//Èç¹û½ÇÉ«ÓÐÉÁ±ÜÄÜÁ¦£¬»Ö¸´ÉÁ±Ü´ÎÊý£»
+        if(selfData.ifHaveDashKey)//å¦‚æžœè§’è‰²æœ‰é—ªé¿èƒ½åŠ›ï¼Œæ¢å¤é—ªé¿æ¬¡æ•°ï¼›
         {
             player.DashState.CanDash();
         }
-        if (selfData.ifHaveJumpKey)//Èç¹û½ÇÉ«ÓÐÌøÔ¾ÄÜÁ¦£¬½«ËüÊ£ÓàµÄÌøÔ¾´ÎÊýÖÃÎª1£»
+        if (selfData.ifHaveJumpKey)//å¦‚æžœè§’è‰²æœ‰è·³è·ƒèƒ½åŠ›ï¼Œå°†å®ƒå‰©ä½™çš„è·³è·ƒæ¬¡æ•°ç½®ä¸º1ï¼›
         {
             player.JumpState.lastAmountOfJump = 1;
         }
@@ -33,7 +33,7 @@ public class PlayerFlyState : PlayerInExternalState
     public override void Exit()
     {
         base.Exit();
-        player.SetGravityScaleFun(playerData.gravityValue, RpcTarget.Others);//»¹Ô­ÖØÁ¦Ëõ·Å
+        player.SetGravityScaleFun(playerData.gravityValue, RpcTarget.Others);//è¿˜åŽŸé‡åŠ›ç¼©æ”¾
         player.RB.gravityScale = playerData.gravityValue;
     }
 
@@ -42,7 +42,7 @@ public class PlayerFlyState : PlayerInExternalState
         base.LogicUpdate();
         if (!isExitingState)
         {
-            //ÔÚ·ÉÐÐµÄ¹ý³ÌÖÐ£¬¿ÉÒÔ×ª»»×´Ì¬
+            //åœ¨é£žè¡Œçš„è¿‡ç¨‹ä¸­ï¼Œå¯ä»¥è½¬æ¢çŠ¶æ€
             if (player.InputHandler.JumpInput && player.JumpState.CanJump())
             {
                 player.isInJumpOrDashState = true;
@@ -53,32 +53,32 @@ public class PlayerFlyState : PlayerInExternalState
                 player.isInJumpOrDashState = true;
                 stateMachine.ChangeState(player.DashState);
             }
-            //Èç¹ûÍæ¼Ò·É³öÁË¹âÖù·¶Î§
-            if (!player.isFly)
+            //å¦‚æžœçŽ©å®¶é£žå‡ºäº†å…‰æŸ±èŒƒå›´
+            if (!player.isFly && !player.isInJumpOrDashState)
             {
                 if (player.IsMinePlayer)
                 {
-                    player.Anim.SetBool("In Air", true);//½«¶¯»­ÉèÖÃÎªÔÚ¿ÕÖÐ¡£
+                    player.Anim.SetBool("In Air", true);//å°†åŠ¨ç”»è®¾ç½®ä¸ºåœ¨ç©ºä¸­ã€‚
                 }
-                if (player.windToFlyDirection.y > 0f)//Èç¹û·ÉÐÐ·½ÏòÊÇÏòÉÏ·É
+                if (player.windToFlyDirection.y > 0f)//å¦‚æžœé£žè¡Œæ–¹å‘æ˜¯å‘ä¸Šé£ž
                 {
-                    player.CheckIfShouldFlip(xInput);//¿ÉÒÔ·­×ª·½Ïò¡£
+                    player.CheckIfShouldFlip(xInput);//å¯ä»¥ç¿»è½¬æ–¹å‘ã€‚
                     if (player.IsMinePlayer)
                     {
                         player.Anim.SetFloat("yVerlocity", player.CurrentVelocity.y);
                     }
-                    player.SetVelocityX(playerData.airMoveSpeed * xInput);//¿ÉÒÔ×óÓÒÒÆ¶¯
+                    player.SetVelocityX(playerData.airMoveSpeed * xInput);//å¯ä»¥å·¦å³ç§»åŠ¨
                 }
-                else//Èç¹û²»ÊÇÏòÉÏ·É£¬ÔòÊÇÏò×óÓÒ·É¡£
+                else//å¦‚æžœä¸æ˜¯å‘ä¸Šé£žï¼Œåˆ™æ˜¯å‘å·¦å³é£žã€‚
                 {
                     if (player.IsMinePlayer)
                     {
                         player.Anim.SetBool("Fly", false);
                         player.Anim.SetFloat("yVerlocity", player.CurrentVelocity.y);
                     }
-                    player.RB.gravityScale = playerData.gravityValue;//»¹Ô­ÖØÁ¦
+                    player.RB.gravityScale = playerData.gravityValue;//è¿˜åŽŸé‡åŠ›
                 }
-                //¾­¹ýÒ»¶ÎÊ±¼äºó£¬Íæ¼ÒÇÐ»»µ½¿ÕÖÐ×´Ì¬
+                //ç»è¿‡ä¸€æ®µæ—¶é—´åŽï¼ŒçŽ©å®¶åˆ‡æ¢åˆ°ç©ºä¸­çŠ¶æ€
                 if (Time.time > (player.exitWindToFlyTime + player.exitWindToFlyStartTime))
                 {
                     stateMachine.ChangeState(player.InAirState);

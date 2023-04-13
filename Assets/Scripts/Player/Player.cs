@@ -7,6 +7,7 @@ using Photon.Realtime;
 using UnityEngine.EventSystems;
 using Cinemachine;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class Player : MonoBehaviour, IPunObservable
 {
@@ -25,10 +26,17 @@ public class Player : MonoBehaviour, IPunObservable
     private Transform handleTF;//handle子物体
     private CinemachineVirtualCamera cinemachine;//虚拟摄像机
 
-    public bool IsMinePlayer { get;private set; }
+    public bool IsMinePlayer { get; private set; }
     private bool updateInvokeAvoid;//避免多次执行协程
 
     private bool preHandleInput;//上一帧是否有按下handle键。
+
+    private Material _myMaterial;//该角色的材质
+    private float fadeTimer = -0.1f;//计时器
+    [HideInInspector]
+    public bool isDead;
+
+
 
     public int FacingDirection { get; private set; }
     [HideInInspector]
@@ -67,6 +75,7 @@ public class Player : MonoBehaviour, IPunObservable
     public PlayerDashState DashState { get; private set; }
     public PlayerFlyState FlyState { get; private set; }
     public PlayerJumpPlatState JumpPlatState { get; private set; }
+    public PlayerTurnInState TurnInState { get; private set; }
 
     #endregion
 
@@ -80,11 +89,11 @@ public class Player : MonoBehaviour, IPunObservable
     private PhotonView photonView;
     [SerializeField]
     private Transform wallCheck;
-    
+
     #endregion
 
     #region unity的回调函数
-    private void Awake() 
+    private void Awake()
     {
         StateMachine = new PlayerStateMachine();
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
@@ -93,15 +102,17 @@ public class Player : MonoBehaviour, IPunObservable
         InAirState = new PlayerInAirState(this, StateMachine, playerData, "In Air");
         wallHandleState = new WallHandleState(this, StateMachine, playerData, "wallHandle");
         wallSlideState = new WallSlide(this, StateMachine, playerData, "wallSlide");
-        wallJumpState = new WallJumpState(this, StateMachine, playerData,playerSelfData, "In Air");
+        wallJumpState = new WallJumpState(this, StateMachine, playerData, playerSelfData, "In Air");
         RotateState = new PlayerRotateState(this, StateMachine, playerData, playerSelfData, "Rotate");
         DashState = new PlayerDashState(this, StateMachine, playerData, playerSelfData, "Fly");
         FlyState = new PlayerFlyState(this, StateMachine, playerData, playerSelfData, "idle");
         JumpPlatState = new PlayerJumpPlatState(this, StateMachine, playerData, "In Air");
+        TurnInState = new PlayerTurnInState(this, StateMachine, playerData, "TurnIn");
     }
 
     private void Start()
     {
+
         Anim = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
@@ -109,9 +120,12 @@ public class Player : MonoBehaviour, IPunObservable
         photonView = GetComponent<PhotonView>();
         cinemachine = GameObject.Find("Camera").transform.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
         handleTF = transform.GetChild(2);//拿到第三个子物体HandlePos
-        photonView.RPC("SetHandleEffectActive", RpcTarget.Others,false);
+        photonView.RPC("SetHandleEffectActive", RpcTarget.Others, false);
         SetHandleEffectActiveNotRPC(false);//将第三个子物体的Handle初始化为false。
-        cinemachine.Follow = transform;//摄像机跟随玩家
+        if(photonView.IsMine)
+        {
+            cinemachine.Follow = transform;//摄像机跟随玩家
+        }
         photonView.RPC("CameraFollow", RpcTarget.Others);///相机跟随
         StateMachine.Initialize(IdleState);
         FacingDirection = 1;//记录任务朝向
@@ -131,9 +145,13 @@ public class Player : MonoBehaviour, IPunObservable
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 60;
 
-        //Debug.Log("黑色的身份是否正确：" + (playerSelfData.selfIdentity == LayerMask.GetMask("PlayerDark")));
+        _myMaterial = GetComponent<SpriteRenderer>().material;//拿到特效材质
+        photonView.RPC("Fade", RpcTarget.All, 0.8f);
+        isDead = false;//设置玩家并非死亡
+        fadeTimer = 0.8f;//初始化消逝计时器
+        StartCoroutine(FadeAndAppear(false, -0.1f));
     }
-    
+
 
     private void Update()
     {
@@ -143,8 +161,10 @@ public class Player : MonoBehaviour, IPunObservable
         {
             updateInvokeAvoid = false;
             MonoHelper.Instance.WaitSomeTimeInvoke(() => { }, 0, () => { return true; });//如果有协程，停止协程
-            MonoHelper.Instance.WaitSomeTimeInvoke(() => { isInJumpOrDashState = false; 
-            updateInvokeAvoid = true;
+            MonoHelper.Instance.WaitSomeTimeInvoke(() =>
+            {
+                isInJumpOrDashState = false;
+                updateInvokeAvoid = true;
             }, 0.2f, () => { return false; });
         }
 
@@ -156,6 +176,8 @@ public class Player : MonoBehaviour, IPunObservable
         {
             Player2SmoothPostion();
         }
+        
+
     }
 
     private void FixedUpdate()
@@ -165,7 +187,7 @@ public class Player : MonoBehaviour, IPunObservable
     #endregion
 
     #region 联网RPC方法
-    
+
     /// <summary>
     /// 相机跟随方法
     /// </summary>
@@ -173,7 +195,10 @@ public class Player : MonoBehaviour, IPunObservable
     public void CameraFollow()
     {
         CinemachineVirtualCamera cinemachine = GameObject.Find("Camera").transform.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
-        cinemachine.Follow = transform;
+        if (photonView.IsMine)
+        {
+            cinemachine.Follow = transform;//摄像机跟随玩家
+        }
     }
     /// <summary>
     /// 设置重力缩放
@@ -232,7 +257,7 @@ public class Player : MonoBehaviour, IPunObservable
         return Physics2D.OverlapCircle(
             checkGround.position,
             playerData.circleRadius,
-            playerSelfData.whatIsGround) ;
+            playerSelfData.whatIsGround);
     }
     /// <summary>
     /// Scene视图检查方法
@@ -274,7 +299,7 @@ public class Player : MonoBehaviour, IPunObservable
     /// </summary>
     public void CheckIfHandleInputChange()
     {
-        if(preHandleInput != InputHandler.HandleInput)//当输入有变
+        if (preHandleInput != InputHandler.HandleInput)//当输入有变
         {
             if (InputHandler.HandleInput)//输入为true，则
             {
@@ -353,12 +378,26 @@ public class Player : MonoBehaviour, IPunObservable
 
     #region 其他方法
     /// <summary>
+    /// 胜利方法
+    /// </summary>
+    public void WinGame()
+    {
+        RB.velocity = Vector3.zero;//将速度设置为0
+        InputHandler.ControlHandler(false);//设置角色不可控制
+        Invoke("ShowUI", 3);//三秒后显示UI
+    }
+
+    public void ShowUI()
+    {
+        //显示胜利UI
+        UIManager.Instance.PushUI("UIWinGame");
+    }
+    
+    /// <summary>
     /// 翻转方法
     /// </summary>
     public void Flip()
     {
-
-        
         FacingDirection *= -1;
         transform.Rotate(new Vector3(0, 180, 0));
     }
@@ -420,10 +459,71 @@ public class Player : MonoBehaviour, IPunObservable
     [PunRPC]
     public void RPCDead()
     {
+        
         RB.velocity = Vector3.zero;//将速度设置为0
         InputHandler.ControlHandler(false);//设置角色不可控制
-        //Debug.Log("执行！！！！！");
-        UIManager.Instance.PushUI("UIEndGame");
+        isDead = true;//设置玩家死亡状态为true
+        StartCoroutine(FadeAndAppear(true, 0.8f));//开启淡入淡出的协程
+    }
+    [PunRPC]
+    public void Fade(float change)//控制显示隐藏的rpc
+    {
+        Debug.Log("执行消融");
+        _myMaterial.SetFloat("_Fade", change);
+    }
+
+    //private void FadeAndAppear()
+    //{
+    //    if(isDead)
+    //    {
+    //        fadeTimer -= Time.deltaTime/playerData.fadeTime;
+    //        photonView.RPC("Fade", RpcTarget.All, fadeTimer);
+    //        if(fadeTimer <= -0.1f)
+    //        {
+    //            fadeTimer = -0.1f;
+    //            isDead = true;//防止继续执行这段代码
+    //        }
+    //    }
+    //}
+
+    /// <summary>
+    /// 淡入淡出方法
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator FadeAndAppear(bool ifFade, float timerStartValue)
+    {
+        fadeTimer = timerStartValue;
+
+        if (ifFade)
+        {
+            while (true)
+            {
+                fadeTimer -= Time.deltaTime / playerData.fadeTime;
+                _myMaterial.SetFloat("_Fade", fadeTimer);
+                if (fadeTimer <= -0.1f)
+                {
+                    fadeTimer = -0.1f;
+                    UIManager.Instance.PushUI("UIEndGame");
+                    yield break;
+                }
+                yield return -1;
+            }
+        }
+        else
+        {
+            while (true)
+            {
+                fadeTimer += Time.deltaTime / playerData.fadeTime;
+                _myMaterial.SetFloat("_Fade", fadeTimer);
+                if (fadeTimer >= 0.8f)
+                {
+                    fadeTimer = 0.8f;
+                    InputHandler.ControlHandler(true);//角色完全显示，才让玩家可以显示
+                    yield break;
+                }
+                yield return -1;
+            }
+        }
     }
 
     public void playerDataClear()
