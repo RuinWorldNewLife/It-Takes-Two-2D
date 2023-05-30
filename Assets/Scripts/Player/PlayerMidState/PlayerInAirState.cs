@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// 
+/// </summary>
 public class PlayerInAirState : PlayerState
 {
     //Input
@@ -73,7 +75,7 @@ public class PlayerInAirState : PlayerState
             else if (player.CurrentVelocity.y < 15f)
             {
                 player.playerTempJumpSpeed = MonoHelper.Instance.TimeLerpDown(player.playerTempJumpSpeed, playerData.jump2StopVelocity);
-                //µ±ÌøÔ¾µÄËÙ¶ÈĞ¡ÓÚ15fÊ±£¬½øĞĞËÙ¶Èµİ¼õµÄ·½·¨¡£
+                //å½“è·³è·ƒçš„é€Ÿåº¦å°äº15fæ—¶ï¼Œè¿›è¡Œé€Ÿåº¦é€’å‡çš„æ–¹æ³•ã€‚
                 player.SetVelocityY(player.playerTempJumpSpeed);
             }
         }
@@ -85,6 +87,7 @@ public class PlayerInAirState : PlayerState
         {
             if (isGrounded && player.CurrentVelocity.y < 0.01f)
             {
+                MusicMgr.Instance.PlayAtPointFun("land", player.transform.position,false);
                 stateMachine.ChangeState(player.IdleState);
             }
             else if (player.JumpState.CanJump() && player.InputHandler.JumpInput)
@@ -141,12 +144,12 @@ public class PlayerInAirState : PlayerState
        
         if (IsCoyote && Time.time > startTime + playerData.coyoteTime)
         {
-            player.JumpState.lastAmountOfJump--; //µ±ÍÁÀÇÊ±¼ä¿ªÆô£¬ÇÒ½øÈë¿ÕÖĞ×´Ì¬µÄÊ±¼ä¼ÓÉÏÍÁÀÇÊ±¼äĞ¡ÓÚµ±Ç°Ê±¼ä£¬
-            //Debug.Log("ÍÁÀÇÊ±¼äÖ´ĞĞ£¬µ±Ç°Ê£ÓàÌøÔ¾´ÎÊıÎª£º" + player.JumpState.lastAmountOfJump);
+            player.JumpState.lastAmountOfJump--; //å½“åœŸç‹¼æ—¶é—´å¼€å¯ï¼Œä¸”è¿›å…¥ç©ºä¸­çŠ¶æ€çš„æ—¶é—´åŠ ä¸ŠåœŸç‹¼æ—¶é—´å°äºå½“å‰æ—¶é—´ï¼Œ
+            //Debug.Log("åœŸç‹¼æ—¶é—´æ‰§è¡Œï¼Œå½“å‰å‰©ä½™è·³è·ƒæ¬¡æ•°ä¸ºï¼š" + player.JumpState.lastAmountOfJump);
             IsCoyote = false;
         }
     }
-    //¿ªÆôÍÁÀÇÊ±¼ä
+    //å¼€å¯åœŸç‹¼æ—¶é—´
     public void StartCoyoteTime()
     {
         IsCoyote = true;

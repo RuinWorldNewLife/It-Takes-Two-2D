@@ -39,6 +39,10 @@ public class Light : MonoBehaviour
         if(lightCollider.IsTouchingLayers(playerLayer))
         {
             sceneData.bornPosIndex = indexOfBornPos;//调整出生索引值。
+            if(!isOn)//如果灯没开，就执行开启代码
+            {
+                MusicMgr.Instance.PlayAtPointFun("light_open", transform.position, false);
+            }
             MainSceneRoot.Instance.SetBornPos();//重新设置出生位置
             isOn = true;
             LightOff.SetActive(!isOn);

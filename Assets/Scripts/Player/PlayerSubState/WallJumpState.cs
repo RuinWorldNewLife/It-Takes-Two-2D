@@ -28,6 +28,8 @@ public class WallJumpState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
+        MusicMgr.Instance.PlayAtPointFun("hero_wall_jump", player.transform.position, false);
+        player.RPCPlayClip("hero_wall_jump", player.transform.position);
         player.InputHandler.UseJumpInput();
         player.resetLastAmountOfJump();
         player.SetVelocity(playerData.wallJumpVelocity, playerData.wallJumpAngle, wallJumpDirection);

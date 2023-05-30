@@ -12,30 +12,30 @@ public class ButtonToWind : MonoBehaviour
     private LayerMask playerLayer;
 
     Collider2D buttonTrigger;
-    //Ê¹ÓÃÄÄÒ»¸ö¼ÆÊıÆ÷£¿
+    //ä½¿ç”¨å“ªä¸€ä¸ªè®¡æ•°å™¨ï¼Ÿ
     [SerializeField]
     private int useWhatButtonCount = 1;
 
     [SerializeField]
-    private float moveSpeed = 1.5f;//°´Å¥ÒÆ¶¯ËÙ¶È
+    private float moveSpeed = 1.5f;//æŒ‰é’®ç§»åŠ¨é€Ÿåº¦
 
     [SerializeField]
-    private Transform windBornTF;//Éú³É·çµÄÎ»ÖÃ
+    private Transform windBornTF;//ç”Ÿæˆé£çš„ä½ç½®
 
-    [Header("Éú³ÉÊúÖ±·ç»¹ÊÇË®Æ½·ç£¿")]
+    [Header("ç”Ÿæˆç«–ç›´é£è¿˜æ˜¯æ°´å¹³é£ï¼Ÿ")]
     [SerializeField]
     private string windToBorn = "winkHorizontal";
 
-    Transform colliderTF;//×ÓÎïÌåbuttonµÄtransform¡£
+    Transform colliderTF;//å­ç‰©ä½“buttonçš„transformã€‚
 
-    Vector3 buttonStartPos;//buttonÒ»¿ªÊ¼µÄÎ»ÖÃ
+    Vector3 buttonStartPos;//buttonä¸€å¼€å§‹çš„ä½ç½®
 
     PhotonView photonView;
     private void Start()
     {
         buttonTrigger = GetComponent<Collider2D>();
         colliderTF = transform.GetChild(0);
-        buttonStartPos = colliderTF.position;//³õÊ¼»¯button¿ªÊ¼µÄÎ»ÖÃ¡£
+        buttonStartPos = colliderTF.position;//åˆå§‹åŒ–buttonå¼€å§‹çš„ä½ç½®ã€‚
 
         photonView = GetComponent<PhotonView>();
         
@@ -51,21 +51,22 @@ public class ButtonToWind : MonoBehaviour
             switch (useWhatButtonCount)
             {
                 case 1:
-                    StaticData.buttonOneNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonOneNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonOneNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonOneNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 case 2:
-                    StaticData.buttonTwoNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonTwoNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonTwoNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonTwoNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 case 3:
-                    StaticData.buttonThreeNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonThreeNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonThreeNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonThreeNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 default:
                     break;
             }
-            //¶¨Ê±Éú³É·çµÄ·½·¨
+            MusicMgr.Instance.PlayAtPointFun("chest_open", transform.position, false);
+            //å®šæ—¶ç”Ÿæˆé£çš„æ–¹æ³•
             MonoHelper.Instance.InvokeReapeat(() =>
             {
                 if (PhotonNetwork.IsMasterClient)
@@ -83,7 +84,7 @@ public class ButtonToWind : MonoBehaviour
             
             if (colliderTF.position.y >= buttonStartPos.y - 0.1f)
             {
-                //±¾Éí°´Å¥ÏòÏÂÒÆ¶¯
+                //æœ¬èº«æŒ‰é’®å‘ä¸‹ç§»åŠ¨
                 colliderTF.Translate(Vector3.down * moveSpeed / 2 * Time.deltaTime);
             }
         }
@@ -91,30 +92,30 @@ public class ButtonToWind : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //µ±ÎïÌåÀë¿ª°´Å¥£¬ÈÃ°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿×Ô¼õ¡£
+        //å½“ç‰©ä½“ç¦»å¼€æŒ‰é’®ï¼Œè®©æŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡è‡ªå‡ã€‚
         switch (useWhatButtonCount)
         {
             case 1:
                 StaticData.buttonOneNum--;
-                if (StaticData.buttonOneNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonOneNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             case 2:
                 StaticData.buttonTwoNum--;
-                if (StaticData.buttonTwoNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonTwoNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             case 3:
                 StaticData.buttonThreeNum--;
-                if (StaticData.buttonThreeNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonThreeNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             default:
                 break;
         }
-        //Í£Ö¹Éú³É·çµÄĞ­³Ì
+        //åœæ­¢ç”Ÿæˆé£çš„åç¨‹
         MonoHelper.Instance.InvokeReapeatStop();
 
         colliderTF.DOPause();
-        colliderTF.DOKill();//ÔÚÒÆ¶¯Ö®Ç°£¬ÏÈ½«Ö®Ç°µÄ¶¯»­É±ËÀ
-        //µ±ÎïÌåÀë¿ª°´Å¥£¬ÔòÈÃ°´Å¥»Øµ½×î³õÎ»ÖÃ¡£
+        colliderTF.DOKill();//åœ¨ç§»åŠ¨ä¹‹å‰ï¼Œå…ˆå°†ä¹‹å‰çš„åŠ¨ç”»æ€æ­»
+        //å½“ç‰©ä½“ç¦»å¼€æŒ‰é’®ï¼Œåˆ™è®©æŒ‰é’®å›åˆ°æœ€åˆä½ç½®ã€‚
         colliderTF.DOMove(buttonStartPos, 0.2f);
     }
 }

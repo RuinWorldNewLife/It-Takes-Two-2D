@@ -7,8 +7,8 @@ using UnityEngine;
 
 public class JumpPlat : MonoBehaviour
 {
-    public float jumpPlatTime;//在跳板上被施加力的时间，时间越长跳跃越高
-    public float jumpPlatForce;//在跳板上跳跃的力
+    public float jumpPlatTime;//鍦ㄨ烦鏉夸笂琚柦鍔犲姏鐨勬椂闂达紝鏃堕棿瓒婇暱璺宠穬瓒婇珮
+    public float jumpPlatForce;//鍦ㄨ烦鏉夸笂璺宠穬鐨勫姏
     [SerializeField]
     private LayerMask playerLayer;
 
@@ -31,6 +31,7 @@ public class JumpPlat : MonoBehaviour
         if (platCollider.IsTouchingLayers(playerLayer))
         {
             player = collision.gameObject.GetComponent<Player>();
+            MusicMgr.Instance.PlayAtPointFun("jump2", player.transform.position, false);
             player.jumpPlatTime = jumpPlatTime;
             player.isJumpPlat = true;
             player.jumpPlatForce = jumpPlatForce;

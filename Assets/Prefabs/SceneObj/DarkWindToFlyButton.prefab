@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 808667205980906010}
   - component: {fileID: 1592040430709537513}
   - component: {fileID: 1592040431020132272}
+  - component: {fileID: 2916810756808693251}
   m_Layer: 9
   m_Name: WindToFly
   m_TagString: WindToFly
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1404982891
-  m_SortingLayer: 2
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -1100794429, guid: 4ff0cced55b25124095915c5fabbe6dc, type: 3}
   m_Color: {r: 0.67358494, g: 1, b: 0.9810173, a: 1}
@@ -174,6 +175,102 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!82 &2916810756808693251
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808667205980906009}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d06dade7aa3ed7e4dbd8981730732e20, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0
+  MaxDistance: 6
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0001
+      value: 1
+      inSlope: -2.7314842
+      outSlope: -2.7314842
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.07737253
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.13901746
+      outSlope: -0.13901746
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18663837
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3367517508673807719
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +472,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1404982891
-  m_SortingLayer: 2
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f33eafc009058544d9becf190d3528a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

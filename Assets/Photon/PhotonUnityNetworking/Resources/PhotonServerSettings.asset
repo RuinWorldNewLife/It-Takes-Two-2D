@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
   AppSettings:
-    AppIdRealtime: b305f618-914f-43ca-968e-a3fc13b5359f
+    AppIdRealtime: 9161f1d1-607e-408d-9348-12db465e3cb7
     AppIdFusion: 
     AppIdChat: 
     AppIdVoice: 
-    AppVersion: 
+    AppVersion: 1
     UseNameServer: 1
     FixedRegion: cn
     Server: ns.photonengine.cn
@@ -54,6 +54,7 @@ MonoBehaviour:
   - RPCRestart
   - RPCUIPop
   - Fade
+  - PlayClipAtPoint
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

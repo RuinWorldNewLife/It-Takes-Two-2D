@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerDashState : PlayerAbilityState
 {
@@ -30,6 +31,9 @@ public class PlayerDashState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
+        
+        MusicMgr.Instance.PlayAtPointFun("hero_dash", player.transform.position, false);
+        player.RPCPlayClip("hero_dash", player.transform.position);
         player.RB.gravityScale = 0f;
         player.InputHandler.UseDashInput();
         yPostion = player.transform.position.y;

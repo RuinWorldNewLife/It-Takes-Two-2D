@@ -54,23 +54,15 @@ namespace Photon.Pun.Demo.Asteroids
 
         public void Start()
         {
-            if (photonView == null)
-            {
-                return;
-            }
             foreach (Renderer r in GetComponentsInChildren<Renderer>())
             {
-                r.material.color = AsteroidsGame.GetColor(photonView.Owner.GetPlayerNumber());//报空
+                r.material.color = AsteroidsGame.GetColor(photonView.Owner.GetPlayerNumber());
             }
         }
 
         public void Update()
         {
-            if (photonView == null)
-            {
-                return;
-            }
-            if (!photonView.AmOwner || !controllable)//报空
+            if (!photonView.AmOwner || !controllable)
             {
                 return;
             }
@@ -99,11 +91,7 @@ namespace Photon.Pun.Demo.Asteroids
 
         public void FixedUpdate()
         {
-            if(photonView == null)
-            {
-                return;
-            }
-            if (!photonView.IsMine)//报空
+            if (!photonView.IsMine)
             {
                 return;
             }
@@ -161,9 +149,9 @@ namespace Photon.Pun.Demo.Asteroids
                 object lives;
                 if (PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue(AsteroidsGame.PLAYER_LIVES, out lives))
                 {
-                    PhotonNetwork.LocalPlayer.SetCustomProperties(new Hashtable { { AsteroidsGame.PLAYER_LIVES, ((int)lives <= 1) ? 0 : ((int)lives - 1) } });
+                    PhotonNetwork.LocalPlayer.SetCustomProperties(new Hashtable {{AsteroidsGame.PLAYER_LIVES, ((int) lives <= 1) ? 0 : ((int) lives - 1)}});
 
-                    if (((int)lives) > 1)
+                    if (((int) lives) > 1)
                     {
                         StartCoroutine("WaitForRespawn");
                     }
@@ -174,7 +162,7 @@ namespace Photon.Pun.Demo.Asteroids
         [PunRPC]
         public void Fire(Vector3 position, Quaternion rotation, PhotonMessageInfo info)
         {
-            float lag = (float)(PhotonNetwork.Time - info.SentServerTime);
+            float lag = (float) (PhotonNetwork.Time - info.SentServerTime);
             GameObject bullet;
 
             /** Use this if you want to fire one bullet at a time **/
@@ -206,7 +194,7 @@ namespace Photon.Pun.Demo.Asteroids
             EngineTrail.SetActive(true);
             Destruction.Stop();
         }
-
+        
         #endregion
 
         private void CheckExitScreen()
@@ -215,7 +203,7 @@ namespace Photon.Pun.Demo.Asteroids
             {
                 return;
             }
-
+            
             if (Mathf.Abs(rigidbody.position.x) > (Camera.main.orthographicSize * Camera.main.aspect))
             {
                 rigidbody.position = new Vector3(-Mathf.Sign(rigidbody.position.x) * Camera.main.orthographicSize * Camera.main.aspect, 0, rigidbody.position.z);

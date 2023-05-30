@@ -25,11 +25,9 @@ namespace Photon.Chat.UtilityScripts
             Debug.LogError("PUN Demos are not compatible with the New Input System, unless you enable \"Both\" in: Edit > Project Settings > Player > Active Input Handling. Pausing App.");
             Debug.Break();
             return;
-#endif
+            #endif
 
-#pragma warning disable CS0162 // 检测到无法访问的代码
             EventSystem sceneEventSystem = FindObjectOfType<EventSystem>();
-#pragma warning restore CS0162 // 检测到无法访问的代码
             if (sceneEventSystem == null)
             {
                 GameObject eventSystem = new GameObject("EventSystem");

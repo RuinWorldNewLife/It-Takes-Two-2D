@@ -69,7 +69,7 @@ MonoBehaviour:
   m_text: "\u83DC\u5355"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9df82154363fbae46b54cd73cffa5add, type: 2}
-  m_sharedMaterial: {fileID: -486146992751139227, guid: 9df82154363fbae46b54cd73cffa5add, type: 2}
+  m_sharedMaterial: {fileID: -8170999243461136403, guid: 9df82154363fbae46b54cd73cffa5add, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -274,6 +274,9 @@ GameObject:
   - component: {fileID: 8280080715195112430}
   - component: {fileID: 8280080715195112431}
   - component: {fileID: 8280080715195112424}
+  - component: {fileID: 3540965820184763685}
+  - component: {fileID: 386123563712589414}
+  - component: {fileID: 7160072870350152320}
   m_Layer: 5
   m_Name: ButtonGamePause
   m_TagString: Untagged
@@ -396,3 +399,52 @@ MonoBehaviour:
           m_StringArgument: UIGamePause
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3540965820184763685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8280080715195112426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0969725a2e063da459efc034c4e03005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 0.5
+--- !u!114 &386123563712589414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8280080715195112426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b2ed11d675446c5a49da1ea296d490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectFactor: 1
+  m_ColorFactor: 0
+  m_BlurFactor: 0
+  m_EffectMode: 0
+  m_ColorMode: 1
+  m_BlurMode: 3
+  m_AdvancedBlur: 0
+--- !u!114 &7160072870350152320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8280080715195112426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BlurFactor: 1
+  m_Style: 3
+  m_EffectColor: {r: 0.011263967, g: 1, b: 0, a: 0}
+  m_EffectDistance: {x: 4, y: 4}
+  m_UseGraphicAlpha: 1

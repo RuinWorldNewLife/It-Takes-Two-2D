@@ -11,26 +11,26 @@ public class ButtonWindToFly : MonoBehaviour
     private LayerMask playerLayer;
 
     Collider2D buttonTrigger;
-    //Ê¹ÓÃÄÄÒ»¸ö¼ÆÊıÆ÷£¿
+    //ä½¿ç”¨å“ªä¸€ä¸ªè®¡æ•°å™¨ï¼Ÿ
     [SerializeField]
     private int useWhatButtonCount = 1;
 
     [SerializeField]
-    private float moveSpeed = 1.5f;//°´Å¥ÒÆ¶¯ËÙ¶È
+    private float moveSpeed = 1.5f;//æŒ‰é’®ç§»åŠ¨é€Ÿåº¦
 
-    Transform colliderTF;//×ÓÎïÌåbuttonµÄtransform¡£
+    Transform colliderTF;//å­ç‰©ä½“buttonçš„transformã€‚
 
-    Vector3 buttonStartPos;//buttonÒ»¿ªÊ¼µÄÎ»ÖÃ
+    Vector3 buttonStartPos;//buttonä¸€å¼€å§‹çš„ä½ç½®
 
     PhotonView photonView;
 
-    private Transform windToFlyTF;//¹âÖù×ÓÎïÌå×ÓÎïÌå
+    private Transform windToFlyTF;//å…‰æŸ±å­ç‰©ä½“å­ç‰©ä½“
 
     private void Start()
     {
         buttonTrigger = GetComponent<Collider2D>();
         colliderTF = transform.GetChild(0);
-        buttonStartPos = colliderTF.position;//³õÊ¼»¯button¿ªÊ¼µÄÎ»ÖÃ¡£
+        buttonStartPos = colliderTF.position;//åˆå§‹åŒ–buttonå¼€å§‹çš„ä½ç½®ã€‚
 
         photonView = GetComponent<PhotonView>();
 
@@ -41,9 +41,9 @@ public class ButtonWindToFly : MonoBehaviour
         StaticData.buttonFiveNum = 0;
         StaticData.buttonSixNum = 0;
 
-        windToFlyTF = transform.GetChild(1);//ÄÃµ½µÚÈı¸ö¹âÖù×ÓÎïÌå
+        windToFlyTF = transform.GetChild(1);//æ‹¿åˆ°ç¬¬ä¸‰ä¸ªå…‰æŸ±å­ç‰©ä½“
         photonView.RPC("SetWindToFlyActive", RpcTarget.Others, false);
-        SetWindToFlyEffectActiveNotRPC(false);//½«µÚÈı¸ö×ÓÎïÌåµÄ¹âÖù×ÓÎïÌåsetAcitve³õÊ¼»¯Îªfalse¡£
+        SetWindToFlyEffectActiveNotRPC(false);//å°†ç¬¬ä¸‰ä¸ªå­ç‰©ä½“çš„å…‰æŸ±å­ç‰©ä½“setAcitveåˆå§‹åŒ–ä¸ºfalseã€‚
     }
 
     [PunRPC]
@@ -64,34 +64,34 @@ public class ButtonWindToFly : MonoBehaviour
             switch (useWhatButtonCount)
             {
                 case 1:
-                    StaticData.buttonOneNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonOneNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonOneNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonOneNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 case 2:
-                    StaticData.buttonTwoNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonTwoNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonTwoNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonTwoNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 case 3:
-                    StaticData.buttonThreeNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonThreeNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonThreeNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonThreeNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 case 4:
-                    StaticData.buttonFourNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonThreeNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonFourNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonThreeNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 case 5:
-                    StaticData.buttonFiveNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonThreeNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonFiveNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonThreeNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 case 6:
-                    StaticData.buttonSixNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonThreeNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonSixNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonThreeNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 default:
                     break;
             }
             photonView.RPC("SetWindToFlyActive", RpcTarget.Others, true);
-            SetWindToFlyEffectActiveNotRPC(true);//µ±Íæ¼Ò°´µ½°´¼üÊ±£¬½«¹âÖùÉú³É
+            SetWindToFlyEffectActiveNotRPC(true);//å½“ç©å®¶æŒ‰åˆ°æŒ‰é”®æ—¶ï¼Œå°†å…‰æŸ±ç”Ÿæˆ
         }
     }
 
@@ -102,48 +102,50 @@ public class ButtonWindToFly : MonoBehaviour
 
             if (colliderTF.position.y >= buttonStartPos.y - 0.1f)
             {
-                //±¾Éí°´Å¥ÏòÏÂÒÆ¶¯
+                //æœ¬èº«æŒ‰é’®å‘ä¸‹ç§»åŠ¨
                 colliderTF.Translate(Vector3.down * moveSpeed / 2 * Time.deltaTime);
             }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //µ±ÎïÌåÀë¿ª°´Å¥£¬ÈÃ°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿×Ô¼õ¡£
+        //å½“ç‰©ä½“ç¦»å¼€æŒ‰é’®ï¼Œè®©æŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡è‡ªå‡ã€‚
         switch (useWhatButtonCount)
         {
             case 1:
                 StaticData.buttonOneNum--;
-                if (StaticData.buttonOneNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonOneNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             case 2:
                 StaticData.buttonTwoNum--;
-                if (StaticData.buttonTwoNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonTwoNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             case 3:
                 StaticData.buttonThreeNum--;
-                if (StaticData.buttonThreeNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonThreeNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             case 4:
                 StaticData.buttonFourNum--;
-                if (StaticData.buttonFourNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonFourNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             case 5:
                 StaticData.buttonFiveNum--;
-                if (StaticData.buttonFiveNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonFiveNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             case 6:
                 StaticData.buttonSixNum--;
-                if (StaticData.buttonSixNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonSixNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             default:
                 break;
         }
         photonView.RPC("SetWindToFlyActive", RpcTarget.Others, false);
-        SetWindToFlyEffectActiveNotRPC(false);//µ±Íæ¼ÒÀë¿ª°´¼ü£¬½«¹âÖùÏûÊ§¡£
+        MusicMgr.Instance.PlayAtPointFun("chest_open", transform.position, false);
+
+        SetWindToFlyEffectActiveNotRPC(false);//å½“ç©å®¶ç¦»å¼€æŒ‰é”®ï¼Œå°†å…‰æŸ±æ¶ˆå¤±ã€‚
         colliderTF.DOPause();
-        colliderTF.DOKill();//ÔÚÒÆ¶¯Ö®Ç°£¬ÏÈ½«Ö®Ç°µÄ¶¯»­É±ËÀ
-        //µ±ÎïÌåÀë¿ª°´Å¥£¬ÔòÈÃ°´Å¥»Øµ½×î³õÎ»ÖÃ¡£
+        colliderTF.DOKill();//åœ¨ç§»åŠ¨ä¹‹å‰ï¼Œå…ˆå°†ä¹‹å‰çš„åŠ¨ç”»æ€æ­»
+        //å½“ç‰©ä½“ç¦»å¼€æŒ‰é’®ï¼Œåˆ™è®©æŒ‰é’®å›åˆ°æœ€åˆä½ç½®ã€‚
         colliderTF.DOMove(buttonStartPos, 0.2f);
     }
 }

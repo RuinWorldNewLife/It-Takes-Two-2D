@@ -30,11 +30,10 @@ public class SceneMgr : Singleton<SceneMgr>
     private void OnSceneUnLoad(Scene arg0)
 	{
 		DOTween.KillAll();//在场景卸载之前，杀死所有动画。
-        
-        
-		// Debug.Log("场景中所有对象已经被销毁，即将卸载场景......");
-		//Debug.Log("<color=#00ff00>代码来到这里说明场景中所有的对象都被卸载，这里你需要做的是保存一些数据，最后想做的事放到这里来</color>");
-	}
+       
+        // Debug.Log("场景中所有对象已经被销毁，即将卸载场景......");
+        //Debug.Log("<color=#00ff00>代码来到这里说明场景中所有的对象都被卸载，这里你需要做的是保存一些数据，最后想做的事放到这里来</color>");
+    }
 	/// <summary>
 	/// 这个方法里做一些场景跳转后初始化的逻辑----添加到Start方法终的事件中
 	/// </summary>
@@ -46,14 +45,16 @@ public class SceneMgr : Singleton<SceneMgr>
 		switch (arg0.name)
 		{
 			case "Unititled":
-				// 初始化UIManager栈区和字典
-					UIManager.Instance.PushUI("UIStart");
-					MusicMgr.Instance.PlayBgm("login");
+                PhotonNetwork.ConnectUsingSettings();//连接到网络
+                // 初始化UIManager栈区和字典
+                UIManager.Instance.PushUI("UIStart");
+					MusicMgr.Instance.PlayBgm("RoyalTheme_QueenNew");
 				// Debug.Log("场景跳转初始化");
 				break;
-			case "SampleScene":
-				// 初始化UIManager栈区和字典
-				MusicMgr.Instance.PlayBgm("sairai");
+			case "MainScene":
+                // 初始化UIManager栈区和字典
+                UIManager.Instance.PushUI("UIGameStart");//将选项显示
+                MusicMgr.Instance.PlayBgm("S30 White Palace");
 				// Debug.Log("场景跳转初始化");
 				break;
 		}

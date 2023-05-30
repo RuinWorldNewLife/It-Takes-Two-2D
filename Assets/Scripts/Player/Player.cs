@@ -19,20 +19,20 @@ public class Player : MonoBehaviour, IPunObservable
     public PlayerInputHandler InputHandler { get; private set; }
     public PlayerExternalAffect ExternalAffect { get; private set; }
 
-    #region Ò»Ğ©±äÁ¿
+    #region ä¸€äº›å˜é‡
     public Vector2 CurrentVelocity { get; private set; }
     private Vector2 workspace;
     private Vector3 posPlayerClone;
-    private Transform handleTF;//handle×ÓÎïÌå
-    private CinemachineVirtualCamera cinemachine;//ĞéÄâÉãÏñ»ú
+    private Transform handleTF;//handleå­ç‰©ä½“
+    private CinemachineVirtualCamera cinemachine;//è™šæ‹Ÿæ‘„åƒæœº
 
     public bool IsMinePlayer { get; private set; }
-    private bool updateInvokeAvoid;//±ÜÃâ¶à´ÎÖ´ĞĞĞ­³Ì
+    private bool updateInvokeAvoid;//é¿å…å¤šæ¬¡æ‰§è¡Œåç¨‹
 
-    private bool preHandleInput;//ÉÏÒ»Ö¡ÊÇ·ñÓĞ°´ÏÂhandle¼ü¡£
+    private bool preHandleInput;//ä¸Šä¸€å¸§æ˜¯å¦æœ‰æŒ‰ä¸‹handleé”®ã€‚
 
-    private Material _myMaterial;//¸Ã½ÇÉ«µÄ²ÄÖÊ
-    private float fadeTimer = -0.1f;//¼ÆÊ±Æ÷
+    private Material _myMaterial;//è¯¥è§’è‰²çš„æè´¨
+    private float fadeTimer = -0.1f;//è®¡æ—¶å™¨
     [HideInInspector]
     public bool isDead;
 
@@ -54,7 +54,7 @@ public class Player : MonoBehaviour, IPunObservable
     [HideInInspector]
     public bool isInJumpOrDashState;
     [HideInInspector]
-    public bool isJumpPlat;//ÊÇ·ñÔÚÌø°åÉÏÌøÔ¾
+    public bool isJumpPlat;//æ˜¯å¦åœ¨è·³æ¿ä¸Šè·³è·ƒ
     [HideInInspector]
     public float jumpPlatTime;
     [HideInInspector]
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour, IPunObservable
     public float playerTempJumpSpeed;
     #endregion
 
-    #region ×´Ì¬
+    #region çŠ¶æ€
     public PlayerIdleState IdleState { get; private set; }
     public PlayerMoveState MoveState { get; private set; }
     public PlayerJumpState JumpState { get; private set; }
@@ -79,20 +79,20 @@ public class Player : MonoBehaviour, IPunObservable
 
     #endregion
 
-    #region ×é¼ş
+    #region ç»„ä»¶
     public Animator Anim { get; private set; }
     public Rigidbody2D RB { get; private set; }
 
     [SerializeField]
     private Transform checkGround;
-    //PhotonÖ÷ÒªÀà,PhotonView½Å±¾¶ÔÏó
+    //Photonä¸»è¦ç±»,PhotonViewè„šæœ¬å¯¹è±¡
     private PhotonView photonView;
     [SerializeField]
     private Transform wallCheck;
 
     #endregion
 
-    #region unityµÄ»Øµ÷º¯Êı
+    #region unityçš„å›è°ƒå‡½æ•°
     private void Awake()
     {
         StateMachine = new PlayerStateMachine();
@@ -119,36 +119,36 @@ public class Player : MonoBehaviour, IPunObservable
         ExternalAffect = GetComponent<PlayerExternalAffect>();
         photonView = GetComponent<PhotonView>();
         cinemachine = GameObject.Find("Camera").transform.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
-        handleTF = transform.GetChild(2);//ÄÃµ½µÚÈı¸ö×ÓÎïÌåHandlePos
+        handleTF = transform.GetChild(2);//æ‹¿åˆ°ç¬¬ä¸‰ä¸ªå­ç‰©ä½“HandlePos
         photonView.RPC("SetHandleEffectActive", RpcTarget.Others, false);
-        SetHandleEffectActiveNotRPC(false);//½«µÚÈı¸ö×ÓÎïÌåµÄHandle³õÊ¼»¯Îªfalse¡£
+        SetHandleEffectActiveNotRPC(false);//å°†ç¬¬ä¸‰ä¸ªå­ç‰©ä½“çš„Handleåˆå§‹åŒ–ä¸ºfalseã€‚
         if(photonView.IsMine)
         {
-            cinemachine.Follow = transform;//ÉãÏñ»ú¸úËæÍæ¼Ò
+            cinemachine.Follow = transform;//æ‘„åƒæœºè·Ÿéšç©å®¶
         }
-        photonView.RPC("CameraFollow", RpcTarget.Others);///Ïà»ú¸úËæ
+        photonView.RPC("CameraFollow", RpcTarget.Others);///ç›¸æœºè·Ÿéš
         StateMachine.Initialize(IdleState);
-        FacingDirection = 1;//¼ÇÂ¼ÈÎÎñ³¯Ïò
+        FacingDirection = 1;//è®°å½•ä»»åŠ¡æœå‘
         isJumpPlat = false;
         isRotate = false;
         isInJumpOrDashState = false;
         updateInvokeAvoid = true;
-        //playerSelfData.ifHaveDashKey = false;//³õÊ¼»¯ÊÇ·ñÓµÓĞÉÁ±ÜÔ¿³×¡£
-        //playerSelfData.ifHaveWallKey = false;//³õÊ¼»¯ÊÇ·ñÓµÓĞÅÀÇ½¼¼ÄÜ¡£
-        //playerSelfData.ifHaveJumpKey = false;//³õÊ¼»¯ÊÇ·ñÓµÓĞÁ¬Ìø¼¼ÄÜ¡£
-        //preHandleInput = false;//³õÊ¼»¯ÉÏÒ»Ö¡handleÊäÈë¡£
-        //playerSelfData.amountOfJump = 1;//³õÊ¼»¯ÄÜ¹»ÌøÔ¾Ò»´Î¡£
-        IsMinePlayer = photonView.IsMine;//ÅĞ¶Ïµ±Ç°½ÇÉ«ÊÇ·ñÎª±¾Éí¡£
+        //playerSelfData.ifHaveDashKey = false;//åˆå§‹åŒ–æ˜¯å¦æ‹¥æœ‰é—ªé¿é’¥åŒ™ã€‚
+        //playerSelfData.ifHaveWallKey = false;//åˆå§‹åŒ–æ˜¯å¦æ‹¥æœ‰çˆ¬å¢™æŠ€èƒ½ã€‚
+        //playerSelfData.ifHaveJumpKey = false;//åˆå§‹åŒ–æ˜¯å¦æ‹¥æœ‰è¿è·³æŠ€èƒ½ã€‚
+        //preHandleInput = false;//åˆå§‹åŒ–ä¸Šä¸€å¸§handleè¾“å…¥ã€‚
+        //playerSelfData.amountOfJump = 1;//åˆå§‹åŒ–èƒ½å¤Ÿè·³è·ƒä¸€æ¬¡ã€‚
+        IsMinePlayer = photonView.IsMine;//åˆ¤æ–­å½“å‰è§’è‰²æ˜¯å¦ä¸ºæœ¬èº«ã€‚
         RB.gravityScale = playerData.gravityValue;
         exitWindToFlyTime = playerData.exitWindToFlyTime;
-        //½«PhotonNetWorkµÄÍ¨Ñ¶ËÙÂÊ¸ÄÎªÃ¿Ö¡60Ãë
+        //å°†PhotonNetWorkçš„é€šè®¯é€Ÿç‡æ”¹ä¸ºæ¯å¸§60ç§’
         PhotonNetwork.SendRate = 60;
         PhotonNetwork.SerializationRate = 60;
 
-        _myMaterial = GetComponent<SpriteRenderer>().material;//ÄÃµ½ÌØĞ§²ÄÖÊ
+        _myMaterial = GetComponent<SpriteRenderer>().material;//æ‹¿åˆ°ç‰¹æ•ˆæè´¨
         photonView.RPC("Fade", RpcTarget.All, 0.8f);
-        isDead = false;//ÉèÖÃÍæ¼Ò²¢·ÇËÀÍö
-        fadeTimer = 0.8f;//³õÊ¼»¯ÏûÊÅ¼ÆÊ±Æ÷
+        isDead = false;//è®¾ç½®ç©å®¶å¹¶éæ­»äº¡
+        fadeTimer = 0.8f;//åˆå§‹åŒ–æ¶ˆé€è®¡æ—¶å™¨
         StartCoroutine(FadeAndAppear(false, -0.1f));
     }
 
@@ -160,7 +160,7 @@ public class Player : MonoBehaviour, IPunObservable
         if (isInJumpOrDashState && updateInvokeAvoid)
         {
             updateInvokeAvoid = false;
-            MonoHelper.Instance.WaitSomeTimeInvoke(() => { }, 0, () => { return true; });//Èç¹ûÓĞĞ­³Ì£¬Í£Ö¹Ğ­³Ì
+            MonoHelper.Instance.WaitSomeTimeInvoke(() => { }, 0, () => { return true; });//å¦‚æœæœ‰åç¨‹ï¼Œåœæ­¢åç¨‹
             MonoHelper.Instance.WaitSomeTimeInvoke(() =>
             {
                 isInJumpOrDashState = false;
@@ -168,10 +168,10 @@ public class Player : MonoBehaviour, IPunObservable
             }, 0.2f, () => { return false; });
         }
 
-        CheckIfHandleInputChange(); //¼ì²éhandleÊäÈë£¬²¢Ö´ĞĞ·½·¨¡£
+        CheckIfHandleInputChange(); //æ£€æŸ¥handleè¾“å…¥ï¼Œå¹¶æ‰§è¡Œæ–¹æ³•ã€‚
 
-        //Èç¹ûµ±Ç°¶ÔÏó²»ÊÇ×Ô¼º£¬Ôò½«×Ô¼ºµÄÎ»ÖÃĞÅÏ¢Æ½»¬µØ´«Êäµ½ÁíÍâÒ»¸ö¿Í»§¶Ë
-        //±£Ö¤Íæ¼ÒÔÚÓÎÍæÊ±ºòÒÆ¶¯²»»á³öÏÖ¿¨¶Ù
+        //å¦‚æœå½“å‰å¯¹è±¡ä¸æ˜¯è‡ªå·±ï¼Œåˆ™å°†è‡ªå·±çš„ä½ç½®ä¿¡æ¯å¹³æ»‘åœ°ä¼ è¾“åˆ°å¦å¤–ä¸€ä¸ªå®¢æˆ·ç«¯
+        //ä¿è¯ç©å®¶åœ¨æ¸¸ç©æ—¶å€™ç§»åŠ¨ä¸ä¼šå‡ºç°å¡é¡¿
         if (!photonView.IsMine)
         {
             Player2SmoothPostion();
@@ -186,22 +186,31 @@ public class Player : MonoBehaviour, IPunObservable
     }
     #endregion
 
-    #region ÁªÍøRPC·½·¨
+    #region è”ç½‘RPCæ–¹æ³•
 
     /// <summary>
-    /// Ïà»ú¸úËæ·½·¨
+    /// ç›¸æœºè·Ÿéšæ–¹æ³•
     /// </summary>
     [PunRPC]
     public void CameraFollow()
     {
-        CinemachineVirtualCamera cinemachine = GameObject.Find("Camera").transform.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
-        if (photonView.IsMine)
+        try
         {
-            cinemachine.Follow = transform;//ÉãÏñ»ú¸úËæÍæ¼Ò
+            CinemachineVirtualCamera cinemachine = GameObject.Find("Camera").transform.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
+            if (photonView.IsMine)
+            {
+                cinemachine.Follow = transform;//æ‘„åƒæœºè·Ÿéšç©å®¶
+            }
         }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        
     }
     /// <summary>
-    /// ÉèÖÃÖØÁ¦Ëõ·Å
+    /// è®¾ç½®é‡åŠ›ç¼©æ”¾
     /// </summary>
     /// <param name="value"></param>
     [PunRPC]
@@ -215,7 +224,7 @@ public class Player : MonoBehaviour, IPunObservable
         photonView.RPC("SetGravityScale", rpcTarget, value);
     }
     /// <summary>
-    /// ÉèÖÃÊÇ·ñÎïÀíÊ§Ğ§
+    /// è®¾ç½®æ˜¯å¦ç‰©ç†å¤±æ•ˆ
     /// </summary>
     /// <param name="isKinematicValue"></param>
     [PunRPC]
@@ -228,7 +237,7 @@ public class Player : MonoBehaviour, IPunObservable
         photonView.RPC("SetRBisKinematic", rpcTarget, value);
     }
     /// <summary>
-    /// ÉèÖÃ×ÓÎïÌå»îÔ¾×´Ì¬
+    /// è®¾ç½®å­ç‰©ä½“æ´»è·ƒçŠ¶æ€
     /// </summary>
     /// <param name="ifShouldActive"></param>
     [PunRPC]
@@ -246,7 +255,7 @@ public class Player : MonoBehaviour, IPunObservable
 
     #endregion
 
-    #region ¼ì²é·½·¨
+    #region æ£€æŸ¥æ–¹æ³•
     public bool CheckIfIsMine()
     {
         return photonView.IsMine;
@@ -260,7 +269,7 @@ public class Player : MonoBehaviour, IPunObservable
             playerSelfData.whatIsGround);
     }
     /// <summary>
-    /// SceneÊÓÍ¼¼ì²é·½·¨
+    /// Sceneè§†å›¾æ£€æŸ¥æ–¹æ³•
     /// </summary>
     public void CheckIfShouldFlip(float xInput)
     {
@@ -269,7 +278,7 @@ public class Player : MonoBehaviour, IPunObservable
             Flip();
         }
     }
-    //ÉèÖÃÊÇ·ñÅöµ½Ç½±Ú¡£
+    //è®¾ç½®æ˜¯å¦ç¢°åˆ°å¢™å£ã€‚
     public bool CheckIfTouchingWall()
     {
         return Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerSelfData.whatIsGround) && playerSelfData.ifHaveWallKey;
@@ -280,7 +289,7 @@ public class Player : MonoBehaviour, IPunObservable
     }
 
     /// <summary>
-    /// ¼ì²éÊÇ·ñÓµÓĞÔ¿³×
+    /// æ£€æŸ¥æ˜¯å¦æ‹¥æœ‰é’¥åŒ™
     /// </summary>
     /// <returns></returns>
     public bool CheckIfIsHavingKey()
@@ -295,28 +304,28 @@ public class Player : MonoBehaviour, IPunObservable
         }
     }
     /// <summary>
-    /// ¼ì²éhandleÊäÈëÊÇ·ñ¸Ä±ä¡£
+    /// æ£€æŸ¥handleè¾“å…¥æ˜¯å¦æ”¹å˜ã€‚
     /// </summary>
     public void CheckIfHandleInputChange()
     {
-        if (preHandleInput != InputHandler.HandleInput)//µ±ÊäÈëÓĞ±ä
+        if (preHandleInput != InputHandler.HandleInput)//å½“è¾“å…¥æœ‰å˜
         {
-            if (InputHandler.HandleInput)//ÊäÈëÎªtrue£¬Ôò
+            if (InputHandler.HandleInput)//è¾“å…¥ä¸ºtrueï¼Œåˆ™
             {
                 photonView.RPC("SetHandleEffectActive", RpcTarget.Others, true);
                 SetHandleEffectActiveNotRPC(true);
             }
-            else//ÊäÈëÎªfalse£¬Ôò
+            else//è¾“å…¥ä¸ºfalseï¼Œåˆ™
             {
                 photonView.RPC("SetHandleEffectActive", RpcTarget.Others, false);
                 SetHandleEffectActiveNotRPC(false);
             }
         }
-        preHandleInput = InputHandler.HandleInput;//½«µ±Ç°µÄÊäÈë¸³Öµ¸øÉÏÒ»Ö¡µÄÊäÈë¡£
+        preHandleInput = InputHandler.HandleInput;//å°†å½“å‰çš„è¾“å…¥èµ‹å€¼ç»™ä¸Šä¸€å¸§çš„è¾“å…¥ã€‚
     }
     #endregion
 
-    #region ÉèÖÃ·½·¨
+    #region è®¾ç½®æ–¹æ³•
     public void SetVelocityX(float velocity)
     {
         workspace.Set(velocity, CurrentVelocity.y);
@@ -337,37 +346,37 @@ public class Player : MonoBehaviour, IPunObservable
         CurrentVelocity = workspace;
     }
     /// <summary>
-    /// ÉèÖÃ´¥Åöµ½ÌøÔ¾Ô¿³×µÄ·½·¨¡£
+    /// è®¾ç½®è§¦ç¢°åˆ°è·³è·ƒé’¥åŒ™çš„æ–¹æ³•ã€‚
     /// </summary>
     public void SetTouchingJumpKey()
     {
         playerSelfData.ifHaveJumpKey = true;
-        playerSelfData.amountOfJump++;//Ôö¼Ó×î´óÌøÔ¾´ÎÊı
-        JumpState.lastAmountOfJump++;//Ìí¼ÓÒ»´Îµ±Ç°µÄÁÙÊ±ÌøÔ¾´ÎÊı
+        playerSelfData.amountOfJump++;//å¢åŠ æœ€å¤§è·³è·ƒæ¬¡æ•°
+        JumpState.lastAmountOfJump++;//æ·»åŠ ä¸€æ¬¡å½“å‰çš„ä¸´æ—¶è·³è·ƒæ¬¡æ•°
     }
     /// <summary>
-    /// ÉèÖÃ´¥Åöµ½ÉÁ±ÜÔ¿³×·½·¨
+    /// è®¾ç½®è§¦ç¢°åˆ°é—ªé¿é’¥åŒ™æ–¹æ³•
     /// </summary>
     public void SetTouchingDashKey()
     {
         playerSelfData.ifHaveDashKey = true;
     }
     /// <summary>
-    /// ÉèÖÃ´¥Åöµ½ÅÀÇ½Ô¿³×·½·¨
+    /// è®¾ç½®è§¦ç¢°åˆ°çˆ¬å¢™é’¥åŒ™æ–¹æ³•
     /// </summary>
     public void SetTouchingWallKey()
     {
         playerSelfData.ifHaveWallKey = true;
     }
     /// <summary>
-    /// ÍøÂçÁ¬½ÓÆ½»¬·½·¨
+    /// ç½‘ç»œè¿æ¥å¹³æ»‘æ–¹æ³•
     /// </summary>
     public void Player2SmoothPostion()
     {
         transform.position = Vector3.Lerp(transform.position, posPlayerClone, 15.0f * Time.deltaTime);
     }
     /// <summary>
-    /// ÉèÖÃhandleÊÇ·ñÎª»îÔ¾×´Ì¬¡£
+    /// è®¾ç½®handleæ˜¯å¦ä¸ºæ´»è·ƒçŠ¶æ€ã€‚
     /// </summary>
     /// <param name="ifShouldActive"></param>
     public void SetHandleEffectActiveNotRPC(bool ifShouldActive)
@@ -376,25 +385,25 @@ public class Player : MonoBehaviour, IPunObservable
     }
     #endregion
 
-    #region ÆäËû·½·¨
+    #region å…¶ä»–æ–¹æ³•
     /// <summary>
-    /// Ê¤Àû·½·¨
+    /// èƒœåˆ©æ–¹æ³•
     /// </summary>
     public void WinGame()
     {
-        RB.velocity = Vector3.zero;//½«ËÙ¶ÈÉèÖÃÎª0
-        InputHandler.ControlHandler(false);//ÉèÖÃ½ÇÉ«²»¿É¿ØÖÆ
-        Invoke("ShowUI", 3);//ÈıÃëºóÏÔÊ¾UI
+        RB.velocity = Vector3.zero;//å°†é€Ÿåº¦è®¾ç½®ä¸º0
+        InputHandler.ControlHandler(false);//è®¾ç½®è§’è‰²ä¸å¯æ§åˆ¶
+        Invoke("ShowUI", 3);//ä¸‰ç§’åæ˜¾ç¤ºUI
     }
 
     public void ShowUI()
     {
-        //ÏÔÊ¾Ê¤ÀûUI
+        //æ˜¾ç¤ºèƒœåˆ©UI
         UIManager.Instance.PushUI("UIWinGame");
     }
     
     /// <summary>
-    /// ·­×ª·½·¨
+    /// ç¿»è½¬æ–¹æ³•
     /// </summary>
     public void Flip()
     {
@@ -402,25 +411,25 @@ public class Player : MonoBehaviour, IPunObservable
         transform.Rotate(new Vector3(0, 180, 0));
     }
     /// <summary>
-    /// ÖØÖÃÌøÔ¾´ÎÊı´úÂë
+    /// é‡ç½®è·³è·ƒæ¬¡æ•°ä»£ç 
     /// </summary>
     public void resetLastAmountOfJump() => JumpState.lastAmountOfJump = playerSelfData.amountOfJump;
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        //ÕıÔÚ´«ÊäµÄÊ±ºò£¬´«Êä×Ô¼ºµÄ×ø±êĞÅÏ¢
+        //æ­£åœ¨ä¼ è¾“çš„æ—¶å€™ï¼Œä¼ è¾“è‡ªå·±çš„åæ ‡ä¿¡æ¯
         if (stream.IsWriting)
         {
             stream.SendNext(transform.position);
         }
-        //ÕıÔÚ¶ÁÈ¡µÄÊ±ºò£¬½«¶ÁÈ¡µ½µÄĞÅÏ¢Ç¿×ªÎªVector3£¬²¢ÇÒ½ÓÊÕ¡£
+        //æ­£åœ¨è¯»å–çš„æ—¶å€™ï¼Œå°†è¯»å–åˆ°çš„ä¿¡æ¯å¼ºè½¬ä¸ºVector3ï¼Œå¹¶ä¸”æ¥æ”¶ã€‚
         if (stream.IsReading)
         {
             posPlayerClone = (Vector3)stream.ReceiveNext();
         }
     }
     /// <summary>
-    /// ÖØĞÂÔÚ±£´æµã¿ªÊ¼
+    /// é‡æ–°åœ¨ä¿å­˜ç‚¹å¼€å§‹
     /// </summary>
     public void Restart()
     {
@@ -434,7 +443,7 @@ public class Player : MonoBehaviour, IPunObservable
     [PunRPC]
     public void RPCRestart()
     {
-        //////¸ù¾İ²»Í¬½ÇÉ«£¬·ÖÅä²»Í¬Î»ÖÃ£¬²¢ÇÒÉèÖÃ¿ÉÒÔ¿ØÖÆ½ÇÉ«¡£
+        //////æ ¹æ®ä¸åŒè§’è‰²ï¼Œåˆ†é…ä¸åŒä½ç½®ï¼Œå¹¶ä¸”è®¾ç½®å¯ä»¥æ§åˆ¶è§’è‰²ã€‚
         //if (playerSelfData.selfIdentity == LayerMask.GetMask("PlayerDark"))
         //{
         //    transform.position = MainSceneRoot.Instance.DarkInitPos;
@@ -445,7 +454,7 @@ public class Player : MonoBehaviour, IPunObservable
         //    transform.position = MainSceneRoot.Instance.RedInitPos;
         //    InputHandler.ControlHandler(true);
         //}
-        //ÖØĞÂ¼ÓÔØ±¾³¡¾°
+        //é‡æ–°åŠ è½½æœ¬åœºæ™¯
         SceneMgr.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -454,21 +463,21 @@ public class Player : MonoBehaviour, IPunObservable
         photonView.RPC("RPCDead", RpcTarget.All);
     }
     /// <summary>
-    /// ½ÇÉ«ËÀÍö·½·¨¡£
+    /// è§’è‰²æ­»äº¡æ–¹æ³•ã€‚
     /// </summary>
     [PunRPC]
     public void RPCDead()
     {
         
-        RB.velocity = Vector3.zero;//½«ËÙ¶ÈÉèÖÃÎª0
-        InputHandler.ControlHandler(false);//ÉèÖÃ½ÇÉ«²»¿É¿ØÖÆ
-        isDead = true;//ÉèÖÃÍæ¼ÒËÀÍö×´Ì¬Îªtrue
-        StartCoroutine(FadeAndAppear(true, 0.8f));//¿ªÆôµ­Èëµ­³öµÄĞ­³Ì
+        RB.velocity = Vector3.zero;//å°†é€Ÿåº¦è®¾ç½®ä¸º0
+        InputHandler.ControlHandler(false);//è®¾ç½®è§’è‰²ä¸å¯æ§åˆ¶
+        isDead = true;//è®¾ç½®ç©å®¶æ­»äº¡çŠ¶æ€ä¸ºtrue
+        StartCoroutine(FadeAndAppear(true, 0.8f));//å¼€å¯æ·¡å…¥æ·¡å‡ºçš„åç¨‹
     }
     [PunRPC]
-    public void Fade(float change)//¿ØÖÆÏÔÊ¾Òş²ØµÄrpc
+    public void Fade(float change)//æ§åˆ¶æ˜¾ç¤ºéšè—çš„rpc
     {
-        Debug.Log("Ö´ĞĞÏûÈÚ");
+        Debug.Log("æ‰§è¡Œæ¶ˆè");
         _myMaterial.SetFloat("_Fade", change);
     }
 
@@ -481,13 +490,13 @@ public class Player : MonoBehaviour, IPunObservable
     //        if(fadeTimer <= -0.1f)
     //        {
     //            fadeTimer = -0.1f;
-    //            isDead = true;//·ÀÖ¹¼ÌĞøÖ´ĞĞÕâ¶Î´úÂë
+    //            isDead = true;//é˜²æ­¢ç»§ç»­æ‰§è¡Œè¿™æ®µä»£ç 
     //        }
     //    }
     //}
-
+    
     /// <summary>
-    /// µ­Èëµ­³ö·½·¨
+    /// æ·¡å…¥æ·¡å‡ºæ–¹æ³•
     /// </summary>
     /// <returns></returns>
     IEnumerator FadeAndAppear(bool ifFade, float timerStartValue)
@@ -518,7 +527,7 @@ public class Player : MonoBehaviour, IPunObservable
                 if (fadeTimer >= 0.8f)
                 {
                     fadeTimer = 0.8f;
-                    InputHandler.ControlHandler(true);//½ÇÉ«ÍêÈ«ÏÔÊ¾£¬²ÅÈÃÍæ¼Ò¿ÉÒÔÏÔÊ¾
+                    InputHandler.ControlHandler(true);//è§’è‰²å®Œå…¨æ˜¾ç¤ºï¼Œæ‰è®©ç©å®¶å¯ä»¥æ˜¾ç¤º
                     yield break;
                 }
                 yield return -1;
@@ -528,11 +537,26 @@ public class Player : MonoBehaviour, IPunObservable
 
     public void playerDataClear()
     {
-        playerSelfData.ifHaveDashKey = false;//³õÊ¼»¯ÊÇ·ñÓµÓĞÉÁ±ÜÔ¿³×¡£
-        playerSelfData.ifHaveWallKey = false;//³õÊ¼»¯ÊÇ·ñÓµÓĞÅÀÇ½¼¼ÄÜ¡£
-        playerSelfData.ifHaveJumpKey = false;//³õÊ¼»¯ÊÇ·ñÓµÓĞÁ¬Ìø¼¼ÄÜ¡£
-        preHandleInput = false;//³õÊ¼»¯ÉÏÒ»Ö¡handleÊäÈë¡£
-        playerSelfData.amountOfJump = 1;//³õÊ¼»¯ÄÜ¹»ÌøÔ¾Ò»´Î¡£
+        playerSelfData.ifHaveDashKey = false;//åˆå§‹åŒ–æ˜¯å¦æ‹¥æœ‰é—ªé¿é’¥åŒ™ã€‚
+        playerSelfData.ifHaveWallKey = false;//åˆå§‹åŒ–æ˜¯å¦æ‹¥æœ‰çˆ¬å¢™æŠ€èƒ½ã€‚
+        playerSelfData.ifHaveJumpKey = false;//åˆå§‹åŒ–æ˜¯å¦æ‹¥æœ‰è¿è·³æŠ€èƒ½ã€‚
+        preHandleInput = false;//åˆå§‹åŒ–ä¸Šä¸€å¸§handleè¾“å…¥ã€‚
+        playerSelfData.amountOfJump = 1;//åˆå§‹åŒ–èƒ½å¤Ÿè·³è·ƒä¸€æ¬¡ã€‚
+    }
+
+    public void RPCPlayClip(string clipName, Vector3 position)
+    {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("PlayClipAtPoint", RpcTarget.Others, clipName, position);
+        }
+    }
+
+
+    [PunRPC]
+    public void PlayClipAtPoint(string clipName, Vector3 position)
+    {
+        MusicMgr.Instance.PlayAtPointFun(clipName, position, false);
     }
     #endregion
 }

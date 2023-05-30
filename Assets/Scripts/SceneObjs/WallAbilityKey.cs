@@ -20,10 +20,11 @@ public class WallAbilityKey : MonoBehaviour
         if (keyCollider.IsTouchingLayers(playerLayer))
         {
             player = collision.gameObject.GetComponent<Player>();
-            if (player == null) { return; }//如果player为null，则返回
+            MusicMgr.Instance.PlayAtPointFun("spell_pickup_final_boom", player.transform.position, false);
+            if (player == null) { return; }//濡傛灉player涓簄ull锛屽垯杩斿洖
             player.SetTouchingWallKey();
             sceneData.haveWallClimbKey = true;
-            if (player.CheckIfIsMine())//检查是否是自己
+            if (player.CheckIfIsMine())//妫�鏌ユ槸鍚︽槸鑷繁
             {
                 UIManager.Instance.PushUI("UIWallClimbAbility");
             }

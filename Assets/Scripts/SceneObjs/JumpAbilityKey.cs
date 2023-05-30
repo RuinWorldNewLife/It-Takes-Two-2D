@@ -22,19 +22,20 @@ public class JumpAbilityKey : MonoBehaviour
         if (keyCollider.IsTouchingLayers(playerLayer))
         {
             player = collision.gameObject.GetComponent<Player>();
-            if (player == null) { return; }//���playerΪnull���򷵻�
+            if (player == null) { return; }//如果player为null，则返回
             if (player.CheckIfIsHavingKey())
             {
-                if (player.CheckIfIsMine() && !showedTip)//����Ƿ����Լ�
+                if (player.CheckIfIsMine() && !showedTip)//检查是否是自己
                 {
                     UIManager.Instance.PushUI("UINoTip");
                     showedTip = true;
                 }
                 return;
-            }//����Ƿ�ӵ��Կ�ף����ӵ�У��򷵻�
+            }//检查是否拥有钥匙，如果拥有，则返回
             player.SetTouchingJumpKey();
+            MusicMgr.Instance.PlayAtPointFun("spell_pickup_final_boom", player.transform.position, false);
             sceneData.haveJumpKey = true;
-            if (player.CheckIfIsMine())//����Ƿ����Լ�
+            if (player.CheckIfIsMine())//检查是否是自己
             {
                 UIManager.Instance.PushUI("UIDoubleJumpAbility");
             }

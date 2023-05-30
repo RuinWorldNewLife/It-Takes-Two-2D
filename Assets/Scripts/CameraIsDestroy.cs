@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// 创建人：朱泽辉
 /// 脚本功能：检测相机是否被销毁
 /// </summary>
 public class CameraIsDestroy : MonoBehaviour

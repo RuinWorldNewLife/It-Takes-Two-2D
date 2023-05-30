@@ -54,6 +54,11 @@ public class UIGamePause : UIBase
             PhotonNetwork.LeaveRoom();
         }
     }
+
+    public void GoToIntroduction(string uiName)
+    {
+        UIManager.Instance.PushUI(uiName);
+    }
     public override IEnumerator UpdateAlphaShow()
     {
         // Debug.Log("进来UpdateAlphaShow");

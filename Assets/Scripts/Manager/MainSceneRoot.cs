@@ -9,16 +9,16 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 public class MainSceneRoot : Singleton<MainSceneRoot>
 {
     GameObject player;
-    bool isInited;//ÅĞ¶ÏÊÇ·ñ½øÈë
+    bool isInited;//åˆ¤æ–­æ˜¯å¦è¿›å…¥
     PhotonView windPhotonView;
 
     [HideInInspector]
     public Vector3 RedInitPos;
     [HideInInspector]
     public Vector3 DarkInitPos;
-    [Header("³¡¾°Êı¾İ")]
+    [Header("åœºæ™¯æ•°æ®")]
     [SerializeField]
-    private SceneData sceneData;//³¡¾°Êı¾İ
+    private SceneData sceneData;//åœºæ™¯æ•°æ®
 
     private struct KeyPos
     {
@@ -27,7 +27,7 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
         public Vector3 wallClimbPos;
     }
     KeyPos keyPos;
-    //Íæ¼ÒÉú³ÉÎ»ÖÃµÄ´æ´¢½á¹¹Ìå
+    //ç©å®¶ç”Ÿæˆä½ç½®çš„å­˜å‚¨ç»“æ„ä½“
     public struct CharacterStartPos
     {
         public Vector3 RedInitPos;
@@ -38,7 +38,7 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
     {
         isInited = false;
         windPhotonView = GetComponent<PhotonView>();
-        //´æ´¢¸÷ÖÖÔ¿³×µÄÉú³ÉÎ»ÖÃ¡£
+        //å­˜å‚¨å„ç§é’¥åŒ™çš„ç”Ÿæˆä½ç½®ã€‚
         keyPos = new KeyPos();
         keyPos.dashKeyPos = new Vector3(9.54f, 1.62f, 0);
         keyPos.jumpKeyPos = new Vector3(69.17f, 5.08f, 0);
@@ -48,12 +48,12 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
     
     private void Start()
     {
-        SetBornPos();//³õÊ¼»¯
-        SetKeyBorn();//³õÊ¼»¯Ô¿³×
-        //ÉèÖÃ³É¹¦¼ÓÔØÍæ¼ÒÊôĞÔ
+        SetBornPos();//åˆå§‹åŒ–
+        SetKeyBorn();//åˆå§‹åŒ–é’¥åŒ™
+        //è®¾ç½®æˆåŠŸåŠ è½½ç©å®¶å±æ€§
         SetPlayerLoaded();
 
-        //¶¨Ê±Éú³É·çµÄ·½·¨
+        //å®šæ—¶ç”Ÿæˆé£çš„æ–¹æ³•
         MonoHelper.Instance.InvokeReapeat(() =>
         {
             if (PhotonNetwork.IsMasterClient)
@@ -63,13 +63,13 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
         }, 6, () => { return false; });
     }
     /// <summary>
-    /// ³õÊ¼»¯ÄÜÁ¦Ô¿³×»ñÈ¡
+    /// åˆå§‹åŒ–èƒ½åŠ›é’¥åŒ™è·å–
     /// </summary>
     public void SetKeyBorn()
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            //Èç¹ûÍæ¼ÒÃ»ÓĞÄÃµ½¶ÔÓ¦µÄÔ¿³×£¬ÄÇÃ´ÔÚÖØÉú³¡¾°µÄÊ±ºò¾ÍÉú³É¶ÔÓ¦Ô¿³×¡£
+            //å¦‚æœç©å®¶æ²¡æœ‰æ‹¿åˆ°å¯¹åº”çš„é’¥åŒ™ï¼Œé‚£ä¹ˆåœ¨é‡ç”Ÿåœºæ™¯çš„æ—¶å€™å°±ç”Ÿæˆå¯¹åº”é’¥åŒ™ã€‚
             if (!sceneData.haveDashKey)
             {
                 PhotonNetwork.Instantiate("DashAbilityKey", keyPos.dashKeyPos, Quaternion.identity);
@@ -86,21 +86,21 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
     }
 
     /// <summary>
-    /// ÉèÖÃ³öÉúÎ»ÖÃ
+    /// è®¾ç½®å‡ºç”Ÿä½ç½®
     /// </summary>
     public void SetBornPos()
     {
-        //µÚÒ»¸öÉú³ÉÎ»ÖÃ
+        //ç¬¬ä¸€ä¸ªç”Ÿæˆä½ç½®
         CharacterStartPos Pos1 = new CharacterStartPos();
         Pos1.RedInitPos = new Vector3(-0.64f, 2.4f, 0f);
         Pos1.DarkInitPos = new Vector3(-3f, 2.4f, 0f);
 
-        //µÚ¶ş¸öÉú³ÉÎ»ÖÃ
+        //ç¬¬äºŒä¸ªç”Ÿæˆä½ç½®
         CharacterStartPos Pos2 = new CharacterStartPos();
         Pos2.RedInitPos = new Vector3(41f, 0.27f, 0f); 
         Pos2.DarkInitPos = new Vector3(41f, 5f, 0f);
 
-        //µÚÈı¸öÉú³ÉÎ»ÖÃ
+        //ç¬¬ä¸‰ä¸ªç”Ÿæˆä½ç½®
         CharacterStartPos Pos3 = new CharacterStartPos();
         Pos3.RedInitPos = new Vector3(70f, 7.2f, 0f);
         Pos3.DarkInitPos = new Vector3(68f, 7.2f, 0f);
@@ -125,70 +125,70 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
     }
 
     /// <summary>
-    /// ÉèÖÃµ±Ç°Íæ¼ÒÒÑ¾­¼ÓÔØ³¡¾°³É¹¦¡£
+    /// è®¾ç½®å½“å‰ç©å®¶å·²ç»åŠ è½½åœºæ™¯æˆåŠŸã€‚
     /// </summary>
     private void SetPlayerLoaded()
     {
         Hashtable hash = new Hashtable();
-        //Ìí¼ÓÊôĞÔ
+        //æ·»åŠ å±æ€§
         hash.Add("Loaded", true);
-        //ÉèÖÃÊôĞÔ
+        //è®¾ç½®å±æ€§
         PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
     }
 
     /// <summary>
-    /// Ã¿´ÎÍæ¼ÒµÄÊôĞÔ·¢Éú¸Ä±ä£¨Ìí¼ÓÁËĞÅÏ¢£©µ÷ÓÃ´Ë·½·¨¡£
+    /// æ¯æ¬¡ç©å®¶çš„å±æ€§å‘ç”Ÿæ”¹å˜ï¼ˆæ·»åŠ äº†ä¿¡æ¯ï¼‰è°ƒç”¨æ­¤æ–¹æ³•ã€‚
     /// </summary>
     /// <param name="targetPlayer"></param>
     /// <param name="changedProps"></param>
     public override void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, Hashtable changedProps)
     {
-        //¼ì²âËùÓĞÍæ¼ÒÊÇ·ñ¼ÓÔØ³¡¾°³É¹¦
+        //æ£€æµ‹æ‰€æœ‰ç©å®¶æ˜¯å¦åŠ è½½åœºæ™¯æˆåŠŸ
         CheckAllPlayerLoaded();
     }
 
     /// <summary>
-    /// ¼ì²âËùÓĞÍæ¼ÒÊÇ·ñ¶¼ÒÑ¾­¼ÓÔØ³É¹¦¡£
+    /// æ£€æµ‹æ‰€æœ‰ç©å®¶æ˜¯å¦éƒ½å·²ç»åŠ è½½æˆåŠŸã€‚
     /// </summary>
     /// <returns></returns>
     private bool CheckAllPlayerLoaded()
     {
-        //Èç¹ûÊÇ²»ÊÇÖ÷¿Í»§¶Ë£¬ÔòÖ±½Ó·µ»Ø·ñ¡£
+        //å¦‚æœæ˜¯ä¸æ˜¯ä¸»å®¢æˆ·ç«¯ï¼Œåˆ™ç›´æ¥è¿”å›å¦ã€‚
         if (!PhotonNetwork.IsMasterClient)
         {
             return false;
         }
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
         {
-            //ÊÇ·ñ¼ÓÔØ
+            //æ˜¯å¦åŠ è½½
             object isLoaded = false;
-            //³¢ÊÔ¼ÓÔØÊôĞÔ
+            //å°è¯•åŠ è½½å±æ€§
             PhotonNetwork.PlayerList[i].CustomProperties.TryGetValue("Loaded", out isLoaded);
 
-            //Èç¹ûÃ»ÓĞ¼ÓÔØµ½
+            //å¦‚æœæ²¡æœ‰åŠ è½½åˆ°
             if (isLoaded == null || !(bool)isLoaded)
             {
                 return false;
             }
         }
-        //ÉèÖÃ·¿¼äÊôĞÔ
+        //è®¾ç½®æˆ¿é—´å±æ€§
         Hashtable initHero = new Hashtable();
         initHero.Add("InitHero", true);
         PhotonNetwork.CurrentRoom.SetCustomProperties(initHero);
-        //±íÊ¾ËùÓĞÍæ¼Ò¶¼ÒÑ¾­¼ÓÔØ³¡¾°³É¹¦¡£
+        //è¡¨ç¤ºæ‰€æœ‰ç©å®¶éƒ½å·²ç»åŠ è½½åœºæ™¯æˆåŠŸã€‚
         return true;
     }
     public override void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
     {
         object canInit = false;
-        //³¢ÊÔ»ñÈ¡ÊôĞÔ
+        //å°è¯•è·å–å±æ€§
         propertiesThatChanged.TryGetValue("InitHero", out canInit);
-        //ÊôĞÔ»ñÈ¡µ½£¬ÇÒÖµÎªtrue
+        //å±æ€§è·å–åˆ°ï¼Œä¸”å€¼ä¸ºtrue
         try
         {
             if ((bool)canInit && !isInited)
             {
-                //ËùÓĞÍæ¼ÒÉú³É¸÷×ÔµÄÓ¢ĞÛ¡£
+                //æ‰€æœ‰ç©å®¶ç”Ÿæˆå„è‡ªçš„è‹±é›„ã€‚
                 InitHero();
             }
         }
@@ -198,47 +198,55 @@ public class MainSceneRoot : Singleton<MainSceneRoot>
 
     }
 
-    //½«½ÇÉ«¼ÓÔØ½øÈë³¡¾°
+    //å°†è§’è‰²åŠ è½½è¿›å…¥åœºæ™¯
     private void InitHero()
     {
-        //Èç¹û½ÇÉ«½øÈë³¡¾°£¬Ôò½«ÅĞ¶ÏÉèÖÃÎªtrue
+        //å¦‚æœè§’è‰²è¿›å…¥åœºæ™¯ï¼Œåˆ™å°†åˆ¤æ–­è®¾ç½®ä¸ºtrue
         isInited = true;
         if (PhotonNetwork.IsMasterClient)
         {
-            //Éú³ÉÍøÂç¶ÔÏó
+            //ç”Ÿæˆç½‘ç»œå¯¹è±¡
             player = PhotonNetwork.Instantiate("PlayerRed", RedInitPos, Quaternion.identity);
+            if (player.GetComponent<PhotonView>().IsMine)
+            {
+                player.AddComponent<AudioListener>();//å¦‚æœè¯¥ç©å®¶æ˜¯ç©å®¶è‡ªèº«æ§åˆ¶çš„ï¼Œé‚£ä¹ˆåˆ™æ·»åŠ å¬å£°éŸ³ç»„ä»¶
+            }
         }
         else
         {
-            //Éú³ÉÍøÂç¶ÔÏó
+            //ç”Ÿæˆç½‘ç»œå¯¹è±¡
             player = PhotonNetwork.Instantiate("PlayerDark", DarkInitPos, Quaternion.identity);
+            if (player.GetComponent<PhotonView>().IsMine)
+            {
+                player.AddComponent<AudioListener>();
+            }
         }
-        //½«Íæ¼ÒµÄÃû×ÖÖĞµÄ¿ËÂ¡È¡³ö
+        //å°†ç©å®¶çš„åå­—ä¸­çš„å…‹éš†å–å‡º
         player.name = player.name.Replace("(Clone)", "");
     }
     /// <summary>
-    /// ÖØĞÂ¿ªÊ¼ÓÎÏ·
+    /// é‡æ–°å¼€å§‹æ¸¸æˆ
     /// </summary>
     public void Restart()
     {
-        player.GetComponent<Player>().Restart();//ÖØĞÂÔÚ´æ´¢Î»ÖÃ¿ªÊ¼ÓÎÏ·¡£
+        player.GetComponent<Player>().Restart();//é‡æ–°åœ¨å­˜å‚¨ä½ç½®å¼€å§‹æ¸¸æˆã€‚
     }
     /// <summary>
-    /// Çå³ıÍæ¼ÒÊı¾İ£¬ÖØÖÃÉú³ÉÎ»ÖÃ£¬ÔÚÀë¿ª·¿¼äÊ±µ÷ÓÃ¡£
+    /// æ¸…é™¤ç©å®¶æ•°æ®ï¼Œé‡ç½®ç”Ÿæˆä½ç½®ï¼Œåœ¨ç¦»å¼€æˆ¿é—´æ—¶è°ƒç”¨ã€‚
     /// </summary>
     public void PlayerDataClear()
     {
         try
         {
-            sceneData.bornPosIndex = 1;//ÖØÖÃÉú³ÉÎ»ÖÃ¡£
-            player.GetComponent<Player>().playerDataClear();//Çå³ıÍæ¼ÒÊı¾İ¡£
+            sceneData.bornPosIndex = 1;//é‡ç½®ç”Ÿæˆä½ç½®ã€‚
+            player.GetComponent<Player>().playerDataClear();//æ¸…é™¤ç©å®¶æ•°æ®ã€‚
         }
         catch (System.Exception)
         {
         }
     }
     /// <summary>
-    /// ³¡¾°Êı¾İÇå³ı
+    /// åœºæ™¯æ•°æ®æ¸…é™¤
     /// </summary>
     public void SceneDataClean()
     {

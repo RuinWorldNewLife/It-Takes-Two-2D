@@ -13,7 +13,7 @@ public class UIStart : UIBase
     public TMP_Text connectingInfo;
     private void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();//连接到网络
+        //PhotonNetwork.ConnectUsingSettings();//连接到网络
         PhotonNetwork.AutomaticallySyncScene = true;//同步主机场景层级。
     }
     public override void OnConnectedToMaster()

@@ -7,7 +7,7 @@ using Photon.Realtime;
 
 public class PlayerInputHandler : MonoBehaviourPunCallbacks
 {
-    //·½±ã¶ÁÈ¡Ä¿Ç°ÓÃ»§µÄÊäÈë
+    //æ–¹ä¾¿è¯»å–ç›®å‰ç”¨æˆ·çš„è¾“å…¥
     private PlayerInput playerInput;
     private Camera cam;
     public Vector2 Movement { get; private set; }
@@ -18,7 +18,7 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     public bool DashInput { get; private set; }
     public bool JumpInput { get; private set; }
     public bool HandleInput { get; private set; }
-    //ÉèÖÃÄÜ·ñ¿ØÖÆ½ÇÉ«µÄ±äÁ¿
+    //è®¾ç½®èƒ½å¦æ§åˆ¶è§’è‰²çš„å˜é‡
     public bool CanControl { get; private set; }
     [SerializeField]
     private float inputHoldTime = 0.2f;
@@ -28,7 +28,7 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     private float dashInputStartTime;
     private void Start()
     {
-        CanControl = false;//³õÊ¼»¯½ÇÉ«²»¿ÉÒÔ¿ØÖÆ
+        CanControl = false;//åˆå§‹åŒ–è§’è‰²ä¸å¯ä»¥æ§åˆ¶
         DashInput = false;
         JumpInput = false;
         HandleInput = false;
@@ -44,9 +44,9 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if (!photonView.IsMine)//Èç¹ûÕıÔÚ²Ù×÷µÄ²»ÊÇ±¾Éí£¬Ôò·µ»Ø
+        if (!photonView.IsMine)//å¦‚æœæ­£åœ¨æ“ä½œçš„ä¸æ˜¯æœ¬èº«ï¼Œåˆ™è¿”å›
             return;
-        if (!CanControl) //Èç¹û²»ÄÜ¿ØÖÆ£¬Ôò·µ»Ø
+        if (!CanControl) //å¦‚æœä¸èƒ½æ§åˆ¶ï¼Œåˆ™è¿”å›
         {
             NormInputX = 0;
             NormInputY = 0;
@@ -73,12 +73,13 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     }
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (!photonView.IsMine)//Èç¹ûÕıÔÚ²Ù×÷µÄ²»ÊÇ±¾Éí£¬Ôò·µ»Ø
+        if (!photonView.IsMine)//å¦‚æœæ­£åœ¨æ“ä½œçš„ä¸æ˜¯æœ¬èº«ï¼Œåˆ™è¿”å›
             return;
-        if (!CanControl)//Èç¹û²»ÄÜ¿ØÖÆ£¬Ôò·µ»Ø
+        if (!CanControl)//å¦‚æœä¸èƒ½æ§åˆ¶ï¼Œåˆ™è¿”å›
             return;
         if (context.started)
         {
+            RPCPlayClip("hero_jump",transform.position);
             JumpInput = true;
             JumpInputStop = false;
             jumpInputStartTime = Time.time;
@@ -90,9 +91,9 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
     }
     public void OnDashInput(InputAction.CallbackContext context)
     {
-        if (!photonView.IsMine)//Èç¹ûÕıÔÚ²Ù×÷µÄ²»ÊÇ±¾Éí£¬Ôò·µ»Ø
+        if (!photonView.IsMine)//å¦‚æœæ­£åœ¨æ“ä½œçš„ä¸æ˜¯æœ¬èº«ï¼Œåˆ™è¿”å›
             return;
-        if (!CanControl)//Èç¹û²»ÄÜ¿ØÖÆ£¬Ôò·µ»Ø
+        if (!CanControl)//å¦‚æœä¸èƒ½æ§åˆ¶ï¼Œåˆ™è¿”å›
             return;
         if (context.started)
         {
@@ -103,9 +104,9 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
 
     public void OnHandleInput(InputAction.CallbackContext context)
     {
-        if (!photonView.IsMine)//Èç¹ûÕıÔÚ²Ù×÷µÄ²»ÊÇ±¾Éí£¬Ôò·µ»Ø
+        if (!photonView.IsMine)//å¦‚æœæ­£åœ¨æ“ä½œçš„ä¸æ˜¯æœ¬èº«ï¼Œåˆ™è¿”å›
             return;
-        if (!CanControl)//Èç¹û²»ÄÜ¿ØÖÆ£¬Ôò·µ»Ø
+        if (!CanControl)//å¦‚æœä¸èƒ½æ§åˆ¶ï¼Œåˆ™è¿”å›
             return;
         if (context.started)
         {
@@ -136,10 +137,24 @@ public class PlayerInputHandler : MonoBehaviourPunCallbacks
         }
     }
     /// <summary>
-    /// ½ÇÉ«Í£Ö¹¿ØÖÆ·½·¨£¬trueÎª¿É¿ØÖÆ£¬falseÎª²»¿É¿ØÖÆ
+    /// è§’è‰²åœæ­¢æ§åˆ¶æ–¹æ³•ï¼Œtrueä¸ºå¯æ§åˆ¶ï¼Œfalseä¸ºä¸å¯æ§åˆ¶
     /// </summary>
     public void ControlHandler(bool controlHandle)
     {
         CanControl = controlHandle;
+    }
+    public void RPCPlayClip(string clipName, Vector3 position)
+    {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("PlayClipAtPoint", RpcTarget.Others,clipName,position);
+        }
+    }
+
+
+    [PunRPC]
+    public void PlayClipAtPoint(string clipName, Vector3 position)
+    {
+        MusicMgr.Instance.PlayAtPointFun(clipName, position,false);
     }
 }

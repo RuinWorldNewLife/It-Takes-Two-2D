@@ -8,14 +8,14 @@ public class MobilePlat : MonoBehaviour
 {
 
     [SerializeField]
-    private LayerMask affectObjLayers;//¿ÉÒÔ°´ÏÂ°´Å¥µÄÎïÆ·²ã
-    [Header("Æ½Ì¨ÒÆ¶¯ËÙ¶È")]
+    private LayerMask affectObjLayers;//å¯ä»¥æŒ‰ä¸‹æŒ‰é’®çš„ç‰©å“å±‚
+    [Header("å¹³å°ç§»åŠ¨é€Ÿåº¦")]
     [SerializeField]
-    private float moveSpeed;//Æ½Ì¨ÒÆ¶¯ËÙ¶È
-    [Header("Æ½Ì¨ÒÆ¶¯µÄÊ±¼ä")]
+    private float moveSpeed;//å¹³å°ç§»åŠ¨é€Ÿåº¦
+    [Header("å¹³å°ç§»åŠ¨çš„æ—¶é—´")]
     [SerializeField]
-    private float timeToMovePlat = 3f;//Æ½Ì¨»Øµ½Ô­Î»µÄÊ±¼ä¡£
-    [Header("Ê¹ÓÃÄÄÒ»¸öÊıÁ¿¼ÆÊıÆ÷")]
+    private float timeToMovePlat = 3f;//å¹³å°å›åˆ°åŸä½çš„æ—¶é—´ã€‚
+    [Header("ä½¿ç”¨å“ªä¸€ä¸ªæ•°é‡è®¡æ•°å™¨")]
     [SerializeField]
     private int useWhatButtonCount = 1;
 
@@ -23,25 +23,25 @@ public class MobilePlat : MonoBehaviour
 
     Transform platTransform;
 
-    Transform startTF;//×î¿ªÊ¼µÄÎ»ÖÃ
+    Transform startTF;//æœ€å¼€å§‹çš„ä½ç½®
 
-    Transform endTF;//×îÖÕÎ»ÖÃ
+    Transform endTF;//æœ€ç»ˆä½ç½®
 
-    Vector3 buttonStartPos;//°´Å¥µÄ³õÊ¼Î»ÖÃ¡£
+    Vector3 buttonStartPos;//æŒ‰é’®çš„åˆå§‹ä½ç½®ã€‚
 
-    Transform colliderBox;//³ĞÔØÅö×²ºĞµÄ×ÓÎïÌåTF
+    Transform colliderBox;//æ‰¿è½½ç¢°æ’ç›’çš„å­ç‰©ä½“TF
 
-    bool trueUpFalseDown;//ÅĞ¶ÏÒÆ¶¯Æ½Ì¨ÊÇÓ¦¸ÃÉÏÉı»¹ÊÇÏÂ½µ
+    bool trueUpFalseDown;//åˆ¤æ–­ç§»åŠ¨å¹³å°æ˜¯åº”è¯¥ä¸Šå‡è¿˜æ˜¯ä¸‹é™
 
     private void Start()
     {
         myCollider = GetComponent<Collider2D>();
         platTransform = transform.parent.GetChild(0).transform;
         colliderBox = transform.GetChild(2);
-        buttonStartPos = colliderBox.position;//³õÊ¼»¯°´Å¥³õÊ¼Î»ÖÃ
+        buttonStartPos = colliderBox.position;//åˆå§‹åŒ–æŒ‰é’®åˆå§‹ä½ç½®
         startTF = transform.GetChild(0);
         endTF = transform.GetChild(1);
-        //³õÊ¼»¯ÅĞ¶ÏÒÆ¶¯Æ½Ì¨ÉÏÉı»òÕßÏÂ½µ¡£
+        //åˆå§‹åŒ–åˆ¤æ–­ç§»åŠ¨å¹³å°ä¸Šå‡æˆ–è€…ä¸‹é™ã€‚
         if (startTF.position.y < endTF.position.y)
         {
             trueUpFalseDown = true;
@@ -57,70 +57,76 @@ public class MobilePlat : MonoBehaviour
         StaticData.buttonFiveNum = 0;
         StaticData.buttonSixNum = 0;
     }
-
+    /// <summary>
+    /// è§¦ç¢°åˆ°è§’è‰²åæ‰§è¡Œä»£ç 
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //µ±´¥Åöµ½½ÇÉ«
+        //å½“è§¦ç¢°åˆ°è§’è‰²
         if (myCollider.IsTouchingLayers(affectObjLayers))
         {
             switch (useWhatButtonCount)
             {
                 case 1:
-                    StaticData.buttonOneNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonOneNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonOneNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonOneNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 case 2:
-                    StaticData.buttonTwoNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonTwoNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonTwoNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonTwoNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 case 3:
-                    StaticData.buttonThreeNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonThreeNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonThreeNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonThreeNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 case 4:
-                    StaticData.buttonFourNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonThreeNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonFourNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonThreeNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 case 5:
-                    StaticData.buttonFiveNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonThreeNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonFiveNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonThreeNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 case 6:
-                    StaticData.buttonSixNum++;//Ã¿´ÎÓĞÍæ¼ÒÕ¾ÔÚÆ½Ì¨ÉÏ£¬ÈÃ°´Å¥Ò»ÉÏµÄÍæ¼ÒÊıÁ¿×ÔÔö¡£
-                    //if (StaticData.buttonThreeNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                    StaticData.buttonSixNum++;//æ¯æ¬¡æœ‰ç©å®¶ç«™åœ¨å¹³å°ä¸Šï¼Œè®©æŒ‰é’®ä¸€ä¸Šçš„ç©å®¶æ•°é‡è‡ªå¢ã€‚
+                    //if (StaticData.buttonThreeNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                     break;
                 default:
                     break;
             }
+            MusicMgr.Instance.PlayAtPointFun("chest_open", transform.position, false);
             colliderBox.DOPause();
             platTransform.DOPause();
             colliderBox.DOKill();
-            platTransform.DOKill();//ÔÚÒÆ¶¯Ö®Ç°£¬ÏÈ½«Ö®Ç°µÄ¶¯»­É±ËÀ
+            platTransform.DOKill();//åœ¨ç§»åŠ¨ä¹‹å‰ï¼Œå…ˆå°†ä¹‹å‰çš„åŠ¨ç”»æ€æ­»
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        //µ±´¥Åöµ½½ÇÉ«
+        //å½“è§¦ç¢°åˆ°è§’è‰²
         if (myCollider.IsTouchingLayers(affectObjLayers))
         {
             if (colliderBox.position.y >= buttonStartPos.y - 0.1f)
             {
-                //±¾Éí°´Å¥ÏòÏÂÒÆ¶¯
+                
+
+                //æœ¬èº«æŒ‰é’®å‘ä¸‹ç§»åŠ¨
                 colliderBox.Translate(Vector3.down * moveSpeed / 2 * Time.deltaTime);
             }
-            else//µ±°´Å¥ÒÑ¾­°´µ½µ×£¬Ö´ĞĞÆ½Ì¨ÒÆ¶¯·½·¨
+            else//å½“æŒ‰é’®å·²ç»æŒ‰åˆ°åº•ï¼Œæ‰§è¡Œå¹³å°ç§»åŠ¨æ–¹æ³•
             {
-                //ÅĞ¶ÏÆ½Ì¨Ó¦¸ÃÉÏÉı»¹ÊÇÏÂ½µ£¬trueÎªÉÏÉı£¬flaseÎªÏÂ½µ¡£
+                //åˆ¤æ–­å¹³å°åº”è¯¥ä¸Šå‡è¿˜æ˜¯ä¸‹é™ï¼Œtrueä¸ºä¸Šå‡ï¼Œflaseä¸ºä¸‹é™ã€‚
                 if (trueUpFalseDown)
                 {
-                    if (platTransform.position.y >= endTF.position.y) return;//Èç¹ûÆ½Ì¨¸ß¶È´ïµ½×î¸ß£¬Ôò·µ»Ø
-                                                                             //Æ½Ì¨ÏòÉÏÉı
+                    if (platTransform.position.y >= endTF.position.y) return;//å¦‚æœå¹³å°é«˜åº¦è¾¾åˆ°æœ€é«˜ï¼Œåˆ™è¿”å›
+                                                                             //å¹³å°å‘ä¸Šå‡
                     platTransform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
                 }
                 else
                 {
-                    if (platTransform.position.y <= endTF.position.y) return;//Èç¹ûÆ½Ì¨¸ß¶È´ïµ½×îµÍ£¬Ôò·µ»Ø
-                                                                             //Æ½Ì¨ÏòÏÂ½µ
+                    if (platTransform.position.y <= endTF.position.y) return;//å¦‚æœå¹³å°é«˜åº¦è¾¾åˆ°æœ€ä½ï¼Œåˆ™è¿”å›
+                                                                             //å¹³å°å‘ä¸‹é™
                     platTransform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
                 }
 
@@ -129,32 +135,32 @@ public class MobilePlat : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //µ±ÎïÌåÀë¿ª°´Å¥£¬ÈÃ°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿×Ô¼õ¡£
+        //å½“ç‰©ä½“ç¦»å¼€æŒ‰é’®ï¼Œè®©æŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡è‡ªå‡ã€‚
         switch (useWhatButtonCount)
         {
             case 1:
                 StaticData.buttonOneNum--;
-                if (StaticData.buttonOneNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonOneNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             case 2:
                 StaticData.buttonTwoNum--;
-                if (StaticData.buttonTwoNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonTwoNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             case 3:
                 StaticData.buttonThreeNum--;
-                if (StaticData.buttonThreeNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonThreeNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             case 4:
                 StaticData.buttonFourNum--;
-                if (StaticData.buttonFourNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonFourNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             case 5:
                 StaticData.buttonFiveNum--;
-                if (StaticData.buttonFiveNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonFiveNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             case 6:
                 StaticData.buttonSixNum--;
-                if (StaticData.buttonSixNum > 0) return;//Èç¹û°´Å¥ÉÏµÄÍæ¼ÒÊıÁ¿´óÓÚ0£¬Ôò·µ»Ø¡£
+                if (StaticData.buttonSixNum > 0) return;//å¦‚æœæŒ‰é’®ä¸Šçš„ç©å®¶æ•°é‡å¤§äº0ï¼Œåˆ™è¿”å›ã€‚
                 break;
             default:
                 break;
@@ -162,10 +168,10 @@ public class MobilePlat : MonoBehaviour
         colliderBox.DOPause();
         platTransform.DOPause();
         colliderBox.DOKill();
-        platTransform.DOKill();//ÔÚÒÆ¶¯Ö®Ç°£¬ÏÈ½«Ö®Ç°µÄ¶¯»­É±ËÀ
-        //µ±ÎïÌåÀë¿ª°´Å¥£¬ÔòÈÃÒÆ¶¯Æ½Ì¨»Øµ½×î³õÎ»ÖÃ¡£
+        platTransform.DOKill();//åœ¨ç§»åŠ¨ä¹‹å‰ï¼Œå…ˆå°†ä¹‹å‰çš„åŠ¨ç”»æ€æ­»
+        //å½“ç‰©ä½“ç¦»å¼€æŒ‰é’®ï¼Œåˆ™è®©ç§»åŠ¨å¹³å°å›åˆ°æœ€åˆä½ç½®ã€‚
         platTransform.DOMove(startTF.position, timeToMovePlat);
-        //µ±ÎïÌåÀë¿ª°´Å¥£¬ÔòÈÃ°´Å¥»Øµ½×î³õÎ»ÖÃ¡£
+        //å½“ç‰©ä½“ç¦»å¼€æŒ‰é’®ï¼Œåˆ™è®©æŒ‰é’®å›åˆ°æœ€åˆä½ç½®ã€‚
         colliderBox.DOMove(buttonStartPos, 0.2f);
     }
 }

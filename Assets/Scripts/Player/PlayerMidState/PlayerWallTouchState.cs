@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// çˆ¬å¢™çŠ¶æ€å®ä½“ç±»
+/// </summary>
 public class PlayerWallTouchState : PlayerState
 {
     protected bool isGrounded;
@@ -72,7 +75,7 @@ public class PlayerWallTouchState : PlayerState
             else if(player.InputHandler.DashInput && player.DashState.CheckIfCanDash())
             {
                 player.Flip();
-                //ÔÚÇ½ÉÏ½øĞĞÉÁ±Ü£¬Ëã×÷Ò»´ÎÌøÔ¾£¬ÌøÔ¾´ÎÊı¼õÉÙÒ»´Î
+                //åœ¨å¢™ä¸Šè¿›è¡Œé—ªé¿ï¼Œç®—ä½œä¸€æ¬¡è·³è·ƒï¼Œè·³è·ƒæ¬¡æ•°å‡å°‘ä¸€æ¬¡
                 player.JumpState.lastAmountOfJump--;
                 stateMachine.ChangeState(player.DashState);
             }

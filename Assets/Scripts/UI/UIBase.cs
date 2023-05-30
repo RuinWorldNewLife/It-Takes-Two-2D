@@ -11,7 +11,7 @@ using UnityEngine.UI;
 /// 脚本功能：UI的基类管理所有UI 
 /// </summary>
 [RequireComponent(typeof(CanvasGroup))]
-public class UIBase : MonoBehaviourPunCallbacks, IPointerClickHandler
+public class UIBase : MonoBehaviourPunCallbacks
 {
     protected CanvasGroup canvasGroup;
     protected GraphicRaycaster graphicRaycaster;
@@ -128,9 +128,5 @@ public class UIBase : MonoBehaviourPunCallbacks, IPointerClickHandler
         }
         coroutine = null;
     }
-    public virtual void OnPointerClick(PointerEventData eventData)
-    {
-        //Debug.Log(name + " Game Object Clicked!");
-        MusicMgr.Instance.PlaySounds("click");
-    }
+    
 }

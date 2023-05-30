@@ -19,7 +19,9 @@ public class WallHandleState : PlayerWallTouchState
     public override void Enter()
     {
         base.Enter();
-        //holdPostion = player.transform.position;//½«½ÇÉ«Î»ÖÃÉèÖÃÎª´¥Åöµ½Ç½ÃæÊ±µÄÎ»ÖÃ
+        //holdPostion = player.transform.position;//å°†è§’è‰²ä½ç½®è®¾ç½®ä¸ºè§¦ç¢°åˆ°å¢™é¢æ—¶çš„ä½ç½®
+        MusicMgr.Instance.PlayAtPointFun("step_wet1", player.transform.position, false);
+        player.RPCPlayClip("step_wet1", player.transform.position);
         HoldPostion();
         player.SetRBisKinematicFun(true, RpcTarget.Others);
         player.RB.isKinematic = true;

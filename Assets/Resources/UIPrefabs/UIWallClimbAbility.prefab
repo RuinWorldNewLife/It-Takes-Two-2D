@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 6955736951533756304}
   - component: {fileID: 6955736951533756311}
   - component: {fileID: 6955736951533756310}
+  - component: {fileID: 419154045580279966}
+  - component: {fileID: 8843978387549717930}
+  - component: {fileID: 6513126562704043579}
   m_Layer: 5
   m_Name: Return
   m_TagString: Untagged
@@ -134,6 +137,55 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &419154045580279966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6955736951533756308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0969725a2e063da459efc034c4e03005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 0.5
+--- !u!114 &8843978387549717930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6955736951533756308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b2ed11d675446c5a49da1ea296d490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectFactor: 1
+  m_ColorFactor: 0
+  m_BlurFactor: 0
+  m_EffectMode: 0
+  m_ColorMode: 1
+  m_BlurMode: 3
+  m_AdvancedBlur: 0
+--- !u!114 &6513126562704043579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6955736951533756308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BlurFactor: 1
+  m_Style: 3
+  m_EffectColor: {r: 0.011263967, g: 1, b: 0, a: 0}
+  m_EffectDistance: {x: 4, y: 4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &6955736951607493926
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,6 +273,7 @@ GameObject:
   - component: {fileID: 6955736951899601527}
   - component: {fileID: 6955736951899601521}
   - component: {fileID: 6955736951899601520}
+  - component: {fileID: 5530796333620345101}
   m_Layer: 5
   m_Name: Dark
   m_TagString: Untagged
@@ -288,6 +341,32 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5530796333620345101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6955736951899601526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19b7e2285c104f6ca47d583f3e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectFactor: 1
+  m_Width: 0.25
+  m_Rotation: 135
+  m_Softness: 1
+  m_Brightness: 1
+  m_Gloss: 1
+  m_EffectArea: 0
+  m_Player:
+    play: 1
+    initialPlayDelay: 0
+    duration: 1
+    loop: 1
+    loopDelay: 1
+    updateMode: 0
 --- !u!1 &6955736951913448264
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +512,7 @@ MonoBehaviour:
   m_text: "\u4F60\u83B7\u5F97\u4E86\u722C\u5899\u80FD\u529B\uFF01\u5FEB\u8BD5\u8BD5\u5427\uFF01"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9df82154363fbae46b54cd73cffa5add, type: 2}
-  m_sharedMaterial: {fileID: -2451155544274415621, guid: 9df82154363fbae46b54cd73cffa5add, type: 2}
+  m_sharedMaterial: {fileID: -8170999243461136403, guid: 9df82154363fbae46b54cd73cffa5add, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -637,6 +716,7 @@ GameObject:
   - component: {fileID: 6955736952090957677}
   - component: {fileID: 6955736952090957679}
   - component: {fileID: 6955736952090957678}
+  - component: {fileID: 6092877806991312182}
   m_Layer: 5
   m_Name: Red
   m_TagString: Untagged
@@ -704,6 +784,32 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6092877806991312182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6955736952090957676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19b7e2285c104f6ca47d583f3e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectFactor: 1
+  m_Width: 0.25
+  m_Rotation: 135
+  m_Softness: 1
+  m_Brightness: 1
+  m_Gloss: 1
+  m_EffectArea: 0
+  m_Player:
+    play: 1
+    initialPlayDelay: 0
+    duration: 1
+    loop: 1
+    loopDelay: 1
+    updateMode: 0
 --- !u!1 &6955736952378155882
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerJumpState : PlayerAbilityState
 {
@@ -19,6 +20,8 @@ public class PlayerJumpState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
+        MusicMgr.Instance.PlayAtPointFun("hero_jump", player.transform.position, false);
+        player.RPCPlayClip("hero_jump", player.transform.position);
         player.InputHandler.UseJumpInput();
         player.SetVelocityX(player.CurrentVelocity.x);
         player.SetVelocityY(playerData.jumpSpeed);
@@ -54,7 +57,7 @@ public class PlayerJumpState : PlayerAbilityState
         }
     }
     /// <summary>
-    /// 跳跃次数减少方法
+    /// 璺宠穬娆℃暟鍑忓皯鏂规硶
     /// </summary>
     public void DecreaseAmountOfJumpsLeft() => lastAmountOfJump--;
 }

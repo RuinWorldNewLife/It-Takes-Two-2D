@@ -22,6 +22,7 @@ public class PlayerGroundState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        
         player.resetLastAmountOfJump();
         player.playerTempJumpSpeed = 0f;
         player.DashState.CanDash();
@@ -40,6 +41,7 @@ public class PlayerGroundState : PlayerState
         dashInput = player.InputHandler.DashInput;
         if ((jumpInput && player.JumpState.CanJump()))
         {
+            
             stateMachine.ChangeState(player.JumpState);
         }
         else if (!isGrounded)

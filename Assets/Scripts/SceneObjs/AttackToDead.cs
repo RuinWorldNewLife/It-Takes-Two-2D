@@ -1,3 +1,4 @@
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,8 +18,9 @@ public class AttackToDead : MonoBehaviour
     {
         if (attack.IsTouchingLayers(playerLayer))
         {
-            //Debug.Log("´¥Åöµ½");
-            //´¥Åöµ½Íæ¼Òºó£¬µ÷ÓÃËÀÍö´úÂë
+            //Debug.Log("è§¦ç¢°åˆ°");
+            MusicMgr.Instance.PlayAtPointFun("hero_damage", collision.transform.position, false);
+            //è§¦ç¢°åˆ°ç©å®¶åï¼Œè°ƒç”¨æ­»äº¡ä»£ç 
             collision.gameObject.GetComponent<Player>().Dead();
         }
     }

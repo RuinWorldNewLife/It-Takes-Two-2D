@@ -21,14 +21,15 @@ public class DashAbilityKey : MonoBehaviour
         if (keyCollider.IsTouchingLayers(playerLayer))
         {
             player = collision.gameObject.GetComponent<Player>();
-            if (player == null) { return; }//如果player为null，则返回
+            if (player == null) { return; }//濡傛灉player涓簄ull锛屽垯杩斿洖
             if (player.CheckIfIsHavingKey())
             {
                 return;
-            }//检查是否拥有钥匙，如果拥有，则返回
+            }//妫�鏌ユ槸鍚︽嫢鏈夐挜鍖欙紝濡傛灉鎷ユ湁锛屽垯杩斿洖
             player.SetTouchingDashKey();
+            MusicMgr.Instance.PlayAtPointFun("spell_pickup_final_boom", player.transform.position, false);
             sceneData.haveDashKey = true;
-            if (player.CheckIfIsMine())//检查是否是自己
+            if (player.CheckIfIsMine())//妫�鏌ユ槸鍚︽槸鑷繁
             {
                 UIManager.Instance.PushUI("UIDashAbility");
             }

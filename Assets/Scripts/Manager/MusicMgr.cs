@@ -136,7 +136,8 @@ public class MusicMgr : Singleton<MusicMgr>
         {
             audioDic.Add(clipName, clip);
         }
-        AudioSource.PlayClipAtPoint(clip, position);
+        AudioSource.PlayClipAtPoint(clip, position, SoundsVolume);
     }
+	
 
 }
